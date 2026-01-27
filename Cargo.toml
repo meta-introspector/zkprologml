@@ -23,3 +23,7 @@ path = "consume_all_repos.rs"
 [[bin]]
 name = "sample_parquet"
 path = "sample_parquet.rs"
+
+[[bin]]
+name = "read_lists_of_lists"
+path = "read_lists_of_lists.rs"
