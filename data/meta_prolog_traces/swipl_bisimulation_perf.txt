@@ -1,0 +1,20 @@
+# started on Tue Jan 27 11:21:24 2026
+
+
+ Performance counter stats for 'swipl -q -f /tmp/test_query.pl':
+
+        33,620,865      cpu_atom/cycles/                                                        (22.79%)
+        43,913,896      cpu_core/cycles/                                                        (77.21%)
+        47,382,336      cpu_atom/instructions/           #    1.41  insn per cycle              (22.79%)
+        77,041,659      cpu_core/instructions/           #    1.75  insn per cycle              (77.21%)
+           335,448      cpu_atom/cache-misses/                                                  (22.79%)
+           151,638      cpu_core/cache-misses/                                                  (77.21%)
+         8,688,519      cpu_atom/branches/                                                      (22.79%)
+        13,791,915      cpu_core/branches/                                                      (77.21%)
+
+       0.080239168 seconds time elapsed
+
+       0.021685000 seconds user
+       0.008674000 seconds sys
+
+

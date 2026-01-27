@@ -1,0 +1,9 @@
+[package]
+name = "plocate-to-parquet"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+parquet = "53"
+arrow = "53"
+flate2 = "1.0"

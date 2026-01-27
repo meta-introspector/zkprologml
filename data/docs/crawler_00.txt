@@ -1,0 +1,2 @@
+/mnt/data1/nix/time/2024/07/29/tabby/ee/tabby-webserver/src/service/background_job/web_crawler.rs
+/mnt/data1/nix/time/2024/09/06/aptos-core/ecosystem/nft-metadata-crawler-parser/src/utils/gcs.rs

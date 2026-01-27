@@ -1,0 +1,11 @@
+Warning: /home/mdupont/nix/vendor/rust/github/data/proofs/bisimulation.pl:15:
+Warning:    Singleton variables: [Layer,Cycles,Instructions,CacheMisses,Branches]
+Warning: /home/mdupont/nix/vendor/rust/github/data/proofs/bisimulation.pl:50:
+Warning:    Singleton variables: [Result]
+Warning: /home/mdupont/nix/vendor/rust/github/data/proofs/bisimulation.pl:69:
+Warning:    Singleton variables: [Result,Cycles]
+Warning: /home/mdupont/nix/vendor/rust/github/data/proofs/bisimulation.pl:91:
+Warning:    Singleton variables: [Cycles,Instructions]
+Warning: /home/mdupont/nix/vendor/rust/github/data/proofs/bisimulation.pl:156:
+Warning:    Singleton variables: [PathN,PathN1]
+Testing swipl with bisimulation

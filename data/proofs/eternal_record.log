@@ -1,0 +1,4362 @@
+
+═══ ITERATION 1 ═══
+Time: 1769537432.3732026
+Theorem: theorem_2_46
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem theorem_2_46 : ∀ (f : Feature), 
+  rank f = 2^46 → is_identity f := by
+  intro f h
+  cases f
+  · simp [is_identity]
+  · exact mirror_is_identity h
+))
+Result: valid
+
+═══ ITERATION 2 ═══
+Time: 1769537432.846258
+Theorem: theorem_71
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem theorem_71 : ∀ (f : Feature),
+  rank f = 71 → is_fixed_point f := by
+  intro f h
+  cases f
+  · simp [is_fixed_point]
+  · exact kleene_fixed_point h
+))
+Result: valid
+
+═══ ITERATION 3 ═══
+Time: 1769537433.4002085
+Theorem: horizontal_transfer_preserves_semantics
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem horizontal_transfer_preserves_semantics :
+  ∀ (m : Meme) (s t : Language),
+  semantics (transfer m s t) = semantics m := by
+  intro m s t
+  unfold transfer
+  simp [lift_preserves, quote_preserves, shift_preserves, splice_preserves]
+))
+Result: valid
+
+═══ ITERATION 4 ═══
+Time: 1769537433.9293623
+Theorem: universal_port_equivalence
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem universal_port_equivalence :
+  ∀ (f : Feature) (l1 l2 : Language),
+  ∃ (p : Port f l1 l2), equivalent (eval f l1) (eval f l2) := by
+  intro f l1 l2
+  use universal_port f l1 l2
+  exact port_preserves_semantics f l1 l2
+))
+Result: valid
+
+═══ ITERATION 5 ═══
+Time: 1769537434.4751685
+Theorem: kleene_fixed_point
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem kleene_fixed_point :
+  ∃ (f : Feature), f = self_extract f := by
+  use kleene_recursion
+  exact kleene_theorem
+))
+Result: valid
+
+═══ ITERATION 6 ═══
+Time: 1769537435.0381577
+Theorem: monster_symmetry_preservation
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem monster_symmetry_preservation :
+  ∀ (f : Feature) (t : Transform),
+  monster_symmetry t → preserves_lattice (apply t f) := by
+  intro f t h
+  cases h
+  · exact identity_preserves f
+  · exact rotation_preserves f
+  · exact reflection_preserves f
+))
+Result: valid
+
+═══ ITERATION 7 ═══
+Time: 1769537435.5665834
+Theorem: lattice_composition
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem lattice_composition :
+  ∀ (f g : Feature),
+  lattice_point (compose f g) = 
+  add (lattice_point f) (lattice_point g) := by
+  intro f g
+  simp [compose, lattice_point, add]
+))
+Result: valid
+
+═══ ITERATION 1 ═══
+Time: 1769538268.2394722
+Theorem: theorem_2_46
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem theorem_2_46 : ∀ (f : Feature), 
+  rank f = 2^46 → is_identity f := by
+  intro f h
+  cases f
+  · simp [is_identity]
+  · exact mirror_is_identity h
+))
+Result: valid
+
+═══ ITERATION 2 ═══
+Time: 1769538268.793145
+Theorem: theorem_71
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem theorem_71 : ∀ (f : Feature),
+  rank f = 71 → is_fixed_point f := by
+  intro f h
+  cases f
+  · simp [is_fixed_point]
+  · exact kleene_fixed_point h
+))
+Result: valid
+
+═══ ITERATION 3 ═══
+Time: 1769538269.2726414
+Theorem: horizontal_transfer_preserves_semantics
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem horizontal_transfer_preserves_semantics :
+  ∀ (m : Meme) (s t : Language),
+  semantics (transfer m s t) = semantics m := by
+  intro m s t
+  unfold transfer
+  simp [lift_preserves, quote_preserves, shift_preserves, splice_preserves]
+))
+Result: valid
+
+═══ ITERATION 4 ═══
+Time: 1769538269.7446856
+Theorem: universal_port_equivalence
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem universal_port_equivalence :
+  ∀ (f : Feature) (l1 l2 : Language),
+  ∃ (p : Port f l1 l2), equivalent (eval f l1) (eval f l2) := by
+  intro f l1 l2
+  use universal_port f l1 l2
+  exact port_preserves_semantics f l1 l2
+))
+Result: valid
+
+═══ ITERATION 5 ═══
+Time: 1769538270.2200441
+Theorem: kleene_fixed_point
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem kleene_fixed_point :
+  ∃ (f : Feature), f = self_extract f := by
+  use kleene_recursion
+  exact kleene_theorem
+))
+Result: valid
+
+═══ ITERATION 6 ═══
+Time: 1769538270.73609
+Theorem: monster_symmetry_preservation
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem monster_symmetry_preservation :
+  ∀ (f : Feature) (t : Transform),
+  monster_symmetry t → preserves_lattice (apply t f) := by
+  intro f t h
+  cases h
+  · exact identity_preserves f
+  · exact rotation_preserves f
+  · exact reflection_preserves f
+))
+Result: valid
+
+═══ ITERATION 7 ═══
+Time: 1769538271.2286441
+Theorem: lattice_composition
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem lattice_composition :
+  ∀ (f g : Feature),
+  lattice_point (compose f g) = 
+  add (lattice_point f) (lattice_point g) := by
+  intro f g
+  simp [compose, lattice_point, add]
+))
+Result: valid
+
+═══ ITERATION 8 ═══
+Time: 1769538271.7221646
+Theorem: feature_equivalence
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem feature_equivalence :
+  ∀ (f : Feature) (l1 l2 : Language),
+  equivalent l1 l2 → 
+  equivalent (eval f l1) (eval f l2) := by
+  intro f l1 l2 h
+  exact language_equiv_implies_feature_equiv f l1 l2 h
+))
+Result: valid
+
+═══ ITERATION 9 ═══
+Time: 1769538272.185082
+Theorem: self_extraction
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem self_extraction :
+  ∀ (f : Feature),
+  ∃ (code : Code), extract f = code ∧ eval code = f := by
+  intro f
+  use extract_code f
+  constructor
+  · rfl
+  · exact extract_eval_inverse f
+))
+Result: valid
+
+═══ ITERATION 10 ═══
+Time: 1769538272.8059967
+Theorem: automorphic_orbit
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem automorphic_orbit :
+  ∀ (s : System),
+  ∃ (λ : ℝ), eigenvalue s λ ∧ λ = 1 := by
+  intro s
+  use 1
+  constructor
+  · exact system_is_eigenvector s
+  · rfl
+))
+Result: valid
+
+═══ ITERATION 11 ═══
+Time: 1769538273.3209927
+Theorem: theorem_2_46
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem theorem_2_46 : ∀ (f : Feature), 
+  rank f = 2^46 → is_identity f := by
+  intro f h
+  cases f
+  · simp [is_identity]
+  · exact mirror_is_identity h
+))
+Result: valid
+
+═══ ITERATION 12 ═══
+Time: 1769538273.7978077
+Theorem: theorem_71
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem theorem_71 : ∀ (f : Feature),
+  rank f = 71 → is_fixed_point f := by
+  intro f h
+  cases f
+  · simp [is_fixed_point]
+  · exact kleene_fixed_point h
+))
+Result: valid
+
+═══ ITERATION 13 ═══
+Time: 1769538274.2766511
+Theorem: horizontal_transfer_preserves_semantics
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem horizontal_transfer_preserves_semantics :
+  ∀ (m : Meme) (s t : Language),
+  semantics (transfer m s t) = semantics m := by
+  intro m s t
+  unfold transfer
+  simp [lift_preserves, quote_preserves, shift_preserves, splice_preserves]
+))
+Result: valid
+
+═══ ITERATION 14 ═══
+Time: 1769538274.7365031
+Theorem: universal_port_equivalence
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem universal_port_equivalence :
+  ∀ (f : Feature) (l1 l2 : Language),
+  ∃ (p : Port f l1 l2), equivalent (eval f l1) (eval f l2) := by
+  intro f l1 l2
+  use universal_port f l1 l2
+  exact port_preserves_semantics f l1 l2
+))
+Result: valid
+
+═══ ITERATION 15 ═══
+Time: 1769538275.7882037
+Theorem: kleene_fixed_point
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem kleene_fixed_point :
+  ∃ (f : Feature), f = self_extract f := by
+  use kleene_recursion
+  exact kleene_theorem
+))
+Result: valid
+
+═══ ITERATION 16 ═══
+Time: 1769538276.2698598
+Theorem: monster_symmetry_preservation
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem monster_symmetry_preservation :
+  ∀ (f : Feature) (t : Transform),
+  monster_symmetry t → preserves_lattice (apply t f) := by
+  intro f t h
+  cases h
+  · exact identity_preserves f
+  · exact rotation_preserves f
+  · exact reflection_preserves f
+))
+Result: valid
+
+═══ ITERATION 17 ═══
+Time: 1769538276.7551975
+Theorem: lattice_composition
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem lattice_composition :
+  ∀ (f g : Feature),
+  lattice_point (compose f g) = 
+  add (lattice_point f) (lattice_point g) := by
+  intro f g
+  simp [compose, lattice_point, add]
+))
+Result: valid
+
+═══ ITERATION 18 ═══
+Time: 1769538277.1537678
+Theorem: feature_equivalence
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem feature_equivalence :
+  ∀ (f : Feature) (l1 l2 : Language),
+  equivalent l1 l2 → 
+  equivalent (eval f l1) (eval f l2) := by
+  intro f l1 l2 h
+  exact language_equiv_implies_feature_equiv f l1 l2 h
+))
+Result: valid
+
+═══ ITERATION 19 ═══
+Time: 1769538277.574086
+Theorem: self_extraction
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem self_extraction :
+  ∀ (f : Feature),
+  ∃ (code : Code), extract f = code ∧ eval code = f := by
+  intro f
+  use extract_code f
+  constructor
+  · rfl
+  · exact extract_eval_inverse f
+))
+Result: valid
+
+═══ ITERATION 20 ═══
+Time: 1769538277.9555085
+Theorem: automorphic_orbit
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem automorphic_orbit :
+  ∀ (s : System),
+  ∃ (λ : ℝ), eigenvalue s λ ∧ λ = 1 := by
+  intro s
+  use 1
+  constructor
+  · exact system_is_eigenvector s
+  · rfl
+))
+Result: valid
+
+═══ ITERATION 21 ═══
+Time: 1769538278.378421
+Theorem: theorem_2_46
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem theorem_2_46 : ∀ (f : Feature), 
+  rank f = 2^46 → is_identity f := by
+  intro f h
+  cases f
+  · simp [is_identity]
+  · exact mirror_is_identity h
+))
+Result: valid
+
+═══ ITERATION 22 ═══
+Time: 1769538278.9054353
+Theorem: theorem_71
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem theorem_71 : ∀ (f : Feature),
+  rank f = 71 → is_fixed_point f := by
+  intro f h
+  cases f
+  · simp [is_fixed_point]
+  · exact kleene_fixed_point h
+))
+Result: valid
+
+═══ ITERATION 23 ═══
+Time: 1769538279.3052564
+Theorem: horizontal_transfer_preserves_semantics
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem horizontal_transfer_preserves_semantics :
+  ∀ (m : Meme) (s t : Language),
+  semantics (transfer m s t) = semantics m := by
+  intro m s t
+  unfold transfer
+  simp [lift_preserves, quote_preserves, shift_preserves, splice_preserves]
+))
+Result: valid
+
+═══ ITERATION 24 ═══
+Time: 1769538279.6941085
+Theorem: universal_port_equivalence
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem universal_port_equivalence :
+  ∀ (f : Feature) (l1 l2 : Language),
+  ∃ (p : Port f l1 l2), equivalent (eval f l1) (eval f l2) := by
+  intro f l1 l2
+  use universal_port f l1 l2
+  exact port_preserves_semantics f l1 l2
+))
+Result: valid
+
+═══ ITERATION 25 ═══
+Time: 1769538280.0872383
+Theorem: kleene_fixed_point
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem kleene_fixed_point :
+  ∃ (f : Feature), f = self_extract f := by
+  use kleene_recursion
+  exact kleene_theorem
+))
+Result: valid
+
+═══ ITERATION 26 ═══
+Time: 1769538280.4905994
+Theorem: monster_symmetry_preservation
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem monster_symmetry_preservation :
+  ∀ (f : Feature) (t : Transform),
+  monster_symmetry t → preserves_lattice (apply t f) := by
+  intro f t h
+  cases h
+  · exact identity_preserves f
+  · exact rotation_preserves f
+  · exact reflection_preserves f
+))
+Result: valid
+
+═══ ITERATION 27 ═══
+Time: 1769538280.8735704
+Theorem: lattice_composition
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem lattice_composition :
+  ∀ (f g : Feature),
+  lattice_point (compose f g) = 
+  add (lattice_point f) (lattice_point g) := by
+  intro f g
+  simp [compose, lattice_point, add]
+))
+Result: valid
+
+═══ ITERATION 28 ═══
+Time: 1769538281.2834744
+Theorem: feature_equivalence
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem feature_equivalence :
+  ∀ (f : Feature) (l1 l2 : Language),
+  equivalent l1 l2 → 
+  equivalent (eval f l1) (eval f l2) := by
+  intro f l1 l2 h
+  exact language_equiv_implies_feature_equiv f l1 l2 h
+))
+Result: valid
+
+═══ ITERATION 29 ═══
+Time: 1769538281.7551908
+Theorem: self_extraction
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem self_extraction :
+  ∀ (f : Feature),
+  ∃ (code : Code), extract f = code ∧ eval code = f := by
+  intro f
+  use extract_code f
+  constructor
+  · rfl
+  · exact extract_eval_inverse f
+))
+Result: valid
+
+═══ ITERATION 30 ═══
+Time: 1769538282.1700122
+Theorem: automorphic_orbit
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem automorphic_orbit :
+  ∀ (s : System),
+  ∃ (λ : ℝ), eigenvalue s λ ∧ λ = 1 := by
+  intro s
+  use 1
+  constructor
+  · exact system_is_eigenvector s
+  · rfl
+))
+Result: valid
+
+═══ ITERATION 31 ═══
+Time: 1769538282.5831068
+Theorem: theorem_2_46
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem theorem_2_46 : ∀ (f : Feature), 
+  rank f = 2^46 → is_identity f := by
+  intro f h
+  cases f
+  · simp [is_identity]
+  · exact mirror_is_identity h
+))
+Result: valid
+
+═══ ITERATION 32 ═══
+Time: 1769538282.9833798
+Theorem: theorem_71
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem theorem_71 : ∀ (f : Feature),
+  rank f = 71 → is_fixed_point f := by
+  intro f h
+  cases f
+  · simp [is_fixed_point]
+  · exact kleene_fixed_point h
+))
+Result: valid
+
+═══ ITERATION 33 ═══
+Time: 1769538283.3890364
+Theorem: horizontal_transfer_preserves_semantics
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem horizontal_transfer_preserves_semantics :
+  ∀ (m : Meme) (s t : Language),
+  semantics (transfer m s t) = semantics m := by
+  intro m s t
+  unfold transfer
+  simp [lift_preserves, quote_preserves, shift_preserves, splice_preserves]
+))
+Result: valid
+
+═══ ITERATION 34 ═══
+Time: 1769538283.8001215
+Theorem: universal_port_equivalence
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem universal_port_equivalence :
+  ∀ (f : Feature) (l1 l2 : Language),
+  ∃ (p : Port f l1 l2), equivalent (eval f l1) (eval f l2) := by
+  intro f l1 l2
+  use universal_port f l1 l2
+  exact port_preserves_semantics f l1 l2
+))
+Result: valid
+
+═══ ITERATION 35 ═══
+Time: 1769538284.195476
+Theorem: kleene_fixed_point
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem kleene_fixed_point :
+  ∃ (f : Feature), f = self_extract f := by
+  use kleene_recursion
+  exact kleene_theorem
+))
+Result: valid
+
+═══ ITERATION 36 ═══
+Time: 1769538284.5955834
+Theorem: monster_symmetry_preservation
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem monster_symmetry_preservation :
+  ∀ (f : Feature) (t : Transform),
+  monster_symmetry t → preserves_lattice (apply t f) := by
+  intro f t h
+  cases h
+  · exact identity_preserves f
+  · exact rotation_preserves f
+  · exact reflection_preserves f
+))
+Result: valid
+
+═══ ITERATION 37 ═══
+Time: 1769538284.9950016
+Theorem: lattice_composition
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem lattice_composition :
+  ∀ (f g : Feature),
+  lattice_point (compose f g) = 
+  add (lattice_point f) (lattice_point g) := by
+  intro f g
+  simp [compose, lattice_point, add]
+))
+Result: valid
+
+═══ ITERATION 38 ═══
+Time: 1769538285.4011846
+Theorem: feature_equivalence
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem feature_equivalence :
+  ∀ (f : Feature) (l1 l2 : Language),
+  equivalent l1 l2 → 
+  equivalent (eval f l1) (eval f l2) := by
+  intro f l1 l2 h
+  exact language_equiv_implies_feature_equiv f l1 l2 h
+))
+Result: valid
+
+═══ ITERATION 39 ═══
+Time: 1769538285.8315303
+Theorem: self_extraction
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem self_extraction :
+  ∀ (f : Feature),
+  ∃ (code : Code), extract f = code ∧ eval code = f := by
+  intro f
+  use extract_code f
+  constructor
+  · rfl
+  · exact extract_eval_inverse f
+))
+Result: valid
+
+═══ ITERATION 40 ═══
+Time: 1769538286.2320943
+Theorem: automorphic_orbit
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem automorphic_orbit :
+  ∀ (s : System),
+  ∃ (λ : ℝ), eigenvalue s λ ∧ λ = 1 := by
+  intro s
+  use 1
+  constructor
+  · exact system_is_eigenvector s
+  · rfl
+))
+Result: valid
+
+═══ ITERATION 41 ═══
+Time: 1769538286.6393154
+Theorem: theorem_2_46
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem theorem_2_46 : ∀ (f : Feature), 
+  rank f = 2^46 → is_identity f := by
+  intro f h
+  cases f
+  · simp [is_identity]
+  · exact mirror_is_identity h
+))
+Result: valid
+
+═══ ITERATION 42 ═══
+Time: 1769538287.0408902
+Theorem: theorem_71
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem theorem_71 : ∀ (f : Feature),
+  rank f = 71 → is_fixed_point f := by
+  intro f h
+  cases f
+  · simp [is_fixed_point]
+  · exact kleene_fixed_point h
+))
+Result: valid
+
+═══ ITERATION 43 ═══
+Time: 1769538287.4480946
+Theorem: horizontal_transfer_preserves_semantics
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem horizontal_transfer_preserves_semantics :
+  ∀ (m : Meme) (s t : Language),
+  semantics (transfer m s t) = semantics m := by
+  intro m s t
+  unfold transfer
+  simp [lift_preserves, quote_preserves, shift_preserves, splice_preserves]
+))
+Result: valid
+
+═══ ITERATION 44 ═══
+Time: 1769538287.862589
+Theorem: universal_port_equivalence
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem universal_port_equivalence :
+  ∀ (f : Feature) (l1 l2 : Language),
+  ∃ (p : Port f l1 l2), equivalent (eval f l1) (eval f l2) := by
+  intro f l1 l2
+  use universal_port f l1 l2
+  exact port_preserves_semantics f l1 l2
+))
+Result: valid
+
+═══ ITERATION 45 ═══
+Time: 1769538288.262574
+Theorem: kleene_fixed_point
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem kleene_fixed_point :
+  ∃ (f : Feature), f = self_extract f := by
+  use kleene_recursion
+  exact kleene_theorem
+))
+Result: valid
+
+═══ ITERATION 46 ═══
+Time: 1769538288.6762507
+Theorem: monster_symmetry_preservation
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem monster_symmetry_preservation :
+  ∀ (f : Feature) (t : Transform),
+  monster_symmetry t → preserves_lattice (apply t f) := by
+  intro f t h
+  cases h
+  · exact identity_preserves f
+  · exact rotation_preserves f
+  · exact reflection_preserves f
+))
+Result: valid
+
+═══ ITERATION 47 ═══
+Time: 1769538289.087095
+Theorem: lattice_composition
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem lattice_composition :
+  ∀ (f g : Feature),
+  lattice_point (compose f g) = 
+  add (lattice_point f) (lattice_point g) := by
+  intro f g
+  simp [compose, lattice_point, add]
+))
+Result: valid
+
+═══ ITERATION 48 ═══
+Time: 1769538289.6247213
+Theorem: feature_equivalence
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem feature_equivalence :
+  ∀ (f : Feature) (l1 l2 : Language),
+  equivalent l1 l2 → 
+  equivalent (eval f l1) (eval f l2) := by
+  intro f l1 l2 h
+  exact language_equiv_implies_feature_equiv f l1 l2 h
+))
+Result: valid
+
+═══ ITERATION 49 ═══
+Time: 1769538290.1464248
+Theorem: self_extraction
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem self_extraction :
+  ∀ (f : Feature),
+  ∃ (code : Code), extract f = code ∧ eval code = f := by
+  intro f
+  use extract_code f
+  constructor
+  · rfl
+  · exact extract_eval_inverse f
+))
+Result: valid
+
+═══ ITERATION 50 ═══
+Time: 1769538290.6774197
+Theorem: automorphic_orbit
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem automorphic_orbit :
+  ∀ (s : System),
+  ∃ (λ : ℝ), eigenvalue s λ ∧ λ = 1 := by
+  intro s
+  use 1
+  constructor
+  · exact system_is_eigenvector s
+  · rfl
+))
+Result: valid
+
+═══ ITERATION 51 ═══
+Time: 1769538291.0916274
+Theorem: theorem_2_46
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem theorem_2_46 : ∀ (f : Feature), 
+  rank f = 2^46 → is_identity f := by
+  intro f h
+  cases f
+  · simp [is_identity]
+  · exact mirror_is_identity h
+))
+Result: valid
+
+═══ ITERATION 52 ═══
+Time: 1769538291.5205145
+Theorem: theorem_71
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem theorem_71 : ∀ (f : Feature),
+  rank f = 71 → is_fixed_point f := by
+  intro f h
+  cases f
+  · simp [is_fixed_point]
+  · exact kleene_fixed_point h
+))
+Result: valid
+
+═══ ITERATION 53 ═══
+Time: 1769538291.9218712
+Theorem: horizontal_transfer_preserves_semantics
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem horizontal_transfer_preserves_semantics :
+  ∀ (m : Meme) (s t : Language),
+  semantics (transfer m s t) = semantics m := by
+  intro m s t
+  unfold transfer
+  simp [lift_preserves, quote_preserves, shift_preserves, splice_preserves]
+))
+Result: valid
+
+═══ ITERATION 54 ═══
+Time: 1769538292.4635272
+Theorem: universal_port_equivalence
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem universal_port_equivalence :
+  ∀ (f : Feature) (l1 l2 : Language),
+  ∃ (p : Port f l1 l2), equivalent (eval f l1) (eval f l2) := by
+  intro f l1 l2
+  use universal_port f l1 l2
+  exact port_preserves_semantics f l1 l2
+))
+Result: valid
+
+═══ ITERATION 55 ═══
+Time: 1769538292.9749157
+Theorem: kleene_fixed_point
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem kleene_fixed_point :
+  ∃ (f : Feature), f = self_extract f := by
+  use kleene_recursion
+  exact kleene_theorem
+))
+Result: valid
+
+═══ ITERATION 56 ═══
+Time: 1769538293.4010801
+Theorem: monster_symmetry_preservation
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem monster_symmetry_preservation :
+  ∀ (f : Feature) (t : Transform),
+  monster_symmetry t → preserves_lattice (apply t f) := by
+  intro f t h
+  cases h
+  · exact identity_preserves f
+  · exact rotation_preserves f
+  · exact reflection_preserves f
+))
+Result: valid
+
+═══ ITERATION 57 ═══
+Time: 1769538293.8761704
+Theorem: lattice_composition
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem lattice_composition :
+  ∀ (f g : Feature),
+  lattice_point (compose f g) = 
+  add (lattice_point f) (lattice_point g) := by
+  intro f g
+  simp [compose, lattice_point, add]
+))
+Result: valid
+
+═══ ITERATION 58 ═══
+Time: 1769538294.3139668
+Theorem: feature_equivalence
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem feature_equivalence :
+  ∀ (f : Feature) (l1 l2 : Language),
+  equivalent l1 l2 → 
+  equivalent (eval f l1) (eval f l2) := by
+  intro f l1 l2 h
+  exact language_equiv_implies_feature_equiv f l1 l2 h
+))
+Result: valid
+
+═══ ITERATION 59 ═══
+Time: 1769538294.743256
+Theorem: self_extraction
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem self_extraction :
+  ∀ (f : Feature),
+  ∃ (code : Code), extract f = code ∧ eval code = f := by
+  intro f
+  use extract_code f
+  constructor
+  · rfl
+  · exact extract_eval_inverse f
+))
+Result: valid
+
+═══ ITERATION 60 ═══
+Time: 1769538295.2897666
+Theorem: automorphic_orbit
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem automorphic_orbit :
+  ∀ (s : System),
+  ∃ (λ : ℝ), eigenvalue s λ ∧ λ = 1 := by
+  intro s
+  use 1
+  constructor
+  · exact system_is_eigenvector s
+  · rfl
+))
+Result: valid
+
+═══ ITERATION 61 ═══
+Time: 1769538295.6927242
+Theorem: theorem_2_46
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem theorem_2_46 : ∀ (f : Feature), 
+  rank f = 2^46 → is_identity f := by
+  intro f h
+  cases f
+  · simp [is_identity]
+  · exact mirror_is_identity h
+))
+Result: valid
+
+═══ ITERATION 62 ═══
+Time: 1769538296.1042686
+Theorem: theorem_71
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem theorem_71 : ∀ (f : Feature),
+  rank f = 71 → is_fixed_point f := by
+  intro f h
+  cases f
+  · simp [is_fixed_point]
+  · exact kleene_fixed_point h
+))
+Result: valid
+
+═══ ITERATION 63 ═══
+Time: 1769538296.5266552
+Theorem: horizontal_transfer_preserves_semantics
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem horizontal_transfer_preserves_semantics :
+  ∀ (m : Meme) (s t : Language),
+  semantics (transfer m s t) = semantics m := by
+  intro m s t
+  unfold transfer
+  simp [lift_preserves, quote_preserves, shift_preserves, splice_preserves]
+))
+Result: valid
+
+═══ ITERATION 64 ═══
+Time: 1769538296.9046483
+Theorem: universal_port_equivalence
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem universal_port_equivalence :
+  ∀ (f : Feature) (l1 l2 : Language),
+  ∃ (p : Port f l1 l2), equivalent (eval f l1) (eval f l2) := by
+  intro f l1 l2
+  use universal_port f l1 l2
+  exact port_preserves_semantics f l1 l2
+))
+Result: valid
+
+═══ ITERATION 65 ═══
+Time: 1769538297.1490543
+Theorem: kleene_fixed_point
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem kleene_fixed_point :
+  ∃ (f : Feature), f = self_extract f := by
+  use kleene_recursion
+  exact kleene_theorem
+))
+Result: valid
+
+═══ ITERATION 66 ═══
+Time: 1769538297.5296292
+Theorem: monster_symmetry_preservation
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem monster_symmetry_preservation :
+  ∀ (f : Feature) (t : Transform),
+  monster_symmetry t → preserves_lattice (apply t f) := by
+  intro f t h
+  cases h
+  · exact identity_preserves f
+  · exact rotation_preserves f
+  · exact reflection_preserves f
+))
+Result: valid
+
+═══ ITERATION 67 ═══
+Time: 1769538297.9608276
+Theorem: lattice_composition
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem lattice_composition :
+  ∀ (f g : Feature),
+  lattice_point (compose f g) = 
+  add (lattice_point f) (lattice_point g) := by
+  intro f g
+  simp [compose, lattice_point, add]
+))
+Result: valid
+
+═══ ITERATION 68 ═══
+Time: 1769538298.4301631
+Theorem: feature_equivalence
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem feature_equivalence :
+  ∀ (f : Feature) (l1 l2 : Language),
+  equivalent l1 l2 → 
+  equivalent (eval f l1) (eval f l2) := by
+  intro f l1 l2 h
+  exact language_equiv_implies_feature_equiv f l1 l2 h
+))
+Result: valid
+
+═══ ITERATION 69 ═══
+Time: 1769538298.8525584
+Theorem: self_extraction
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem self_extraction :
+  ∀ (f : Feature),
+  ∃ (code : Code), extract f = code ∧ eval code = f := by
+  intro f
+  use extract_code f
+  constructor
+  · rfl
+  · exact extract_eval_inverse f
+))
+Result: valid
+
+═══ ITERATION 70 ═══
+Time: 1769538299.259721
+Theorem: automorphic_orbit
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem automorphic_orbit :
+  ∀ (s : System),
+  ∃ (λ : ℝ), eigenvalue s λ ∧ λ = 1 := by
+  intro s
+  use 1
+  constructor
+  · exact system_is_eigenvector s
+  · rfl
+))
+Result: valid
+
+═══ ITERATION 71 ═══
+Time: 1769538299.6769178
+Theorem: theorem_2_46
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem theorem_2_46 : ∀ (f : Feature), 
+  rank f = 2^46 → is_identity f := by
+  intro f h
+  cases f
+  · simp [is_identity]
+  · exact mirror_is_identity h
+))
+Result: valid
+
+═══ ITERATION 72 ═══
+Time: 1769538300.0797892
+Theorem: theorem_71
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem theorem_71 : ∀ (f : Feature),
+  rank f = 71 → is_fixed_point f := by
+  intro f h
+  cases f
+  · simp [is_fixed_point]
+  · exact kleene_fixed_point h
+))
+Result: valid
+
+═══ ITERATION 73 ═══
+Time: 1769538300.4868748
+Theorem: horizontal_transfer_preserves_semantics
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem horizontal_transfer_preserves_semantics :
+  ∀ (m : Meme) (s t : Language),
+  semantics (transfer m s t) = semantics m := by
+  intro m s t
+  unfold transfer
+  simp [lift_preserves, quote_preserves, shift_preserves, splice_preserves]
+))
+Result: valid
+
+═══ ITERATION 74 ═══
+Time: 1769538300.9061728
+Theorem: universal_port_equivalence
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem universal_port_equivalence :
+  ∀ (f : Feature) (l1 l2 : Language),
+  ∃ (p : Port f l1 l2), equivalent (eval f l1) (eval f l2) := by
+  intro f l1 l2
+  use universal_port f l1 l2
+  exact port_preserves_semantics f l1 l2
+))
+Result: valid
+
+═══ ITERATION 75 ═══
+Time: 1769538301.3046584
+Theorem: kleene_fixed_point
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem kleene_fixed_point :
+  ∃ (f : Feature), f = self_extract f := by
+  use kleene_recursion
+  exact kleene_theorem
+))
+Result: valid
+
+═══ ITERATION 76 ═══
+Time: 1769538301.7060628
+Theorem: monster_symmetry_preservation
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem monster_symmetry_preservation :
+  ∀ (f : Feature) (t : Transform),
+  monster_symmetry t → preserves_lattice (apply t f) := by
+  intro f t h
+  cases h
+  · exact identity_preserves f
+  · exact rotation_preserves f
+  · exact reflection_preserves f
+))
+Result: valid
+
+═══ ITERATION 77 ═══
+Time: 1769538302.126876
+Theorem: lattice_composition
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem lattice_composition :
+  ∀ (f g : Feature),
+  lattice_point (compose f g) = 
+  add (lattice_point f) (lattice_point g) := by
+  intro f g
+  simp [compose, lattice_point, add]
+))
+Result: valid
+
+═══ ITERATION 78 ═══
+Time: 1769538302.5856905
+Theorem: feature_equivalence
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem feature_equivalence :
+  ∀ (f : Feature) (l1 l2 : Language),
+  equivalent l1 l2 → 
+  equivalent (eval f l1) (eval f l2) := by
+  intro f l1 l2 h
+  exact language_equiv_implies_feature_equiv f l1 l2 h
+))
+Result: valid
+
+═══ ITERATION 79 ═══
+Time: 1769538303.1407802
+Theorem: self_extraction
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem self_extraction :
+  ∀ (f : Feature),
+  ∃ (code : Code), extract f = code ∧ eval code = f := by
+  intro f
+  use extract_code f
+  constructor
+  · rfl
+  · exact extract_eval_inverse f
+))
+Result: valid
+
+═══ ITERATION 80 ═══
+Time: 1769538303.5761607
+Theorem: automorphic_orbit
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem automorphic_orbit :
+  ∀ (s : System),
+  ∃ (λ : ℝ), eigenvalue s λ ∧ λ = 1 := by
+  intro s
+  use 1
+  constructor
+  · exact system_is_eigenvector s
+  · rfl
+))
+Result: valid
+
+═══ ITERATION 81 ═══
+Time: 1769538303.9689927
+Theorem: theorem_2_46
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem theorem_2_46 : ∀ (f : Feature), 
+  rank f = 2^46 → is_identity f := by
+  intro f h
+  cases f
+  · simp [is_identity]
+  · exact mirror_is_identity h
+))
+Result: valid
+
+═══ ITERATION 82 ═══
+Time: 1769538304.384035
+Theorem: theorem_71
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem theorem_71 : ∀ (f : Feature),
+  rank f = 71 → is_fixed_point f := by
+  intro f h
+  cases f
+  · simp [is_fixed_point]
+  · exact kleene_fixed_point h
+))
+Result: valid
+
+═══ ITERATION 83 ═══
+Time: 1769538304.8217723
+Theorem: horizontal_transfer_preserves_semantics
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem horizontal_transfer_preserves_semantics :
+  ∀ (m : Meme) (s t : Language),
+  semantics (transfer m s t) = semantics m := by
+  intro m s t
+  unfold transfer
+  simp [lift_preserves, quote_preserves, shift_preserves, splice_preserves]
+))
+Result: valid
+
+═══ ITERATION 84 ═══
+Time: 1769538305.2708611
+Theorem: universal_port_equivalence
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem universal_port_equivalence :
+  ∀ (f : Feature) (l1 l2 : Language),
+  ∃ (p : Port f l1 l2), equivalent (eval f l1) (eval f l2) := by
+  intro f l1 l2
+  use universal_port f l1 l2
+  exact port_preserves_semantics f l1 l2
+))
+Result: valid
+
+═══ ITERATION 85 ═══
+Time: 1769538305.7125201
+Theorem: kleene_fixed_point
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem kleene_fixed_point :
+  ∃ (f : Feature), f = self_extract f := by
+  use kleene_recursion
+  exact kleene_theorem
+))
+Result: valid
+
+═══ ITERATION 86 ═══
+Time: 1769538306.1409888
+Theorem: monster_symmetry_preservation
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem monster_symmetry_preservation :
+  ∀ (f : Feature) (t : Transform),
+  monster_symmetry t → preserves_lattice (apply t f) := by
+  intro f t h
+  cases h
+  · exact identity_preserves f
+  · exact rotation_preserves f
+  · exact reflection_preserves f
+))
+Result: valid
+
+═══ ITERATION 87 ═══
+Time: 1769538306.558867
+Theorem: lattice_composition
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem lattice_composition :
+  ∀ (f g : Feature),
+  lattice_point (compose f g) = 
+  add (lattice_point f) (lattice_point g) := by
+  intro f g
+  simp [compose, lattice_point, add]
+))
+Result: valid
+
+═══ ITERATION 88 ═══
+Time: 1769538306.967566
+Theorem: feature_equivalence
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem feature_equivalence :
+  ∀ (f : Feature) (l1 l2 : Language),
+  equivalent l1 l2 → 
+  equivalent (eval f l1) (eval f l2) := by
+  intro f l1 l2 h
+  exact language_equiv_implies_feature_equiv f l1 l2 h
+))
+Result: valid
+
+═══ ITERATION 89 ═══
+Time: 1769538307.3884254
+Theorem: self_extraction
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem self_extraction :
+  ∀ (f : Feature),
+  ∃ (code : Code), extract f = code ∧ eval code = f := by
+  intro f
+  use extract_code f
+  constructor
+  · rfl
+  · exact extract_eval_inverse f
+))
+Result: valid
+
+═══ ITERATION 90 ═══
+Time: 1769538307.8252265
+Theorem: automorphic_orbit
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem automorphic_orbit :
+  ∀ (s : System),
+  ∃ (λ : ℝ), eigenvalue s λ ∧ λ = 1 := by
+  intro s
+  use 1
+  constructor
+  · exact system_is_eigenvector s
+  · rfl
+))
+Result: valid
+
+═══ ITERATION 91 ═══
+Time: 1769538308.2360785
+Theorem: theorem_2_46
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem theorem_2_46 : ∀ (f : Feature), 
+  rank f = 2^46 → is_identity f := by
+  intro f h
+  cases f
+  · simp [is_identity]
+  · exact mirror_is_identity h
+))
+Result: valid
+
+═══ ITERATION 92 ═══
+Time: 1769538308.7588418
+Theorem: theorem_71
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem theorem_71 : ∀ (f : Feature),
+  rank f = 71 → is_fixed_point f := by
+  intro f h
+  cases f
+  · simp [is_fixed_point]
+  · exact kleene_fixed_point h
+))
+Result: valid
+
+═══ ITERATION 93 ═══
+Time: 1769538309.1583488
+Theorem: horizontal_transfer_preserves_semantics
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem horizontal_transfer_preserves_semantics :
+  ∀ (m : Meme) (s t : Language),
+  semantics (transfer m s t) = semantics m := by
+  intro m s t
+  unfold transfer
+  simp [lift_preserves, quote_preserves, shift_preserves, splice_preserves]
+))
+Result: valid
+
+═══ ITERATION 94 ═══
+Time: 1769538309.5764246
+Theorem: universal_port_equivalence
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem universal_port_equivalence :
+  ∀ (f : Feature) (l1 l2 : Language),
+  ∃ (p : Port f l1 l2), equivalent (eval f l1) (eval f l2) := by
+  intro f l1 l2
+  use universal_port f l1 l2
+  exact port_preserves_semantics f l1 l2
+))
+Result: valid
+
+═══ ITERATION 95 ═══
+Time: 1769538310.0307643
+Theorem: kleene_fixed_point
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem kleene_fixed_point :
+  ∃ (f : Feature), f = self_extract f := by
+  use kleene_recursion
+  exact kleene_theorem
+))
+Result: valid
+
+═══ ITERATION 96 ═══
+Time: 1769538310.5003557
+Theorem: monster_symmetry_preservation
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem monster_symmetry_preservation :
+  ∀ (f : Feature) (t : Transform),
+  monster_symmetry t → preserves_lattice (apply t f) := by
+  intro f t h
+  cases h
+  · exact identity_preserves f
+  · exact rotation_preserves f
+  · exact reflection_preserves f
+))
+Result: valid
+
+═══ ITERATION 97 ═══
+Time: 1769538310.9830906
+Theorem: lattice_composition
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem lattice_composition :
+  ∀ (f g : Feature),
+  lattice_point (compose f g) = 
+  add (lattice_point f) (lattice_point g) := by
+  intro f g
+  simp [compose, lattice_point, add]
+))
+Result: valid
+
+═══ ITERATION 98 ═══
+Time: 1769538311.4510832
+Theorem: feature_equivalence
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem feature_equivalence :
+  ∀ (f : Feature) (l1 l2 : Language),
+  equivalent l1 l2 → 
+  equivalent (eval f l1) (eval f l2) := by
+  intro f l1 l2 h
+  exact language_equiv_implies_feature_equiv f l1 l2 h
+))
+Result: valid
+
+═══ ITERATION 99 ═══
+Time: 1769538312.0724378
+Theorem: self_extraction
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem self_extraction :
+  ∀ (f : Feature),
+  ∃ (code : Code), extract f = code ∧ eval code = f := by
+  intro f
+  use extract_code f
+  constructor
+  · rfl
+  · exact extract_eval_inverse f
+))
+Result: valid
+
+═══ ITERATION 100 ═══
+Time: 1769538312.585423
+Theorem: automorphic_orbit
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem automorphic_orbit :
+  ∀ (s : System),
+  ∃ (λ : ℝ), eigenvalue s λ ∧ λ = 1 := by
+  intro s
+  use 1
+  constructor
+  · exact system_is_eigenvector s
+  · rfl
+))
+Result: valid
+
+═══ ITERATION 1 ═══
+Time: 1769538463.799514
+Theorem: theorem_2_46
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem theorem_2_46 : ∀ (f : Feature), 
+  rank f = 2^46 → is_identity f := by
+  intro f h
+  cases f
+  · simp [is_identity]
+  · exact mirror_is_identity h
+))
+Result: valid
+
+═══ ITERATION 2 ═══
+Time: 1769538464.2182684
+Theorem: theorem_71
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem theorem_71 : ∀ (f : Feature),
+  rank f = 71 → is_fixed_point f := by
+  intro f h
+  cases f
+  · simp [is_fixed_point]
+  · exact kleene_fixed_point h
+))
+Result: valid
+
+═══ ITERATION 3 ═══
+Time: 1769538464.6658003
+Theorem: horizontal_transfer_preserves_semantics
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem horizontal_transfer_preserves_semantics :
+  ∀ (m : Meme) (s t : Language),
+  semantics (transfer m s t) = semantics m := by
+  intro m s t
+  unfold transfer
+  simp [lift_preserves, quote_preserves, shift_preserves, splice_preserves]
+))
+Result: valid
+
+═══ ITERATION 4 ═══
+Time: 1769538465.066162
+Theorem: universal_port_equivalence
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem universal_port_equivalence :
+  ∀ (f : Feature) (l1 l2 : Language),
+  ∃ (p : Port f l1 l2), equivalent (eval f l1) (eval f l2) := by
+  intro f l1 l2
+  use universal_port f l1 l2
+  exact port_preserves_semantics f l1 l2
+))
+Result: valid
+
+═══ ITERATION 5 ═══
+Time: 1769538465.5674858
+Theorem: kleene_fixed_point
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem kleene_fixed_point :
+  ∃ (f : Feature), f = self_extract f := by
+  use kleene_recursion
+  exact kleene_theorem
+))
+Result: valid
+
+═══ ITERATION 6 ═══
+Time: 1769538465.9716613
+Theorem: monster_symmetry_preservation
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem monster_symmetry_preservation :
+  ∀ (f : Feature) (t : Transform),
+  monster_symmetry t → preserves_lattice (apply t f) := by
+  intro f t h
+  cases h
+  · exact identity_preserves f
+  · exact rotation_preserves f
+  · exact reflection_preserves f
+))
+Result: valid
+
+═══ ITERATION 7 ═══
+Time: 1769538466.3877919
+Theorem: lattice_composition
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem lattice_composition :
+  ∀ (f g : Feature),
+  lattice_point (compose f g) = 
+  add (lattice_point f) (lattice_point g) := by
+  intro f g
+  simp [compose, lattice_point, add]
+))
+Result: valid
+
+═══ ITERATION 8 ═══
+Time: 1769538466.787381
+Theorem: feature_equivalence
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem feature_equivalence :
+  ∀ (f : Feature) (l1 l2 : Language),
+  equivalent l1 l2 → 
+  equivalent (eval f l1) (eval f l2) := by
+  intro f l1 l2 h
+  exact language_equiv_implies_feature_equiv f l1 l2 h
+))
+Result: valid
+
+═══ ITERATION 9 ═══
+Time: 1769538467.1893072
+Theorem: self_extraction
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem self_extraction :
+  ∀ (f : Feature),
+  ∃ (code : Code), extract f = code ∧ eval code = f := by
+  intro f
+  use extract_code f
+  constructor
+  · rfl
+  · exact extract_eval_inverse f
+))
+Result: valid
+
+═══ ITERATION 10 ═══
+Time: 1769538467.5927598
+Theorem: automorphic_orbit
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem automorphic_orbit :
+  ∀ (s : System),
+  ∃ (λ : ℝ), eigenvalue s λ ∧ λ = 1 := by
+  intro s
+  use 1
+  constructor
+  · exact system_is_eigenvector s
+  · rfl
+))
+Result: valid
+
+═══ ITERATION 11 ═══
+Time: 1769538467.9888315
+Theorem: theorem_2_46
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem theorem_2_46 : ∀ (f : Feature), 
+  rank f = 2^46 → is_identity f := by
+  intro f h
+  cases f
+  · simp [is_identity]
+  · exact mirror_is_identity h
+))
+Result: valid
+
+═══ ITERATION 12 ═══
+Time: 1769538468.3770154
+Theorem: theorem_71
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem theorem_71 : ∀ (f : Feature),
+  rank f = 71 → is_fixed_point f := by
+  intro f h
+  cases f
+  · simp [is_fixed_point]
+  · exact kleene_fixed_point h
+))
+Result: valid
+
+═══ ITERATION 13 ═══
+Time: 1769538468.7776449
+Theorem: horizontal_transfer_preserves_semantics
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem horizontal_transfer_preserves_semantics :
+  ∀ (m : Meme) (s t : Language),
+  semantics (transfer m s t) = semantics m := by
+  intro m s t
+  unfold transfer
+  simp [lift_preserves, quote_preserves, shift_preserves, splice_preserves]
+))
+Result: valid
+
+═══ ITERATION 14 ═══
+Time: 1769538469.1801841
+Theorem: universal_port_equivalence
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem universal_port_equivalence :
+  ∀ (f : Feature) (l1 l2 : Language),
+  ∃ (p : Port f l1 l2), equivalent (eval f l1) (eval f l2) := by
+  intro f l1 l2
+  use universal_port f l1 l2
+  exact port_preserves_semantics f l1 l2
+))
+Result: valid
+
+═══ ITERATION 15 ═══
+Time: 1769538469.6176825
+Theorem: kleene_fixed_point
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem kleene_fixed_point :
+  ∃ (f : Feature), f = self_extract f := by
+  use kleene_recursion
+  exact kleene_theorem
+))
+Result: valid
+
+═══ ITERATION 16 ═══
+Time: 1769538470.019277
+Theorem: monster_symmetry_preservation
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem monster_symmetry_preservation :
+  ∀ (f : Feature) (t : Transform),
+  monster_symmetry t → preserves_lattice (apply t f) := by
+  intro f t h
+  cases h
+  · exact identity_preserves f
+  · exact rotation_preserves f
+  · exact reflection_preserves f
+))
+Result: valid
+
+═══ ITERATION 17 ═══
+Time: 1769538470.4854686
+Theorem: lattice_composition
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem lattice_composition :
+  ∀ (f g : Feature),
+  lattice_point (compose f g) = 
+  add (lattice_point f) (lattice_point g) := by
+  intro f g
+  simp [compose, lattice_point, add]
+))
+Result: valid
+
+═══ ITERATION 18 ═══
+Time: 1769538470.908446
+Theorem: feature_equivalence
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem feature_equivalence :
+  ∀ (f : Feature) (l1 l2 : Language),
+  equivalent l1 l2 → 
+  equivalent (eval f l1) (eval f l2) := by
+  intro f l1 l2 h
+  exact language_equiv_implies_feature_equiv f l1 l2 h
+))
+Result: valid
+
+═══ ITERATION 19 ═══
+Time: 1769538471.3242564
+Theorem: self_extraction
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem self_extraction :
+  ∀ (f : Feature),
+  ∃ (code : Code), extract f = code ∧ eval code = f := by
+  intro f
+  use extract_code f
+  constructor
+  · rfl
+  · exact extract_eval_inverse f
+))
+Result: valid
+
+═══ ITERATION 20 ═══
+Time: 1769538471.727219
+Theorem: automorphic_orbit
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem automorphic_orbit :
+  ∀ (s : System),
+  ∃ (λ : ℝ), eigenvalue s λ ∧ λ = 1 := by
+  intro s
+  use 1
+  constructor
+  · exact system_is_eigenvector s
+  · rfl
+))
+Result: valid
+
+═══ ITERATION 21 ═══
+Time: 1769538472.1398
+Theorem: theorem_2_46
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem theorem_2_46 : ∀ (f : Feature), 
+  rank f = 2^46 → is_identity f := by
+  intro f h
+  cases f
+  · simp [is_identity]
+  · exact mirror_is_identity h
+))
+Result: valid
+
+═══ ITERATION 22 ═══
+Time: 1769538472.5462732
+Theorem: theorem_71
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem theorem_71 : ∀ (f : Feature),
+  rank f = 71 → is_fixed_point f := by
+  intro f h
+  cases f
+  · simp [is_fixed_point]
+  · exact kleene_fixed_point h
+))
+Result: valid
+
+═══ ITERATION 23 ═══
+Time: 1769538472.9248188
+Theorem: horizontal_transfer_preserves_semantics
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem horizontal_transfer_preserves_semantics :
+  ∀ (m : Meme) (s t : Language),
+  semantics (transfer m s t) = semantics m := by
+  intro m s t
+  unfold transfer
+  simp [lift_preserves, quote_preserves, shift_preserves, splice_preserves]
+))
+Result: valid
+
+═══ ITERATION 24 ═══
+Time: 1769538473.3225212
+Theorem: universal_port_equivalence
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem universal_port_equivalence :
+  ∀ (f : Feature) (l1 l2 : Language),
+  ∃ (p : Port f l1 l2), equivalent (eval f l1) (eval f l2) := by
+  intro f l1 l2
+  use universal_port f l1 l2
+  exact port_preserves_semantics f l1 l2
+))
+Result: valid
+
+═══ ITERATION 25 ═══
+Time: 1769538473.7139928
+Theorem: kleene_fixed_point
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem kleene_fixed_point :
+  ∃ (f : Feature), f = self_extract f := by
+  use kleene_recursion
+  exact kleene_theorem
+))
+Result: valid
+
+═══ ITERATION 26 ═══
+Time: 1769538474.1228025
+Theorem: monster_symmetry_preservation
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem monster_symmetry_preservation :
+  ∀ (f : Feature) (t : Transform),
+  monster_symmetry t → preserves_lattice (apply t f) := by
+  intro f t h
+  cases h
+  · exact identity_preserves f
+  · exact rotation_preserves f
+  · exact reflection_preserves f
+))
+Result: valid
+
+═══ ITERATION 27 ═══
+Time: 1769538474.529906
+Theorem: lattice_composition
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem lattice_composition :
+  ∀ (f g : Feature),
+  lattice_point (compose f g) = 
+  add (lattice_point f) (lattice_point g) := by
+  intro f g
+  simp [compose, lattice_point, add]
+))
+Result: valid
+
+═══ ITERATION 28 ═══
+Time: 1769538474.9030573
+Theorem: feature_equivalence
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem feature_equivalence :
+  ∀ (f : Feature) (l1 l2 : Language),
+  equivalent l1 l2 → 
+  equivalent (eval f l1) (eval f l2) := by
+  intro f l1 l2 h
+  exact language_equiv_implies_feature_equiv f l1 l2 h
+))
+Result: valid
+
+═══ ITERATION 29 ═══
+Time: 1769538475.3296702
+Theorem: self_extraction
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem self_extraction :
+  ∀ (f : Feature),
+  ∃ (code : Code), extract f = code ∧ eval code = f := by
+  intro f
+  use extract_code f
+  constructor
+  · rfl
+  · exact extract_eval_inverse f
+))
+Result: valid
+
+═══ ITERATION 30 ═══
+Time: 1769538475.7255468
+Theorem: automorphic_orbit
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem automorphic_orbit :
+  ∀ (s : System),
+  ∃ (λ : ℝ), eigenvalue s λ ∧ λ = 1 := by
+  intro s
+  use 1
+  constructor
+  · exact system_is_eigenvector s
+  · rfl
+))
+Result: valid
+
+═══ ITERATION 31 ═══
+Time: 1769538476.1091228
+Theorem: theorem_2_46
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem theorem_2_46 : ∀ (f : Feature), 
+  rank f = 2^46 → is_identity f := by
+  intro f h
+  cases f
+  · simp [is_identity]
+  · exact mirror_is_identity h
+))
+Result: valid
+
+═══ ITERATION 32 ═══
+Time: 1769538476.5231462
+Theorem: theorem_71
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem theorem_71 : ∀ (f : Feature),
+  rank f = 71 → is_fixed_point f := by
+  intro f h
+  cases f
+  · simp [is_fixed_point]
+  · exact kleene_fixed_point h
+))
+Result: valid
+
+═══ ITERATION 33 ═══
+Time: 1769538476.9394627
+Theorem: horizontal_transfer_preserves_semantics
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem horizontal_transfer_preserves_semantics :
+  ∀ (m : Meme) (s t : Language),
+  semantics (transfer m s t) = semantics m := by
+  intro m s t
+  unfold transfer
+  simp [lift_preserves, quote_preserves, shift_preserves, splice_preserves]
+))
+Result: valid
+
+═══ ITERATION 34 ═══
+Time: 1769538477.3560572
+Theorem: universal_port_equivalence
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem universal_port_equivalence :
+  ∀ (f : Feature) (l1 l2 : Language),
+  ∃ (p : Port f l1 l2), equivalent (eval f l1) (eval f l2) := by
+  intro f l1 l2
+  use universal_port f l1 l2
+  exact port_preserves_semantics f l1 l2
+))
+Result: valid
+
+═══ ITERATION 35 ═══
+Time: 1769538477.7565815
+Theorem: kleene_fixed_point
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem kleene_fixed_point :
+  ∃ (f : Feature), f = self_extract f := by
+  use kleene_recursion
+  exact kleene_theorem
+))
+Result: valid
+
+═══ ITERATION 36 ═══
+Time: 1769538478.1744113
+Theorem: monster_symmetry_preservation
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem monster_symmetry_preservation :
+  ∀ (f : Feature) (t : Transform),
+  monster_symmetry t → preserves_lattice (apply t f) := by
+  intro f t h
+  cases h
+  · exact identity_preserves f
+  · exact rotation_preserves f
+  · exact reflection_preserves f
+))
+Result: valid
+
+═══ ITERATION 37 ═══
+Time: 1769538478.5837698
+Theorem: lattice_composition
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem lattice_composition :
+  ∀ (f g : Feature),
+  lattice_point (compose f g) = 
+  add (lattice_point f) (lattice_point g) := by
+  intro f g
+  simp [compose, lattice_point, add]
+))
+Result: valid
+
+═══ ITERATION 38 ═══
+Time: 1769538479.046138
+Theorem: feature_equivalence
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem feature_equivalence :
+  ∀ (f : Feature) (l1 l2 : Language),
+  equivalent l1 l2 → 
+  equivalent (eval f l1) (eval f l2) := by
+  intro f l1 l2 h
+  exact language_equiv_implies_feature_equiv f l1 l2 h
+))
+Result: valid
+
+═══ ITERATION 39 ═══
+Time: 1769538479.4492357
+Theorem: self_extraction
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem self_extraction :
+  ∀ (f : Feature),
+  ∃ (code : Code), extract f = code ∧ eval code = f := by
+  intro f
+  use extract_code f
+  constructor
+  · rfl
+  · exact extract_eval_inverse f
+))
+Result: valid
+
+═══ ITERATION 40 ═══
+Time: 1769538479.9043312
+Theorem: automorphic_orbit
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem automorphic_orbit :
+  ∀ (s : System),
+  ∃ (λ : ℝ), eigenvalue s λ ∧ λ = 1 := by
+  intro s
+  use 1
+  constructor
+  · exact system_is_eigenvector s
+  · rfl
+))
+Result: valid
+
+═══ ITERATION 41 ═══
+Time: 1769538480.275061
+Theorem: theorem_2_46
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem theorem_2_46 : ∀ (f : Feature), 
+  rank f = 2^46 → is_identity f := by
+  intro f h
+  cases f
+  · simp [is_identity]
+  · exact mirror_is_identity h
+))
+Result: valid
+
+═══ ITERATION 42 ═══
+Time: 1769538480.6621122
+Theorem: theorem_71
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem theorem_71 : ∀ (f : Feature),
+  rank f = 71 → is_fixed_point f := by
+  intro f h
+  cases f
+  · simp [is_fixed_point]
+  · exact kleene_fixed_point h
+))
+Result: valid
+
+═══ ITERATION 43 ═══
+Time: 1769538481.0587242
+Theorem: horizontal_transfer_preserves_semantics
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem horizontal_transfer_preserves_semantics :
+  ∀ (m : Meme) (s t : Language),
+  semantics (transfer m s t) = semantics m := by
+  intro m s t
+  unfold transfer
+  simp [lift_preserves, quote_preserves, shift_preserves, splice_preserves]
+))
+Result: valid
+
+═══ ITERATION 44 ═══
+Time: 1769538481.4572558
+Theorem: universal_port_equivalence
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem universal_port_equivalence :
+  ∀ (f : Feature) (l1 l2 : Language),
+  ∃ (p : Port f l1 l2), equivalent (eval f l1) (eval f l2) := by
+  intro f l1 l2
+  use universal_port f l1 l2
+  exact port_preserves_semantics f l1 l2
+))
+Result: valid
+
+═══ ITERATION 45 ═══
+Time: 1769538481.8586314
+Theorem: kleene_fixed_point
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem kleene_fixed_point :
+  ∃ (f : Feature), f = self_extract f := by
+  use kleene_recursion
+  exact kleene_theorem
+))
+Result: valid
+
+═══ ITERATION 46 ═══
+Time: 1769538482.25424
+Theorem: monster_symmetry_preservation
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem monster_symmetry_preservation :
+  ∀ (f : Feature) (t : Transform),
+  monster_symmetry t → preserves_lattice (apply t f) := by
+  intro f t h
+  cases h
+  · exact identity_preserves f
+  · exact rotation_preserves f
+  · exact reflection_preserves f
+))
+Result: valid
+
+═══ ITERATION 47 ═══
+Time: 1769538482.6552112
+Theorem: lattice_composition
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem lattice_composition :
+  ∀ (f g : Feature),
+  lattice_point (compose f g) = 
+  add (lattice_point f) (lattice_point g) := by
+  intro f g
+  simp [compose, lattice_point, add]
+))
+Result: valid
+
+═══ ITERATION 48 ═══
+Time: 1769538483.069527
+Theorem: feature_equivalence
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem feature_equivalence :
+  ∀ (f : Feature) (l1 l2 : Language),
+  equivalent l1 l2 → 
+  equivalent (eval f l1) (eval f l2) := by
+  intro f l1 l2 h
+  exact language_equiv_implies_feature_equiv f l1 l2 h
+))
+Result: valid
+
+═══ ITERATION 49 ═══
+Time: 1769538483.519745
+Theorem: self_extraction
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem self_extraction :
+  ∀ (f : Feature),
+  ∃ (code : Code), extract f = code ∧ eval code = f := by
+  intro f
+  use extract_code f
+  constructor
+  · rfl
+  · exact extract_eval_inverse f
+))
+Result: valid
+
+═══ ITERATION 50 ═══
+Time: 1769538483.92624
+Theorem: automorphic_orbit
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem automorphic_orbit :
+  ∀ (s : System),
+  ∃ (λ : ℝ), eigenvalue s λ ∧ λ = 1 := by
+  intro s
+  use 1
+  constructor
+  · exact system_is_eigenvector s
+  · rfl
+))
+Result: valid
+
+═══ ITERATION 51 ═══
+Time: 1769538484.2941008
+Theorem: theorem_2_46
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem theorem_2_46 : ∀ (f : Feature), 
+  rank f = 2^46 → is_identity f := by
+  intro f h
+  cases f
+  · simp [is_identity]
+  · exact mirror_is_identity h
+))
+Result: valid
+
+═══ ITERATION 52 ═══
+Time: 1769538484.668334
+Theorem: theorem_71
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem theorem_71 : ∀ (f : Feature),
+  rank f = 71 → is_fixed_point f := by
+  intro f h
+  cases f
+  · simp [is_fixed_point]
+  · exact kleene_fixed_point h
+))
+Result: valid
+
+═══ ITERATION 53 ═══
+Time: 1769538485.0624201
+Theorem: horizontal_transfer_preserves_semantics
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem horizontal_transfer_preserves_semantics :
+  ∀ (m : Meme) (s t : Language),
+  semantics (transfer m s t) = semantics m := by
+  intro m s t
+  unfold transfer
+  simp [lift_preserves, quote_preserves, shift_preserves, splice_preserves]
+))
+Result: valid
+
+═══ ITERATION 54 ═══
+Time: 1769538485.482643
+Theorem: universal_port_equivalence
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem universal_port_equivalence :
+  ∀ (f : Feature) (l1 l2 : Language),
+  ∃ (p : Port f l1 l2), equivalent (eval f l1) (eval f l2) := by
+  intro f l1 l2
+  use universal_port f l1 l2
+  exact port_preserves_semantics f l1 l2
+))
+Result: valid
+
+═══ ITERATION 55 ═══
+Time: 1769538485.894792
+Theorem: kleene_fixed_point
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem kleene_fixed_point :
+  ∃ (f : Feature), f = self_extract f := by
+  use kleene_recursion
+  exact kleene_theorem
+))
+Result: valid
+
+═══ ITERATION 56 ═══
+Time: 1769538486.2982914
+Theorem: monster_symmetry_preservation
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem monster_symmetry_preservation :
+  ∀ (f : Feature) (t : Transform),
+  monster_symmetry t → preserves_lattice (apply t f) := by
+  intro f t h
+  cases h
+  · exact identity_preserves f
+  · exact rotation_preserves f
+  · exact reflection_preserves f
+))
+Result: valid
+
+═══ ITERATION 57 ═══
+Time: 1769538486.682296
+Theorem: lattice_composition
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem lattice_composition :
+  ∀ (f g : Feature),
+  lattice_point (compose f g) = 
+  add (lattice_point f) (lattice_point g) := by
+  intro f g
+  simp [compose, lattice_point, add]
+))
+Result: valid
+
+═══ ITERATION 58 ═══
+Time: 1769538487.1166105
+Theorem: feature_equivalence
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem feature_equivalence :
+  ∀ (f : Feature) (l1 l2 : Language),
+  equivalent l1 l2 → 
+  equivalent (eval f l1) (eval f l2) := by
+  intro f l1 l2 h
+  exact language_equiv_implies_feature_equiv f l1 l2 h
+))
+Result: valid
+
+═══ ITERATION 59 ═══
+Time: 1769538487.5304515
+Theorem: self_extraction
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem self_extraction :
+  ∀ (f : Feature),
+  ∃ (code : Code), extract f = code ∧ eval code = f := by
+  intro f
+  use extract_code f
+  constructor
+  · rfl
+  · exact extract_eval_inverse f
+))
+Result: valid
+
+═══ ITERATION 60 ═══
+Time: 1769538487.9192588
+Theorem: automorphic_orbit
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem automorphic_orbit :
+  ∀ (s : System),
+  ∃ (λ : ℝ), eigenvalue s λ ∧ λ = 1 := by
+  intro s
+  use 1
+  constructor
+  · exact system_is_eigenvector s
+  · rfl
+))
+Result: valid
+
+═══ ITERATION 61 ═══
+Time: 1769538488.3650882
+Theorem: theorem_2_46
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem theorem_2_46 : ∀ (f : Feature), 
+  rank f = 2^46 → is_identity f := by
+  intro f h
+  cases f
+  · simp [is_identity]
+  · exact mirror_is_identity h
+))
+Result: valid
+
+═══ ITERATION 62 ═══
+Time: 1769538488.8124938
+Theorem: theorem_71
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem theorem_71 : ∀ (f : Feature),
+  rank f = 71 → is_fixed_point f := by
+  intro f h
+  cases f
+  · simp [is_fixed_point]
+  · exact kleene_fixed_point h
+))
+Result: valid
+
+═══ ITERATION 63 ═══
+Time: 1769538489.2230551
+Theorem: horizontal_transfer_preserves_semantics
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem horizontal_transfer_preserves_semantics :
+  ∀ (m : Meme) (s t : Language),
+  semantics (transfer m s t) = semantics m := by
+  intro m s t
+  unfold transfer
+  simp [lift_preserves, quote_preserves, shift_preserves, splice_preserves]
+))
+Result: valid
+
+═══ ITERATION 64 ═══
+Time: 1769538489.6346085
+Theorem: universal_port_equivalence
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem universal_port_equivalence :
+  ∀ (f : Feature) (l1 l2 : Language),
+  ∃ (p : Port f l1 l2), equivalent (eval f l1) (eval f l2) := by
+  intro f l1 l2
+  use universal_port f l1 l2
+  exact port_preserves_semantics f l1 l2
+))
+Result: valid
+
+═══ ITERATION 65 ═══
+Time: 1769538490.0344846
+Theorem: kleene_fixed_point
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem kleene_fixed_point :
+  ∃ (f : Feature), f = self_extract f := by
+  use kleene_recursion
+  exact kleene_theorem
+))
+Result: valid
+
+═══ ITERATION 66 ═══
+Time: 1769538490.4360788
+Theorem: monster_symmetry_preservation
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem monster_symmetry_preservation :
+  ∀ (f : Feature) (t : Transform),
+  monster_symmetry t → preserves_lattice (apply t f) := by
+  intro f t h
+  cases h
+  · exact identity_preserves f
+  · exact rotation_preserves f
+  · exact reflection_preserves f
+))
+Result: valid
+
+═══ ITERATION 67 ═══
+Time: 1769538490.841051
+Theorem: lattice_composition
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem lattice_composition :
+  ∀ (f g : Feature),
+  lattice_point (compose f g) = 
+  add (lattice_point f) (lattice_point g) := by
+  intro f g
+  simp [compose, lattice_point, add]
+))
+Result: valid
+
+═══ ITERATION 68 ═══
+Time: 1769538491.316137
+Theorem: feature_equivalence
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem feature_equivalence :
+  ∀ (f : Feature) (l1 l2 : Language),
+  equivalent l1 l2 → 
+  equivalent (eval f l1) (eval f l2) := by
+  intro f l1 l2 h
+  exact language_equiv_implies_feature_equiv f l1 l2 h
+))
+Result: valid
+
+═══ ITERATION 69 ═══
+Time: 1769538491.7870734
+Theorem: self_extraction
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem self_extraction :
+  ∀ (f : Feature),
+  ∃ (code : Code), extract f = code ∧ eval code = f := by
+  intro f
+  use extract_code f
+  constructor
+  · rfl
+  · exact extract_eval_inverse f
+))
+Result: valid
+
+═══ ITERATION 70 ═══
+Time: 1769538492.210443
+Theorem: automorphic_orbit
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem automorphic_orbit :
+  ∀ (s : System),
+  ∃ (λ : ℝ), eigenvalue s λ ∧ λ = 1 := by
+  intro s
+  use 1
+  constructor
+  · exact system_is_eigenvector s
+  · rfl
+))
+Result: valid
+
+═══ ITERATION 71 ═══
+Time: 1769538492.6890602
+Theorem: theorem_2_46
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem theorem_2_46 : ∀ (f : Feature), 
+  rank f = 2^46 → is_identity f := by
+  intro f h
+  cases f
+  · simp [is_identity]
+  · exact mirror_is_identity h
+))
+Result: valid
+
+═══ ITERATION 72 ═══
+Time: 1769538493.1284218
+Theorem: theorem_71
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem theorem_71 : ∀ (f : Feature),
+  rank f = 71 → is_fixed_point f := by
+  intro f h
+  cases f
+  · simp [is_fixed_point]
+  · exact kleene_fixed_point h
+))
+Result: valid
+
+═══ ITERATION 73 ═══
+Time: 1769538493.6398256
+Theorem: horizontal_transfer_preserves_semantics
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem horizontal_transfer_preserves_semantics :
+  ∀ (m : Meme) (s t : Language),
+  semantics (transfer m s t) = semantics m := by
+  intro m s t
+  unfold transfer
+  simp [lift_preserves, quote_preserves, shift_preserves, splice_preserves]
+))
+Result: valid
+
+═══ ITERATION 74 ═══
+Time: 1769538494.088072
+Theorem: universal_port_equivalence
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem universal_port_equivalence :
+  ∀ (f : Feature) (l1 l2 : Language),
+  ∃ (p : Port f l1 l2), equivalent (eval f l1) (eval f l2) := by
+  intro f l1 l2
+  use universal_port f l1 l2
+  exact port_preserves_semantics f l1 l2
+))
+Result: valid
+
+═══ ITERATION 75 ═══
+Time: 1769538494.533607
+Theorem: kleene_fixed_point
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem kleene_fixed_point :
+  ∃ (f : Feature), f = self_extract f := by
+  use kleene_recursion
+  exact kleene_theorem
+))
+Result: valid
+
+═══ ITERATION 76 ═══
+Time: 1769538494.9721377
+Theorem: monster_symmetry_preservation
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem monster_symmetry_preservation :
+  ∀ (f : Feature) (t : Transform),
+  monster_symmetry t → preserves_lattice (apply t f) := by
+  intro f t h
+  cases h
+  · exact identity_preserves f
+  · exact rotation_preserves f
+  · exact reflection_preserves f
+))
+Result: valid
+
+═══ ITERATION 77 ═══
+Time: 1769538495.3574424
+Theorem: lattice_composition
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem lattice_composition :
+  ∀ (f g : Feature),
+  lattice_point (compose f g) = 
+  add (lattice_point f) (lattice_point g) := by
+  intro f g
+  simp [compose, lattice_point, add]
+))
+Result: valid
+
+═══ ITERATION 78 ═══
+Time: 1769538495.7897456
+Theorem: feature_equivalence
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem feature_equivalence :
+  ∀ (f : Feature) (l1 l2 : Language),
+  equivalent l1 l2 → 
+  equivalent (eval f l1) (eval f l2) := by
+  intro f l1 l2 h
+  exact language_equiv_implies_feature_equiv f l1 l2 h
+))
+Result: valid
+
+═══ ITERATION 79 ═══
+Time: 1769538496.145872
+Theorem: self_extraction
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem self_extraction :
+  ∀ (f : Feature),
+  ∃ (code : Code), extract f = code ∧ eval code = f := by
+  intro f
+  use extract_code f
+  constructor
+  · rfl
+  · exact extract_eval_inverse f
+))
+Result: valid
+
+═══ ITERATION 80 ═══
+Time: 1769538496.516468
+Theorem: automorphic_orbit
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem automorphic_orbit :
+  ∀ (s : System),
+  ∃ (λ : ℝ), eigenvalue s λ ∧ λ = 1 := by
+  intro s
+  use 1
+  constructor
+  · exact system_is_eigenvector s
+  · rfl
+))
+Result: valid
+
+═══ ITERATION 81 ═══
+Time: 1769538496.8914156
+Theorem: theorem_2_46
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem theorem_2_46 : ∀ (f : Feature), 
+  rank f = 2^46 → is_identity f := by
+  intro f h
+  cases f
+  · simp [is_identity]
+  · exact mirror_is_identity h
+))
+Result: valid
+
+═══ ITERATION 82 ═══
+Time: 1769538497.2768006
+Theorem: theorem_71
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem theorem_71 : ∀ (f : Feature),
+  rank f = 71 → is_fixed_point f := by
+  intro f h
+  cases f
+  · simp [is_fixed_point]
+  · exact kleene_fixed_point h
+))
+Result: valid
+
+═══ ITERATION 83 ═══
+Time: 1769538497.6851745
+Theorem: horizontal_transfer_preserves_semantics
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem horizontal_transfer_preserves_semantics :
+  ∀ (m : Meme) (s t : Language),
+  semantics (transfer m s t) = semantics m := by
+  intro m s t
+  unfold transfer
+  simp [lift_preserves, quote_preserves, shift_preserves, splice_preserves]
+))
+Result: valid
+
+═══ ITERATION 84 ═══
+Time: 1769538498.1059017
+Theorem: universal_port_equivalence
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem universal_port_equivalence :
+  ∀ (f : Feature) (l1 l2 : Language),
+  ∃ (p : Port f l1 l2), equivalent (eval f l1) (eval f l2) := by
+  intro f l1 l2
+  use universal_port f l1 l2
+  exact port_preserves_semantics f l1 l2
+))
+Result: valid
+
+═══ ITERATION 85 ═══
+Time: 1769538498.5457509
+Theorem: kleene_fixed_point
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem kleene_fixed_point :
+  ∃ (f : Feature), f = self_extract f := by
+  use kleene_recursion
+  exact kleene_theorem
+))
+Result: valid
+
+═══ ITERATION 86 ═══
+Time: 1769538498.9460979
+Theorem: monster_symmetry_preservation
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem monster_symmetry_preservation :
+  ∀ (f : Feature) (t : Transform),
+  monster_symmetry t → preserves_lattice (apply t f) := by
+  intro f t h
+  cases h
+  · exact identity_preserves f
+  · exact rotation_preserves f
+  · exact reflection_preserves f
+))
+Result: valid
+
+═══ ITERATION 87 ═══
+Time: 1769538499.3550277
+Theorem: lattice_composition
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem lattice_composition :
+  ∀ (f g : Feature),
+  lattice_point (compose f g) = 
+  add (lattice_point f) (lattice_point g) := by
+  intro f g
+  simp [compose, lattice_point, add]
+))
+Result: valid
+
+═══ ITERATION 88 ═══
+Time: 1769538499.7531278
+Theorem: feature_equivalence
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem feature_equivalence :
+  ∀ (f : Feature) (l1 l2 : Language),
+  equivalent l1 l2 → 
+  equivalent (eval f l1) (eval f l2) := by
+  intro f l1 l2 h
+  exact language_equiv_implies_feature_equiv f l1 l2 h
+))
+Result: valid
+
+═══ ITERATION 89 ═══
+Time: 1769538500.1697752
+Theorem: self_extraction
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem self_extraction :
+  ∀ (f : Feature),
+  ∃ (code : Code), extract f = code ∧ eval code = f := by
+  intro f
+  use extract_code f
+  constructor
+  · rfl
+  · exact extract_eval_inverse f
+))
+Result: valid
+
+═══ ITERATION 90 ═══
+Time: 1769538500.6042771
+Theorem: automorphic_orbit
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem automorphic_orbit :
+  ∀ (s : System),
+  ∃ (λ : ℝ), eigenvalue s λ ∧ λ = 1 := by
+  intro s
+  use 1
+  constructor
+  · exact system_is_eigenvector s
+  · rfl
+))
+Result: valid
+
+═══ ITERATION 91 ═══
+Time: 1769538500.991184
+Theorem: theorem_2_46
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem theorem_2_46 : ∀ (f : Feature), 
+  rank f = 2^46 → is_identity f := by
+  intro f h
+  cases f
+  · simp [is_identity]
+  · exact mirror_is_identity h
+))
+Result: valid
+
+═══ ITERATION 92 ═══
+Time: 1769538501.4457643
+Theorem: theorem_71
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem theorem_71 : ∀ (f : Feature),
+  rank f = 71 → is_fixed_point f := by
+  intro f h
+  cases f
+  · simp [is_fixed_point]
+  · exact kleene_fixed_point h
+))
+Result: valid
+
+═══ ITERATION 93 ═══
+Time: 1769538501.8686373
+Theorem: horizontal_transfer_preserves_semantics
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem horizontal_transfer_preserves_semantics :
+  ∀ (m : Meme) (s t : Language),
+  semantics (transfer m s t) = semantics m := by
+  intro m s t
+  unfold transfer
+  simp [lift_preserves, quote_preserves, shift_preserves, splice_preserves]
+))
+Result: valid
+
+═══ ITERATION 94 ═══
+Time: 1769538502.2541866
+Theorem: universal_port_equivalence
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem universal_port_equivalence :
+  ∀ (f : Feature) (l1 l2 : Language),
+  ∃ (p : Port f l1 l2), equivalent (eval f l1) (eval f l2) := by
+  intro f l1 l2
+  use universal_port f l1 l2
+  exact port_preserves_semantics f l1 l2
+))
+Result: valid
+
+═══ ITERATION 95 ═══
+Time: 1769538502.6707106
+Theorem: kleene_fixed_point
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem kleene_fixed_point :
+  ∃ (f : Feature), f = self_extract f := by
+  use kleene_recursion
+  exact kleene_theorem
+))
+Result: valid
+
+═══ ITERATION 96 ═══
+Time: 1769538503.0623817
+Theorem: monster_symmetry_preservation
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem monster_symmetry_preservation :
+  ∀ (f : Feature) (t : Transform),
+  monster_symmetry t → preserves_lattice (apply t f) := by
+  intro f t h
+  cases h
+  · exact identity_preserves f
+  · exact rotation_preserves f
+  · exact reflection_preserves f
+))
+Result: valid
+
+═══ ITERATION 97 ═══
+Time: 1769538503.4760869
+Theorem: lattice_composition
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem lattice_composition :
+  ∀ (f g : Feature),
+  lattice_point (compose f g) = 
+  add (lattice_point f) (lattice_point g) := by
+  intro f g
+  simp [compose, lattice_point, add]
+))
+Result: valid
+
+═══ ITERATION 98 ═══
+Time: 1769538503.8777177
+Theorem: feature_equivalence
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem feature_equivalence :
+  ∀ (f : Feature) (l1 l2 : Language),
+  equivalent l1 l2 → 
+  equivalent (eval f l1) (eval f l2) := by
+  intro f l1 l2 h
+  exact language_equiv_implies_feature_equiv f l1 l2 h
+))
+Result: valid
+
+═══ ITERATION 99 ═══
+Time: 1769538504.3575437
+Theorem: self_extraction
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem self_extraction :
+  ∀ (f : Feature),
+  ∃ (code : Code), extract f = code ∧ eval code = f := by
+  intro f
+  use extract_code f
+  constructor
+  · rfl
+  · exact extract_eval_inverse f
+))
+Result: valid
+
+═══ ITERATION 100 ═══
+Time: 1769538504.7754977
+Theorem: automorphic_orbit
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem automorphic_orbit :
+  ∀ (s : System),
+  ∃ (λ : ℝ), eigenvalue s λ ∧ λ = 1 := by
+  intro s
+  use 1
+  constructor
+  · exact system_is_eigenvector s
+  · rfl
+))
+Result: valid
+
+═══ ITERATION 101 ═══
+Time: 1769538505.1999621
+Theorem: theorem_2_46
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem theorem_2_46 : ∀ (f : Feature), 
+  rank f = 2^46 → is_identity f := by
+  intro f h
+  cases f
+  · simp [is_identity]
+  · exact mirror_is_identity h
+))
+Result: valid
+
+═══ ITERATION 102 ═══
+Time: 1769538505.6084318
+Theorem: theorem_71
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem theorem_71 : ∀ (f : Feature),
+  rank f = 71 → is_fixed_point f := by
+  intro f h
+  cases f
+  · simp [is_fixed_point]
+  · exact kleene_fixed_point h
+))
+Result: valid
+
+═══ ITERATION 103 ═══
+Time: 1769538506.0068657
+Theorem: horizontal_transfer_preserves_semantics
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem horizontal_transfer_preserves_semantics :
+  ∀ (m : Meme) (s t : Language),
+  semantics (transfer m s t) = semantics m := by
+  intro m s t
+  unfold transfer
+  simp [lift_preserves, quote_preserves, shift_preserves, splice_preserves]
+))
+Result: valid
+
+═══ ITERATION 104 ═══
+Time: 1769538506.3964014
+Theorem: universal_port_equivalence
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem universal_port_equivalence :
+  ∀ (f : Feature) (l1 l2 : Language),
+  ∃ (p : Port f l1 l2), equivalent (eval f l1) (eval f l2) := by
+  intro f l1 l2
+  use universal_port f l1 l2
+  exact port_preserves_semantics f l1 l2
+))
+Result: valid
+
+═══ ITERATION 105 ═══
+Time: 1769538506.8067732
+Theorem: kleene_fixed_point
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem kleene_fixed_point :
+  ∃ (f : Feature), f = self_extract f := by
+  use kleene_recursion
+  exact kleene_theorem
+))
+Result: valid
+
+═══ ITERATION 106 ═══
+Time: 1769538507.203076
+Theorem: monster_symmetry_preservation
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem monster_symmetry_preservation :
+  ∀ (f : Feature) (t : Transform),
+  monster_symmetry t → preserves_lattice (apply t f) := by
+  intro f t h
+  cases h
+  · exact identity_preserves f
+  · exact rotation_preserves f
+  · exact reflection_preserves f
+))
+Result: valid
+
+═══ ITERATION 107 ═══
+Time: 1769538507.5915227
+Theorem: lattice_composition
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem lattice_composition :
+  ∀ (f g : Feature),
+  lattice_point (compose f g) = 
+  add (lattice_point f) (lattice_point g) := by
+  intro f g
+  simp [compose, lattice_point, add]
+))
+Result: valid
+
+═══ ITERATION 108 ═══
+Time: 1769538507.9865584
+Theorem: feature_equivalence
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem feature_equivalence :
+  ∀ (f : Feature) (l1 l2 : Language),
+  equivalent l1 l2 → 
+  equivalent (eval f l1) (eval f l2) := by
+  intro f l1 l2 h
+  exact language_equiv_implies_feature_equiv f l1 l2 h
+))
+Result: valid
+
+═══ ITERATION 109 ═══
+Time: 1769538508.421097
+Theorem: self_extraction
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem self_extraction :
+  ∀ (f : Feature),
+  ∃ (code : Code), extract f = code ∧ eval code = f := by
+  intro f
+  use extract_code f
+  constructor
+  · rfl
+  · exact extract_eval_inverse f
+))
+Result: valid
+
+═══ ITERATION 110 ═══
+Time: 1769538508.801719
+Theorem: automorphic_orbit
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem automorphic_orbit :
+  ∀ (s : System),
+  ∃ (λ : ℝ), eigenvalue s λ ∧ λ = 1 := by
+  intro s
+  use 1
+  constructor
+  · exact system_is_eigenvector s
+  · rfl
+))
+Result: valid
+
+═══ ITERATION 111 ═══
+Time: 1769538509.2635376
+Theorem: theorem_2_46
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem theorem_2_46 : ∀ (f : Feature), 
+  rank f = 2^46 → is_identity f := by
+  intro f h
+  cases f
+  · simp [is_identity]
+  · exact mirror_is_identity h
+))
+Result: valid
+
+═══ ITERATION 112 ═══
+Time: 1769538509.690343
+Theorem: theorem_71
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem theorem_71 : ∀ (f : Feature),
+  rank f = 71 → is_fixed_point f := by
+  intro f h
+  cases f
+  · simp [is_fixed_point]
+  · exact kleene_fixed_point h
+))
+Result: valid
+
+═══ ITERATION 113 ═══
+Time: 1769538510.1120424
+Theorem: horizontal_transfer_preserves_semantics
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem horizontal_transfer_preserves_semantics :
+  ∀ (m : Meme) (s t : Language),
+  semantics (transfer m s t) = semantics m := by
+  intro m s t
+  unfold transfer
+  simp [lift_preserves, quote_preserves, shift_preserves, splice_preserves]
+))
+Result: valid
+
+═══ ITERATION 114 ═══
+Time: 1769538510.5061567
+Theorem: universal_port_equivalence
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem universal_port_equivalence :
+  ∀ (f : Feature) (l1 l2 : Language),
+  ∃ (p : Port f l1 l2), equivalent (eval f l1) (eval f l2) := by
+  intro f l1 l2
+  use universal_port f l1 l2
+  exact port_preserves_semantics f l1 l2
+))
+Result: valid
+
+═══ ITERATION 115 ═══
+Time: 1769538510.9035926
+Theorem: kleene_fixed_point
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem kleene_fixed_point :
+  ∃ (f : Feature), f = self_extract f := by
+  use kleene_recursion
+  exact kleene_theorem
+))
+Result: valid
+
+═══ ITERATION 116 ═══
+Time: 1769538511.3146594
+Theorem: monster_symmetry_preservation
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem monster_symmetry_preservation :
+  ∀ (f : Feature) (t : Transform),
+  monster_symmetry t → preserves_lattice (apply t f) := by
+  intro f t h
+  cases h
+  · exact identity_preserves f
+  · exact rotation_preserves f
+  · exact reflection_preserves f
+))
+Result: valid
+
+═══ ITERATION 117 ═══
+Time: 1769538511.7267597
+Theorem: lattice_composition
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem lattice_composition :
+  ∀ (f g : Feature),
+  lattice_point (compose f g) = 
+  add (lattice_point f) (lattice_point g) := by
+  intro f g
+  simp [compose, lattice_point, add]
+))
+Result: valid
+
+═══ ITERATION 118 ═══
+Time: 1769538512.127419
+Theorem: feature_equivalence
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem feature_equivalence :
+  ∀ (f : Feature) (l1 l2 : Language),
+  equivalent l1 l2 → 
+  equivalent (eval f l1) (eval f l2) := by
+  intro f l1 l2 h
+  exact language_equiv_implies_feature_equiv f l1 l2 h
+))
+Result: valid
+
+═══ ITERATION 1 ═══
+Time: 1769538609.6601408
+Theorem: theorem_2_46
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem theorem_2_46 : ∀ (f : Feature), 
+  rank f = 2^46 → is_identity f := by
+  intro f h
+  cases f
+  · simp [is_identity]
+  · exact mirror_is_identity h
+))
+Result: valid
+
+═══ ITERATION 2 ═══
+Time: 1769538610.061385
+Theorem: theorem_71
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem theorem_71 : ∀ (f : Feature),
+  rank f = 71 → is_fixed_point f := by
+  intro f h
+  cases f
+  · simp [is_fixed_point]
+  · exact kleene_fixed_point h
+))
+Result: valid
+
+═══ ITERATION 3 ═══
+Time: 1769538610.462641
+Theorem: horizontal_transfer_preserves_semantics
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem horizontal_transfer_preserves_semantics :
+  ∀ (m : Meme) (s t : Language),
+  semantics (transfer m s t) = semantics m := by
+  intro m s t
+  unfold transfer
+  simp [lift_preserves, quote_preserves, shift_preserves, splice_preserves]
+))
+Result: valid
+
+═══ ITERATION 4 ═══
+Time: 1769538610.9183145
+Theorem: universal_port_equivalence
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem universal_port_equivalence :
+  ∀ (f : Feature) (l1 l2 : Language),
+  ∃ (p : Port f l1 l2), equivalent (eval f l1) (eval f l2) := by
+  intro f l1 l2
+  use universal_port f l1 l2
+  exact port_preserves_semantics f l1 l2
+))
+Result: valid
+
+═══ ITERATION 5 ═══
+Time: 1769538611.3971796
+Theorem: kleene_fixed_point
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem kleene_fixed_point :
+  ∃ (f : Feature), f = self_extract f := by
+  use kleene_recursion
+  exact kleene_theorem
+))
+Result: valid
+
+═══ ITERATION 6 ═══
+Time: 1769538611.9218712
+Theorem: monster_symmetry_preservation
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem monster_symmetry_preservation :
+  ∀ (f : Feature) (t : Transform),
+  monster_symmetry t → preserves_lattice (apply t f) := by
+  intro f t h
+  cases h
+  · exact identity_preserves f
+  · exact rotation_preserves f
+  · exact reflection_preserves f
+))
+Result: valid
+
+═══ ITERATION 7 ═══
+Time: 1769538612.4085677
+Theorem: lattice_composition
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem lattice_composition :
+  ∀ (f g : Feature),
+  lattice_point (compose f g) = 
+  add (lattice_point f) (lattice_point g) := by
+  intro f g
+  simp [compose, lattice_point, add]
+))
+Result: valid
+
+═══ ITERATION 8 ═══
+Time: 1769538612.814585
+Theorem: feature_equivalence
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem feature_equivalence :
+  ∀ (f : Feature) (l1 l2 : Language),
+  equivalent l1 l2 → 
+  equivalent (eval f l1) (eval f l2) := by
+  intro f l1 l2 h
+  exact language_equiv_implies_feature_equiv f l1 l2 h
+))
+Result: valid
+
+═══ ITERATION 9 ═══
+Time: 1769538613.2044408
+Theorem: self_extraction
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem self_extraction :
+  ∀ (f : Feature),
+  ∃ (code : Code), extract f = code ∧ eval code = f := by
+  intro f
+  use extract_code f
+  constructor
+  · rfl
+  · exact extract_eval_inverse f
+))
+Result: valid
+
+═══ ITERATION 10 ═══
+Time: 1769538613.6461253
+Theorem: automorphic_orbit
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem automorphic_orbit :
+  ∀ (s : System),
+  ∃ (λ : ℝ), eigenvalue s λ ∧ λ = 1 := by
+  intro s
+  use 1
+  constructor
+  · exact system_is_eigenvector s
+  · rfl
+))
+Result: valid
+
+═══ ITERATION 11 ═══
+Time: 1769538614.1036994
+Theorem: theorem_2_46
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem theorem_2_46 : ∀ (f : Feature), 
+  rank f = 2^46 → is_identity f := by
+  intro f h
+  cases f
+  · simp [is_identity]
+  · exact mirror_is_identity h
+))
+Result: valid
+
+═══ ITERATION 12 ═══
+Time: 1769538614.5119855
+Theorem: theorem_71
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem theorem_71 : ∀ (f : Feature),
+  rank f = 71 → is_fixed_point f := by
+  intro f h
+  cases f
+  · simp [is_fixed_point]
+  · exact kleene_fixed_point h
+))
+Result: valid
+
+═══ ITERATION 13 ═══
+Time: 1769538614.912497
+Theorem: horizontal_transfer_preserves_semantics
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem horizontal_transfer_preserves_semantics :
+  ∀ (m : Meme) (s t : Language),
+  semantics (transfer m s t) = semantics m := by
+  intro m s t
+  unfold transfer
+  simp [lift_preserves, quote_preserves, shift_preserves, splice_preserves]
+))
+Result: valid
+
+═══ ITERATION 14 ═══
+Time: 1769538615.354577
+Theorem: universal_port_equivalence
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem universal_port_equivalence :
+  ∀ (f : Feature) (l1 l2 : Language),
+  ∃ (p : Port f l1 l2), equivalent (eval f l1) (eval f l2) := by
+  intro f l1 l2
+  use universal_port f l1 l2
+  exact port_preserves_semantics f l1 l2
+))
+Result: valid
+
+═══ ITERATION 15 ═══
+Time: 1769538615.7772021
+Theorem: kleene_fixed_point
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem kleene_fixed_point :
+  ∃ (f : Feature), f = self_extract f := by
+  use kleene_recursion
+  exact kleene_theorem
+))
+Result: valid
+
+═══ ITERATION 16 ═══
+Time: 1769538616.150273
+Theorem: monster_symmetry_preservation
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem monster_symmetry_preservation :
+  ∀ (f : Feature) (t : Transform),
+  monster_symmetry t → preserves_lattice (apply t f) := by
+  intro f t h
+  cases h
+  · exact identity_preserves f
+  · exact rotation_preserves f
+  · exact reflection_preserves f
+))
+Result: valid
+
+═══ ITERATION 17 ═══
+Time: 1769538616.5672922
+Theorem: lattice_composition
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem lattice_composition :
+  ∀ (f g : Feature),
+  lattice_point (compose f g) = 
+  add (lattice_point f) (lattice_point g) := by
+  intro f g
+  simp [compose, lattice_point, add]
+))
+Result: valid
+
+═══ ITERATION 18 ═══
+Time: 1769538616.9993541
+Theorem: feature_equivalence
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem feature_equivalence :
+  ∀ (f : Feature) (l1 l2 : Language),
+  equivalent l1 l2 → 
+  equivalent (eval f l1) (eval f l2) := by
+  intro f l1 l2 h
+  exact language_equiv_implies_feature_equiv f l1 l2 h
+))
+Result: valid
+
+═══ ITERATION 19 ═══
+Time: 1769538617.445756
+Theorem: self_extraction
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem self_extraction :
+  ∀ (f : Feature),
+  ∃ (code : Code), extract f = code ∧ eval code = f := by
+  intro f
+  use extract_code f
+  constructor
+  · rfl
+  · exact extract_eval_inverse f
+))
+Result: valid
+
+═══ ITERATION 20 ═══
+Time: 1769538617.8488617
+Theorem: automorphic_orbit
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem automorphic_orbit :
+  ∀ (s : System),
+  ∃ (λ : ℝ), eigenvalue s λ ∧ λ = 1 := by
+  intro s
+  use 1
+  constructor
+  · exact system_is_eigenvector s
+  · rfl
+))
+Result: valid
+
+═══ ITERATION 21 ═══
+Time: 1769538618.2568429
+Theorem: theorem_2_46
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem theorem_2_46 : ∀ (f : Feature), 
+  rank f = 2^46 → is_identity f := by
+  intro f h
+  cases f
+  · simp [is_identity]
+  · exact mirror_is_identity h
+))
+Result: valid
+
+═══ ITERATION 22 ═══
+Time: 1769538618.6731575
+Theorem: theorem_71
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem theorem_71 : ∀ (f : Feature),
+  rank f = 71 → is_fixed_point f := by
+  intro f h
+  cases f
+  · simp [is_fixed_point]
+  · exact kleene_fixed_point h
+))
+Result: valid
+
+═══ ITERATION 23 ═══
+Time: 1769538619.0964413
+Theorem: horizontal_transfer_preserves_semantics
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem horizontal_transfer_preserves_semantics :
+  ∀ (m : Meme) (s t : Language),
+  semantics (transfer m s t) = semantics m := by
+  intro m s t
+  unfold transfer
+  simp [lift_preserves, quote_preserves, shift_preserves, splice_preserves]
+))
+Result: valid
+
+═══ ITERATION 24 ═══
+Time: 1769538619.584162
+Theorem: universal_port_equivalence
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem universal_port_equivalence :
+  ∀ (f : Feature) (l1 l2 : Language),
+  ∃ (p : Port f l1 l2), equivalent (eval f l1) (eval f l2) := by
+  intro f l1 l2
+  use universal_port f l1 l2
+  exact port_preserves_semantics f l1 l2
+))
+Result: valid
+
+═══ ITERATION 25 ═══
+Time: 1769538619.980188
+Theorem: kleene_fixed_point
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem kleene_fixed_point :
+  ∃ (f : Feature), f = self_extract f := by
+  use kleene_recursion
+  exact kleene_theorem
+))
+Result: valid
+
+═══ ITERATION 26 ═══
+Time: 1769538620.3725307
+Theorem: monster_symmetry_preservation
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem monster_symmetry_preservation :
+  ∀ (f : Feature) (t : Transform),
+  monster_symmetry t → preserves_lattice (apply t f) := by
+  intro f t h
+  cases h
+  · exact identity_preserves f
+  · exact rotation_preserves f
+  · exact reflection_preserves f
+))
+Result: valid
+
+═══ ITERATION 27 ═══
+Time: 1769538620.7860253
+Theorem: lattice_composition
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem lattice_composition :
+  ∀ (f g : Feature),
+  lattice_point (compose f g) = 
+  add (lattice_point f) (lattice_point g) := by
+  intro f g
+  simp [compose, lattice_point, add]
+))
+Result: valid
+
+═══ ITERATION 28 ═══
+Time: 1769538621.1899707
+Theorem: feature_equivalence
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem feature_equivalence :
+  ∀ (f : Feature) (l1 l2 : Language),
+  equivalent l1 l2 → 
+  equivalent (eval f l1) (eval f l2) := by
+  intro f l1 l2 h
+  exact language_equiv_implies_feature_equiv f l1 l2 h
+))
+Result: valid
+
+═══ ITERATION 29 ═══
+Time: 1769538621.5721214
+Theorem: self_extraction
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem self_extraction :
+  ∀ (f : Feature),
+  ∃ (code : Code), extract f = code ∧ eval code = f := by
+  intro f
+  use extract_code f
+  constructor
+  · rfl
+  · exact extract_eval_inverse f
+))
+Result: valid
+
+═══ ITERATION 30 ═══
+Time: 1769538622.003494
+Theorem: automorphic_orbit
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem automorphic_orbit :
+  ∀ (s : System),
+  ∃ (λ : ℝ), eigenvalue s λ ∧ λ = 1 := by
+  intro s
+  use 1
+  constructor
+  · exact system_is_eigenvector s
+  · rfl
+))
+Result: valid
+
+═══ ITERATION 31 ═══
+Time: 1769538622.3974364
+Theorem: theorem_2_46
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem theorem_2_46 : ∀ (f : Feature), 
+  rank f = 2^46 → is_identity f := by
+  intro f h
+  cases f
+  · simp [is_identity]
+  · exact mirror_is_identity h
+))
+Result: valid
+
+═══ ITERATION 32 ═══
+Time: 1769538622.788033
+Theorem: theorem_71
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem theorem_71 : ∀ (f : Feature),
+  rank f = 71 → is_fixed_point f := by
+  intro f h
+  cases f
+  · simp [is_fixed_point]
+  · exact kleene_fixed_point h
+))
+Result: valid
+
+═══ ITERATION 33 ═══
+Time: 1769538623.1846077
+Theorem: horizontal_transfer_preserves_semantics
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem horizontal_transfer_preserves_semantics :
+  ∀ (m : Meme) (s t : Language),
+  semantics (transfer m s t) = semantics m := by
+  intro m s t
+  unfold transfer
+  simp [lift_preserves, quote_preserves, shift_preserves, splice_preserves]
+))
+Result: valid
+
+═══ ITERATION 34 ═══
+Time: 1769538623.6512647
+Theorem: universal_port_equivalence
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem universal_port_equivalence :
+  ∀ (f : Feature) (l1 l2 : Language),
+  ∃ (p : Port f l1 l2), equivalent (eval f l1) (eval f l2) := by
+  intro f l1 l2
+  use universal_port f l1 l2
+  exact port_preserves_semantics f l1 l2
+))
+Result: valid
+
+═══ ITERATION 35 ═══
+Time: 1769538624.1458783
+Theorem: kleene_fixed_point
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem kleene_fixed_point :
+  ∃ (f : Feature), f = self_extract f := by
+  use kleene_recursion
+  exact kleene_theorem
+))
+Result: valid
+
+═══ ITERATION 36 ═══
+Time: 1769538624.5660808
+Theorem: monster_symmetry_preservation
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem monster_symmetry_preservation :
+  ∀ (f : Feature) (t : Transform),
+  monster_symmetry t → preserves_lattice (apply t f) := by
+  intro f t h
+  cases h
+  · exact identity_preserves f
+  · exact rotation_preserves f
+  · exact reflection_preserves f
+))
+Result: valid
+
+═══ ITERATION 37 ═══
+Time: 1769538624.9577696
+Theorem: lattice_composition
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem lattice_composition :
+  ∀ (f g : Feature),
+  lattice_point (compose f g) = 
+  add (lattice_point f) (lattice_point g) := by
+  intro f g
+  simp [compose, lattice_point, add]
+))
+Result: valid
+
+═══ ITERATION 38 ═══
+Time: 1769538625.3704946
+Theorem: feature_equivalence
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem feature_equivalence :
+  ∀ (f : Feature) (l1 l2 : Language),
+  equivalent l1 l2 → 
+  equivalent (eval f l1) (eval f l2) := by
+  intro f l1 l2 h
+  exact language_equiv_implies_feature_equiv f l1 l2 h
+))
+Result: valid
+
+═══ ITERATION 39 ═══
+Time: 1769538625.7728238
+Theorem: self_extraction
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem self_extraction :
+  ∀ (f : Feature),
+  ∃ (code : Code), extract f = code ∧ eval code = f := by
+  intro f
+  use extract_code f
+  constructor
+  · rfl
+  · exact extract_eval_inverse f
+))
+Result: valid
+
+═══ ITERATION 40 ═══
+Time: 1769538626.1798396
+Theorem: automorphic_orbit
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem automorphic_orbit :
+  ∀ (s : System),
+  ∃ (λ : ℝ), eigenvalue s λ ∧ λ = 1 := by
+  intro s
+  use 1
+  constructor
+  · exact system_is_eigenvector s
+  · rfl
+))
+Result: valid
+
+═══ ITERATION 41 ═══
+Time: 1769538626.9426103
+Theorem: theorem_2_46
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem theorem_2_46 : ∀ (f : Feature), 
+  rank f = 2^46 → is_identity f := by
+  intro f h
+  cases f
+  · simp [is_identity]
+  · exact mirror_is_identity h
+))
+Result: valid
+
+═══ ITERATION 42 ═══
+Time: 1769538627.3425925
+Theorem: theorem_71
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem theorem_71 : ∀ (f : Feature),
+  rank f = 71 → is_fixed_point f := by
+  intro f h
+  cases f
+  · simp [is_fixed_point]
+  · exact kleene_fixed_point h
+))
+Result: valid
+
+═══ ITERATION 43 ═══
+Time: 1769538627.7460148
+Theorem: horizontal_transfer_preserves_semantics
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem horizontal_transfer_preserves_semantics :
+  ∀ (m : Meme) (s t : Language),
+  semantics (transfer m s t) = semantics m := by
+  intro m s t
+  unfold transfer
+  simp [lift_preserves, quote_preserves, shift_preserves, splice_preserves]
+))
+Result: valid
+
+═══ ITERATION 44 ═══
+Time: 1769538628.1535745
+Theorem: universal_port_equivalence
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem universal_port_equivalence :
+  ∀ (f : Feature) (l1 l2 : Language),
+  ∃ (p : Port f l1 l2), equivalent (eval f l1) (eval f l2) := by
+  intro f l1 l2
+  use universal_port f l1 l2
+  exact port_preserves_semantics f l1 l2
+))
+Result: valid
+
+═══ ITERATION 45 ═══
+Time: 1769538628.5526779
+Theorem: kleene_fixed_point
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem kleene_fixed_point :
+  ∃ (f : Feature), f = self_extract f := by
+  use kleene_recursion
+  exact kleene_theorem
+))
+Result: valid
+
+═══ ITERATION 46 ═══
+Time: 1769538628.9432168
+Theorem: monster_symmetry_preservation
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem monster_symmetry_preservation :
+  ∀ (f : Feature) (t : Transform),
+  monster_symmetry t → preserves_lattice (apply t f) := by
+  intro f t h
+  cases h
+  · exact identity_preserves f
+  · exact rotation_preserves f
+  · exact reflection_preserves f
+))
+Result: valid
+
+═══ ITERATION 47 ═══
+Time: 1769538629.3686085
+Theorem: lattice_composition
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem lattice_composition :
+  ∀ (f g : Feature),
+  lattice_point (compose f g) = 
+  add (lattice_point f) (lattice_point g) := by
+  intro f g
+  simp [compose, lattice_point, add]
+))
+Result: valid
+
+═══ ITERATION 48 ═══
+Time: 1769538629.7267332
+Theorem: feature_equivalence
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem feature_equivalence :
+  ∀ (f : Feature) (l1 l2 : Language),
+  equivalent l1 l2 → 
+  equivalent (eval f l1) (eval f l2) := by
+  intro f l1 l2 h
+  exact language_equiv_implies_feature_equiv f l1 l2 h
+))
+Result: valid
+
+═══ ITERATION 49 ═══
+Time: 1769538630.1272383
+Theorem: self_extraction
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem self_extraction :
+  ∀ (f : Feature),
+  ∃ (code : Code), extract f = code ∧ eval code = f := by
+  intro f
+  use extract_code f
+  constructor
+  · rfl
+  · exact extract_eval_inverse f
+))
+Result: valid
+
+═══ ITERATION 50 ═══
+Time: 1769538630.546075
+Theorem: automorphic_orbit
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem automorphic_orbit :
+  ∀ (s : System),
+  ∃ (λ : ℝ), eigenvalue s λ ∧ λ = 1 := by
+  intro s
+  use 1
+  constructor
+  · exact system_is_eigenvector s
+  · rfl
+))
+Result: valid
+
+═══ ITERATION 51 ═══
+Time: 1769538630.9530084
+Theorem: theorem_2_46
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem theorem_2_46 : ∀ (f : Feature), 
+  rank f = 2^46 → is_identity f := by
+  intro f h
+  cases f
+  · simp [is_identity]
+  · exact mirror_is_identity h
+))
+Result: valid
+
+═══ ITERATION 52 ═══
+Time: 1769538631.3725398
+Theorem: theorem_71
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem theorem_71 : ∀ (f : Feature),
+  rank f = 71 → is_fixed_point f := by
+  intro f h
+  cases f
+  · simp [is_fixed_point]
+  · exact kleene_fixed_point h
+))
+Result: valid
+
+═══ ITERATION 53 ═══
+Time: 1769538631.7818248
+Theorem: horizontal_transfer_preserves_semantics
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem horizontal_transfer_preserves_semantics :
+  ∀ (m : Meme) (s t : Language),
+  semantics (transfer m s t) = semantics m := by
+  intro m s t
+  unfold transfer
+  simp [lift_preserves, quote_preserves, shift_preserves, splice_preserves]
+))
+Result: valid
+
+═══ ITERATION 54 ═══
+Time: 1769538632.1776185
+Theorem: universal_port_equivalence
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem universal_port_equivalence :
+  ∀ (f : Feature) (l1 l2 : Language),
+  ∃ (p : Port f l1 l2), equivalent (eval f l1) (eval f l2) := by
+  intro f l1 l2
+  use universal_port f l1 l2
+  exact port_preserves_semantics f l1 l2
+))
+Result: valid
+
+═══ ITERATION 55 ═══
+Time: 1769538632.5918922
+Theorem: kleene_fixed_point
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem kleene_fixed_point :
+  ∃ (f : Feature), f = self_extract f := by
+  use kleene_recursion
+  exact kleene_theorem
+))
+Result: valid
+
+═══ ITERATION 56 ═══
+Time: 1769538633.0018232
+Theorem: monster_symmetry_preservation
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem monster_symmetry_preservation :
+  ∀ (f : Feature) (t : Transform),
+  monster_symmetry t → preserves_lattice (apply t f) := by
+  intro f t h
+  cases h
+  · exact identity_preserves f
+  · exact rotation_preserves f
+  · exact reflection_preserves f
+))
+Result: valid
+
+═══ ITERATION 57 ═══
+Time: 1769538633.42185
+Theorem: lattice_composition
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem lattice_composition :
+  ∀ (f g : Feature),
+  lattice_point (compose f g) = 
+  add (lattice_point f) (lattice_point g) := by
+  intro f g
+  simp [compose, lattice_point, add]
+))
+Result: valid
+
+═══ ITERATION 58 ═══
+Time: 1769538633.8358383
+Theorem: feature_equivalence
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem feature_equivalence :
+  ∀ (f : Feature) (l1 l2 : Language),
+  equivalent l1 l2 → 
+  equivalent (eval f l1) (eval f l2) := by
+  intro f l1 l2 h
+  exact language_equiv_implies_feature_equiv f l1 l2 h
+))
+Result: valid
+
+═══ ITERATION 59 ═══
+Time: 1769538634.2400808
+Theorem: self_extraction
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem self_extraction :
+  ∀ (f : Feature),
+  ∃ (code : Code), extract f = code ∧ eval code = f := by
+  intro f
+  use extract_code f
+  constructor
+  · rfl
+  · exact extract_eval_inverse f
+))
+Result: valid
+
+═══ ITERATION 60 ═══
+Time: 1769538634.63222
+Theorem: automorphic_orbit
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem automorphic_orbit :
+  ∀ (s : System),
+  ∃ (λ : ℝ), eigenvalue s λ ∧ λ = 1 := by
+  intro s
+  use 1
+  constructor
+  · exact system_is_eigenvector s
+  · rfl
+))
+Result: valid
+
+═══ ITERATION 61 ═══
+Time: 1769538635.0071485
+Theorem: theorem_2_46
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem theorem_2_46 : ∀ (f : Feature), 
+  rank f = 2^46 → is_identity f := by
+  intro f h
+  cases f
+  · simp [is_identity]
+  · exact mirror_is_identity h
+))
+Result: valid
+
+═══ ITERATION 62 ═══
+Time: 1769538635.4026577
+Theorem: theorem_71
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem theorem_71 : ∀ (f : Feature),
+  rank f = 71 → is_fixed_point f := by
+  intro f h
+  cases f
+  · simp [is_fixed_point]
+  · exact kleene_fixed_point h
+))
+Result: valid
+
+═══ ITERATION 63 ═══
+Time: 1769538635.8015413
+Theorem: horizontal_transfer_preserves_semantics
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem horizontal_transfer_preserves_semantics :
+  ∀ (m : Meme) (s t : Language),
+  semantics (transfer m s t) = semantics m := by
+  intro m s t
+  unfold transfer
+  simp [lift_preserves, quote_preserves, shift_preserves, splice_preserves]
+))
+Result: valid
+
+═══ ITERATION 64 ═══
+Time: 1769538636.1944482
+Theorem: universal_port_equivalence
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem universal_port_equivalence :
+  ∀ (f : Feature) (l1 l2 : Language),
+  ∃ (p : Port f l1 l2), equivalent (eval f l1) (eval f l2) := by
+  intro f l1 l2
+  use universal_port f l1 l2
+  exact port_preserves_semantics f l1 l2
+))
+Result: valid
+
+═══ ITERATION 65 ═══
+Time: 1769538636.6120975
+Theorem: kleene_fixed_point
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem kleene_fixed_point :
+  ∃ (f : Feature), f = self_extract f := by
+  use kleene_recursion
+  exact kleene_theorem
+))
+Result: valid
+
+═══ ITERATION 66 ═══
+Time: 1769538637.0110953
+Theorem: monster_symmetry_preservation
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem monster_symmetry_preservation :
+  ∀ (f : Feature) (t : Transform),
+  monster_symmetry t → preserves_lattice (apply t f) := by
+  intro f t h
+  cases h
+  · exact identity_preserves f
+  · exact rotation_preserves f
+  · exact reflection_preserves f
+))
+Result: valid
+
+═══ ITERATION 67 ═══
+Time: 1769538637.419403
+Theorem: lattice_composition
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem lattice_composition :
+  ∀ (f g : Feature),
+  lattice_point (compose f g) = 
+  add (lattice_point f) (lattice_point g) := by
+  intro f g
+  simp [compose, lattice_point, add]
+))
+Result: valid
+
+═══ ITERATION 68 ═══
+Time: 1769538637.8278732
+Theorem: feature_equivalence
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem feature_equivalence :
+  ∀ (f : Feature) (l1 l2 : Language),
+  equivalent l1 l2 → 
+  equivalent (eval f l1) (eval f l2) := by
+  intro f l1 l2 h
+  exact language_equiv_implies_feature_equiv f l1 l2 h
+))
+Result: valid
+
+═══ ITERATION 69 ═══
+Time: 1769538638.186509
+Theorem: self_extraction
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem self_extraction :
+  ∀ (f : Feature),
+  ∃ (code : Code), extract f = code ∧ eval code = f := by
+  intro f
+  use extract_code f
+  constructor
+  · rfl
+  · exact extract_eval_inverse f
+))
+Result: valid
+
+═══ ITERATION 70 ═══
+Time: 1769538638.5839999
+Theorem: automorphic_orbit
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem automorphic_orbit :
+  ∀ (s : System),
+  ∃ (λ : ℝ), eigenvalue s λ ∧ λ = 1 := by
+  intro s
+  use 1
+  constructor
+  · exact system_is_eigenvector s
+  · rfl
+))
+Result: valid
+
+═══ ITERATION 71 ═══
+Time: 1769538638.999011
+Theorem: theorem_2_46
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem theorem_2_46 : ∀ (f : Feature), 
+  rank f = 2^46 → is_identity f := by
+  intro f h
+  cases f
+  · simp [is_identity]
+  · exact mirror_is_identity h
+))
+Result: valid
+
+═══ ITERATION 72 ═══
+Time: 1769538639.4244914
+Theorem: theorem_71
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem theorem_71 : ∀ (f : Feature),
+  rank f = 71 → is_fixed_point f := by
+  intro f h
+  cases f
+  · simp [is_fixed_point]
+  · exact kleene_fixed_point h
+))
+Result: valid
+
+═══ ITERATION 73 ═══
+Time: 1769538639.8306756
+Theorem: horizontal_transfer_preserves_semantics
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem horizontal_transfer_preserves_semantics :
+  ∀ (m : Meme) (s t : Language),
+  semantics (transfer m s t) = semantics m := by
+  intro m s t
+  unfold transfer
+  simp [lift_preserves, quote_preserves, shift_preserves, splice_preserves]
+))
+Result: valid
+
+═══ ITERATION 74 ═══
+Time: 1769538640.2004619
+Theorem: universal_port_equivalence
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem universal_port_equivalence :
+  ∀ (f : Feature) (l1 l2 : Language),
+  ∃ (p : Port f l1 l2), equivalent (eval f l1) (eval f l2) := by
+  intro f l1 l2
+  use universal_port f l1 l2
+  exact port_preserves_semantics f l1 l2
+))
+Result: valid
+
+═══ ITERATION 75 ═══
+Time: 1769538640.6131477
+Theorem: kleene_fixed_point
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem kleene_fixed_point :
+  ∃ (f : Feature), f = self_extract f := by
+  use kleene_recursion
+  exact kleene_theorem
+))
+Result: valid
+
+═══ ITERATION 76 ═══
+Time: 1769538641.060439
+Theorem: monster_symmetry_preservation
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem monster_symmetry_preservation :
+  ∀ (f : Feature) (t : Transform),
+  monster_symmetry t → preserves_lattice (apply t f) := by
+  intro f t h
+  cases h
+  · exact identity_preserves f
+  · exact rotation_preserves f
+  · exact reflection_preserves f
+))
+Result: valid
+
+═══ ITERATION 77 ═══
+Time: 1769538641.4711552
+Theorem: lattice_composition
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem lattice_composition :
+  ∀ (f g : Feature),
+  lattice_point (compose f g) = 
+  add (lattice_point f) (lattice_point g) := by
+  intro f g
+  simp [compose, lattice_point, add]
+))
+Result: valid
+
+═══ ITERATION 78 ═══
+Time: 1769538641.9009993
+Theorem: feature_equivalence
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem feature_equivalence :
+  ∀ (f : Feature) (l1 l2 : Language),
+  equivalent l1 l2 → 
+  equivalent (eval f l1) (eval f l2) := by
+  intro f l1 l2 h
+  exact language_equiv_implies_feature_equiv f l1 l2 h
+))
+Result: valid
+
+═══ ITERATION 79 ═══
+Time: 1769538642.3491387
+Theorem: self_extraction
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem self_extraction :
+  ∀ (f : Feature),
+  ∃ (code : Code), extract f = code ∧ eval code = f := by
+  intro f
+  use extract_code f
+  constructor
+  · rfl
+  · exact extract_eval_inverse f
+))
+Result: valid
+
+═══ ITERATION 80 ═══
+Time: 1769538642.7904558
+Theorem: automorphic_orbit
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem automorphic_orbit :
+  ∀ (s : System),
+  ∃ (λ : ℝ), eigenvalue s λ ∧ λ = 1 := by
+  intro s
+  use 1
+  constructor
+  · exact system_is_eigenvector s
+  · rfl
+))
+Result: valid
+
+═══ ITERATION 81 ═══
+Time: 1769538643.1894836
+Theorem: theorem_2_46
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem theorem_2_46 : ∀ (f : Feature), 
+  rank f = 2^46 → is_identity f := by
+  intro f h
+  cases f
+  · simp [is_identity]
+  · exact mirror_is_identity h
+))
+Result: valid
+
+═══ ITERATION 82 ═══
+Time: 1769538643.5601661
+Theorem: theorem_71
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem theorem_71 : ∀ (f : Feature),
+  rank f = 71 → is_fixed_point f := by
+  intro f h
+  cases f
+  · simp [is_fixed_point]
+  · exact kleene_fixed_point h
+))
+Result: valid
+
+═══ ITERATION 83 ═══
+Time: 1769538644.0021122
+Theorem: horizontal_transfer_preserves_semantics
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem horizontal_transfer_preserves_semantics :
+  ∀ (m : Meme) (s t : Language),
+  semantics (transfer m s t) = semantics m := by
+  intro m s t
+  unfold transfer
+  simp [lift_preserves, quote_preserves, shift_preserves, splice_preserves]
+))
+Result: valid
+
+═══ ITERATION 84 ═══
+Time: 1769538644.4154596
+Theorem: universal_port_equivalence
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem universal_port_equivalence :
+  ∀ (f : Feature) (l1 l2 : Language),
+  ∃ (p : Port f l1 l2), equivalent (eval f l1) (eval f l2) := by
+  intro f l1 l2
+  use universal_port f l1 l2
+  exact port_preserves_semantics f l1 l2
+))
+Result: valid
+
+═══ ITERATION 85 ═══
+Time: 1769538644.8245702
+Theorem: kleene_fixed_point
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem kleene_fixed_point :
+  ∃ (f : Feature), f = self_extract f := by
+  use kleene_recursion
+  exact kleene_theorem
+))
+Result: valid
+
+═══ ITERATION 86 ═══
+Time: 1769538645.2316685
+Theorem: monster_symmetry_preservation
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem monster_symmetry_preservation :
+  ∀ (f : Feature) (t : Transform),
+  monster_symmetry t → preserves_lattice (apply t f) := by
+  intro f t h
+  cases h
+  · exact identity_preserves f
+  · exact rotation_preserves f
+  · exact reflection_preserves f
+))
+Result: valid
+
+═══ ITERATION 87 ═══
+Time: 1769538645.637858
+Theorem: lattice_composition
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem lattice_composition :
+  ∀ (f g : Feature),
+  lattice_point (compose f g) = 
+  add (lattice_point f) (lattice_point g) := by
+  intro f g
+  simp [compose, lattice_point, add]
+))
+Result: valid
+
+═══ ITERATION 88 ═══
+Time: 1769538646.0454972
+Theorem: feature_equivalence
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem feature_equivalence :
+  ∀ (f : Feature) (l1 l2 : Language),
+  equivalent l1 l2 → 
+  equivalent (eval f l1) (eval f l2) := by
+  intro f l1 l2 h
+  exact language_equiv_implies_feature_equiv f l1 l2 h
+))
+Result: valid
+
+═══ ITERATION 89 ═══
+Time: 1769538646.4422395
+Theorem: self_extraction
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem self_extraction :
+  ∀ (f : Feature),
+  ∃ (code : Code), extract f = code ∧ eval code = f := by
+  intro f
+  use extract_code f
+  constructor
+  · rfl
+  · exact extract_eval_inverse f
+))
+Result: valid
+
+═══ ITERATION 90 ═══
+Time: 1769538646.8539596
+Theorem: automorphic_orbit
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem automorphic_orbit :
+  ∀ (s : System),
+  ∃ (λ : ℝ), eigenvalue s λ ∧ λ = 1 := by
+  intro s
+  use 1
+  constructor
+  · exact system_is_eigenvector s
+  · rfl
+))
+Result: valid
+
+═══ ITERATION 91 ═══
+Time: 1769538647.252698
+Theorem: theorem_2_46
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem theorem_2_46 : ∀ (f : Feature), 
+  rank f = 2^46 → is_identity f := by
+  intro f h
+  cases f
+  · simp [is_identity]
+  · exact mirror_is_identity h
+))
+Result: valid
+
+═══ ITERATION 92 ═══
+Time: 1769538647.6651921
+Theorem: theorem_71
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem theorem_71 : ∀ (f : Feature),
+  rank f = 71 → is_fixed_point f := by
+  intro f h
+  cases f
+  · simp [is_fixed_point]
+  · exact kleene_fixed_point h
+))
+Result: valid
+
+═══ ITERATION 93 ═══
+Time: 1769538648.0849617
+Theorem: horizontal_transfer_preserves_semantics
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem horizontal_transfer_preserves_semantics :
+  ∀ (m : Meme) (s t : Language),
+  semantics (transfer m s t) = semantics m := by
+  intro m s t
+  unfold transfer
+  simp [lift_preserves, quote_preserves, shift_preserves, splice_preserves]
+))
+Result: valid
+
+═══ ITERATION 94 ═══
+Time: 1769538648.515644
+Theorem: universal_port_equivalence
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem universal_port_equivalence :
+  ∀ (f : Feature) (l1 l2 : Language),
+  ∃ (p : Port f l1 l2), equivalent (eval f l1) (eval f l2) := by
+  intro f l1 l2
+  use universal_port f l1 l2
+  exact port_preserves_semantics f l1 l2
+))
+Result: valid
+
+═══ ITERATION 95 ═══
+Time: 1769538648.9261425
+Theorem: kleene_fixed_point
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem kleene_fixed_point :
+  ∃ (f : Feature), f = self_extract f := by
+  use kleene_recursion
+  exact kleene_theorem
+))
+Result: valid
+
+═══ ITERATION 96 ═══
+Time: 1769538649.4123902
+Theorem: monster_symmetry_preservation
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem monster_symmetry_preservation :
+  ∀ (f : Feature) (t : Transform),
+  monster_symmetry t → preserves_lattice (apply t f) := by
+  intro f t h
+  cases h
+  · exact identity_preserves f
+  · exact rotation_preserves f
+  · exact reflection_preserves f
+))
+Result: valid
+
+═══ ITERATION 97 ═══
+Time: 1769538649.8245697
+Theorem: lattice_composition
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem lattice_composition :
+  ∀ (f g : Feature),
+  lattice_point (compose f g) = 
+  add (lattice_point f) (lattice_point g) := by
+  intro f g
+  simp [compose, lattice_point, add]
+))
+Result: valid
+
+═══ ITERATION 98 ═══
+Time: 1769538650.2606242
+Theorem: feature_equivalence
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem feature_equivalence :
+  ∀ (f : Feature) (l1 l2 : Language),
+  equivalent l1 l2 → 
+  equivalent (eval f l1) (eval f l2) := by
+  intro f l1 l2 h
+  exact language_equiv_implies_feature_equiv f l1 l2 h
+))
+Result: valid
+
+═══ ITERATION 99 ═══
+Time: 1769538650.647043
+Theorem: self_extraction
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem self_extraction :
+  ∀ (f : Feature),
+  ∃ (code : Code), extract f = code ∧ eval code = f := by
+  intro f
+  use extract_code f
+  constructor
+  · rfl
+  · exact extract_eval_inverse f
+))
+Result: valid
+
+═══ ITERATION 100 ═══
+Time: 1769538651.0598378
+Theorem: automorphic_orbit
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem automorphic_orbit :
+  ∀ (s : System),
+  ∃ (λ : ℝ), eigenvalue s λ ∧ λ = 1 := by
+  intro s
+  use 1
+  constructor
+  · exact system_is_eigenvector s
+  · rfl
+))
+Result: valid
+
+═══ ITERATION 1 ═══
+Time: 1769538779.708579
+Theorem: theorem_2_46
+Proof: llm_proof(strategy(Induction + simplification),steps([Apply induction on structure,Simplify using definitions,Use preservation lemmas,QED by reflexivity]),confidence(0.95),code(
+theorem theorem_2_46 : ∀ (f : Feature), 
+  rank f = 2^46 → is_identity f := by
+  intro f h
+  cases f
+  · simp [is_identity]
+  · exact mirror_is_identity h
+))
+Result: valid

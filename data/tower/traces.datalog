@@ -1,0 +1,8 @@
+% Datalog Facts from LLM Traces
+
+trace(1, 0.9207354924039483, 0.8414709848078965).
+
+% Datalog Rules
+high_activation(Layer) :- trace(Layer, _, A), A > 0.5.
+low_activation(Layer) :- trace(Layer, _, A), A < -0.5.
+connected(L1, L2) :- trace(L1, _, _), trace(L2, _, _), L2 is L1 + 1.

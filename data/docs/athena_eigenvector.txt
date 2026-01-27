@@ -1,0 +1,21 @@
+# Athena's Automorphic Eigenvector
+
+## Theory
+Three curves (source, execution, result) converge to one automorphic eigenvector.
+
+## Curves
+- Source: postgres (5)
+- Execution: magma (5)
+- Result: sage (5)
+
+## Convergence
+0.600000
+
+## Interpretation
+The three curves represent:
+1. Source: Input data (LMFDB queries)
+2. Execution: Computation trace (Magma/Sage/Postgres)
+3. Result: Output (L-functions, modular forms)
+
+As they converge (→ 1.0), the system reaches automorphic equilibrium.
+This is Athena's eigenvector: the stable state of the computation.

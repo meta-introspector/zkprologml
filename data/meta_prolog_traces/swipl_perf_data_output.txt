@@ -1,0 +1,80 @@
+Warning: /home/mdupont/nix/vendor/rust/github/data/proofs/perf_data.pl:13:
+Warning:    Clauses of perf_trace/5 are not together in the source-file
+Warning:    Earlier definition at /home/mdupont/nix/vendor/rust/github/data/proofs/perf_data.pl:9
+Warning:    Current predicate: harmonic_layer/2
+Warning:    Use :- discontiguous perf_trace/5. to suppress this message
+Warning: /home/mdupont/nix/vendor/rust/github/data/proofs/perf_data.pl:14:
+Warning:    Clauses of instruction_class/4 are not together in the source-file
+Warning:    Earlier definition at /home/mdupont/nix/vendor/rust/github/data/proofs/perf_data.pl:10
+Warning:    Current predicate: perf_trace/5
+Warning:    Use :- discontiguous instruction_class/4. to suppress this message
+Warning: /home/mdupont/nix/vendor/rust/github/data/proofs/perf_data.pl:15:
+Warning:    Clauses of prime_invariant/2 are not together in the source-file
+Warning:    Earlier definition at /home/mdupont/nix/vendor/rust/github/data/proofs/perf_data.pl:11
+Warning:    Current predicate: instruction_class/4
+Warning:    Use :- discontiguous prime_invariant/2. to suppress this message
+Warning: /home/mdupont/nix/vendor/rust/github/data/proofs/perf_data.pl:16:
+Warning:    Clauses of harmonic_layer/2 are not together in the source-file
+Warning:    Earlier definition at /home/mdupont/nix/vendor/rust/github/data/proofs/perf_data.pl:12
+Warning:    Current predicate: prime_invariant/2
+Warning:    Use :- discontiguous harmonic_layer/2. to suppress this message
+Warning: /home/mdupont/nix/vendor/rust/github/data/proofs/perf_data.pl:17:
+Warning:    Clauses of perf_trace/5 are not together in the source-file
+Warning:    Earlier definition at /home/mdupont/nix/vendor/rust/github/data/proofs/perf_data.pl:9
+Warning:    Current predicate: harmonic_layer/2
+Warning:    Use :- discontiguous perf_trace/5. to suppress this message
+Warning: /home/mdupont/nix/vendor/rust/github/data/proofs/perf_data.pl:18:
+Warning:    Clauses of instruction_class/4 are not together in the source-file
+Warning:    Earlier definition at /home/mdupont/nix/vendor/rust/github/data/proofs/perf_data.pl:10
+Warning:    Current predicate: perf_trace/5
+Warning:    Use :- discontiguous instruction_class/4. to suppress this message
+Warning: /home/mdupont/nix/vendor/rust/github/data/proofs/perf_data.pl:19:
+Warning:    Clauses of prime_invariant/2 are not together in the source-file
+Warning:    Earlier definition at /home/mdupont/nix/vendor/rust/github/data/proofs/perf_data.pl:11
+Warning:    Current predicate: instruction_class/4
+Warning:    Use :- discontiguous prime_invariant/2. to suppress this message
+Warning: /home/mdupont/nix/vendor/rust/github/data/proofs/perf_data.pl:20:
+Warning:    Clauses of harmonic_layer/2 are not together in the source-file
+Warning:    Earlier definition at /home/mdupont/nix/vendor/rust/github/data/proofs/perf_data.pl:12
+Warning:    Current predicate: prime_invariant/2
+Warning:    Use :- discontiguous harmonic_layer/2. to suppress this message
+Warning: /home/mdupont/nix/vendor/rust/github/data/proofs/perf_data.pl:21:
+Warning:    Clauses of perf_trace/5 are not together in the source-file
+Warning:    Earlier definition at /home/mdupont/nix/vendor/rust/github/data/proofs/perf_data.pl:9
+Warning:    Current predicate: harmonic_layer/2
+Warning:    Use :- discontiguous perf_trace/5. to suppress this message
+Warning: /home/mdupont/nix/vendor/rust/github/data/proofs/perf_data.pl:22:
+Warning:    Clauses of instruction_class/4 are not together in the source-file
+Warning:    Earlier definition at /home/mdupont/nix/vendor/rust/github/data/proofs/perf_data.pl:10
+Warning:    Current predicate: perf_trace/5
+Warning:    Use :- discontiguous instruction_class/4. to suppress this message
+Warning: /home/mdupont/nix/vendor/rust/github/data/proofs/perf_data.pl:23:
+Warning:    Clauses of prime_invariant/2 are not together in the source-file
+Warning:    Earlier definition at /home/mdupont/nix/vendor/rust/github/data/proofs/perf_data.pl:11
+Warning:    Current predicate: instruction_class/4
+Warning:    Use :- discontiguous prime_invariant/2. to suppress this message
+Warning: /home/mdupont/nix/vendor/rust/github/data/proofs/perf_data.pl:24:
+Warning:    Clauses of harmonic_layer/2 are not together in the source-file
+Warning:    Earlier definition at /home/mdupont/nix/vendor/rust/github/data/proofs/perf_data.pl:12
+Warning:    Current predicate: prime_invariant/2
+Warning:    Use :- discontiguous harmonic_layer/2. to suppress this message
+Warning: /home/mdupont/nix/vendor/rust/github/data/proofs/perf_data.pl:25:
+Warning:    Clauses of perf_trace/5 are not together in the source-file
+Warning:    Earlier definition at /home/mdupont/nix/vendor/rust/github/data/proofs/perf_data.pl:9
+Warning:    Current predicate: harmonic_layer/2
+Warning:    Use :- discontiguous perf_trace/5. to suppress this message
+Warning: /home/mdupont/nix/vendor/rust/github/data/proofs/perf_data.pl:26:
+Warning:    Clauses of instruction_class/4 are not together in the source-file
+Warning:    Earlier definition at /home/mdupont/nix/vendor/rust/github/data/proofs/perf_data.pl:10
+Warning:    Current predicate: perf_trace/5
+Warning:    Use :- discontiguous instruction_class/4. to suppress this message
+Warning: /home/mdupont/nix/vendor/rust/github/data/proofs/perf_data.pl:27:
+Warning:    Clauses of prime_invariant/2 are not together in the source-file
+Warning:    Earlier definition at /home/mdupont/nix/vendor/rust/github/data/proofs/perf_data.pl:11
+Warning:    Current predicate: instruction_class/4
+Warning:    Use :- discontiguous prime_invariant/2. to suppress this message
+Warning: /home/mdupont/nix/vendor/rust/github/data/proofs/perf_data.pl:28:
+Warning:    Clauses of harmonic_layer/2 are not together in the source-file
+Warning:    Earlier definition at /home/mdupont/nix/vendor/rust/github/data/proofs/perf_data.pl:12
+Warning:    Current predicate: prime_invariant/2
+Warning:    Use :- discontiguous harmonic_layer/2. to suppress this message

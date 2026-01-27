@@ -1,0 +1,60 @@
+DIGEST 92813a23a934e117ae555ba9f426953f
+Fprolog_interp
+R72:85 Coq.Lists.List <> <> lib
+R103:120 Coq.Strings.String <> <> lib
+R130:142 Coq.Lists.List ListNotations <> mod
+ind 179:182 <> term
+constr 198:200 <> Var
+constr 223:226 <> Atom
+constr 249:256 <> Compound
+R210:213 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R204:209 Coq.Strings.String <> string ind
+R214:217 prolog_interp <> term:1 ind
+R236:239 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R230:235 Coq.Strings.String <> string ind
+R240:243 prolog_interp <> term:1 ind
+R266:269 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R260:265 Coq.Strings.String <> string ind
+R279:282 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R270:273 Coq.Init.Datatypes <> list ind
+R275:278 prolog_interp <> term:1 ind
+R283:286 prolog_interp <> term:1 ind
+scheme 179:182 <> term_rect
+scheme 179:182 <> term_ind
+scheme 179:182 <> term_rec
+scheme 179:182 <> term_sind
+rec 322:327 <> clause
+proj 343:346 <> head
+proj 358:361 <> body
+R350:353 prolog_interp <> term ind
+R365:368 Coq.Init.Datatypes <> list ind
+R370:373 prolog_interp <> term ind
+def 412:414 <> env
+R419:422 Coq.Init.Datatypes <> list ind
+R431:433 Coq.Init.Datatypes <> ::type_scope:x_'*'_x not
+R425:430 Coq.Strings.String <> string ind
+R434:437 prolog_interp <> term ind
+def 473:484 <> occurs_check
+R491:496 Coq.Strings.String <> string ind
+binder 487:487 <> v:6
+R504:507 prolog_interp <> term ind
+binder 500:500 <> t:7
+R512:515 Coq.Init.Datatypes <> bool ind
+R528:528 prolog_interp <> t:7 var
+R539:541 prolog_interp <> Var constr
+R552:561 Coq.Strings.String <> string_dec def
+R563:563 prolog_interp <> v:6 var
+R583:587 Coq.Init.Datatypes <> false constr
+R573:576 Coq.Init.Datatypes <> true constr
+R593:596 prolog_interp <> Atom constr
+R603:607 Coq.Init.Datatypes <> false constr
+R613:620 prolog_interp <> Compound constr
+R632:638 Coq.Lists.List <> existsb def
+R641:652 prolog_interp <> occurs_check:8 def
+R654:654 prolog_interp <> v:6 var
+def 773:787 <> complexity_eval
+R791:793 Coq.Init.Datatypes <> nat ind
+def 843:858 <> complexity_unify
+R862:864 Coq.Init.Datatypes <> nat ind
+def 914:930 <> complexity_lookup
+R934:936 Coq.Init.Datatypes <> nat ind

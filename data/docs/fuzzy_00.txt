@@ -1,0 +1,6 @@
+/home/mdupont/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fuzzy-matcher-0.3.7/src/skim.rs
+/home/mdupont/nix-controller/data/user_timelines/fuzzyfox123.parquet
+/home/mdupont/nix-controller/data/user_timelines/fuzzypixelz.parquet
+/home/mdupont/nix-controller/data/user_timelines/fuzzythecat.parquet
+/mnt/data1/nix/time/2024/05/26/seer/example/fuzzy-pickles/Cargo.toml
+/mnt/data1/nix/vendor/rust/cargo2nix/submodules/rust/tests/ui/lint/lint-strict-provenance-fuzzy-casts.rs

@@ -1,0 +1,6 @@
+# Umberto Eco's Index Cards (Parquet Format)
+# Terms: 18
+# Compressed: gzip
+# Shared Memory: mmap
+
+terms: ["monster_prime_29", "monster_prime_31", "monster_prime_41", "monster_prime_47", "monster_prime_59", "monster_prime_71", "lmfdb_l_function", "lmfdb_modular_form", "lmfdb_elliptic_curve", "lmfdb_galois_rep", "lmfdb_conductor", "lmfdb_degree", "langlands_correspondence", "automorphic_form", "galois_representation", "moonshine_connection", "j_invariant", "mckay_thompson"]

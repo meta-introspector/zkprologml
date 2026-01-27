@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Prolog GPU Visualizer</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #000;
+            color: #0f0;
+            font-family: monospace;
+        }
+        #info {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(0,0,0,0.8);
+            padding: 10px;
+            border: 1px solid #0f0;
+        }
+        canvas {
+            border: 1px solid #0f0;
+            image-rendering: pixelated;
+        }
+    </style>
+</head>
+<body>
+    <div id="info">
+        <h2>🎮 Prolog GPU Visualizer</h2>
+        <p>Location: <span id="location">Detecting...</span></p>
+        <p>IP: <span id="ip">Detecting...</span></p>
+        <p>OSM Node: <span id="osm">Calculating...</span></p>
+        <p>FPS: <span id="fps">0</span></p>
+        <p>Reasoning: factorial(N, F)</p>
+    </div>
+    
+    <canvas id="canvas" width="800" height="600"></canvas>
+    
+    <script type="module">
+        // Get user location and IP
+        async function getUserInfo() {
+            try {
+                // Get IP
+                const ipResp = await fetch('https://api.ipify.org?format=json');
+                const ipData = await ipResp.json();
+                document.getElementById('ip').textContent = ipData.ip;
+                
+                // Get geolocation
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(async (pos) => {
+                        const lat = pos.coords.latitude;
+                        const lon = pos.coords.longitude;
+                        
+                        document.getElementById('location').textContent = 
+                            `${lat.toFixed(4)}, ${lon.toFixed(4)}`;
+                        
+                        // Get OSM node
+                        const osmResp = await fetch(
+                            `https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}`
+                        );
+                        const osmData = await osmResp.json();
+                        document.getElementById('osm').textContent = 
+                            osmData.osm_id || 'Unknown';
+                    });
+                }
+            } catch (e) {
+                console.error('Error getting user info:', e);
+            }
+        }
+        
+        getUserInfo();
+        
+        // Prolog GPU simulation (pure JS for now, would be WASM in production)
+        class PrologGPU {
+            constructor() {
+                this.nodes = [
+                    { x: -0.5, y: 0.5, z: 0, energy: 1, id: 0, name: "factorial(0,1)" },
+                    { x: 0.0, y: 0.0, z: 0, energy: 1, id: 1, name: "factorial(N,F)" },
+                    { x: 0.3, y: -0.3, z: 0, energy: 1, id: 2, name: "N>0" },
+                    { x: 0.5, y: 0.0, z: 0, energy: 1, id: 3, name: "N1=N-1" },
+                    { x: 0.7, y: 0.3, z: 0, energy: 1, id: 4, name: "factorial(N1,F1)" },
+                    { x: 0.5, y: 0.6, z: 0, energy: 1, id: 5, name: "F=N*F1" }
+                ];
+                
+                this.connections = [
+                    [1, 2], [2, 3], [3, 4], [4, 5], [0, 1]
+                ];
+                
+                this.time = 0;
+            }
+            
+            update(dt) {
+                this.time += dt;
+                
+                // GPU-style parallel update
+                for (let node of this.nodes) {
+                    node.z = Math.sin(this.time + node.id * 0.5) * 0.3;
+                    node.energy = (Math.sin(this.time * 2 + node.id) + 1) / 2;
+                }
+            }
+            
+            render(ctx, width, height) {
+                ctx.fillStyle = '#000';
+                ctx.fillRect(0, 0, width, height);
+                
+                // Render connections
+                ctx.strokeStyle = '#0f0';
+                ctx.lineWidth = 2;
+                for (let [from, to] of this.connections) {
+                    const n1 = this.nodes[from];
+                    const n2 = this.nodes[to];
+                    
+                    const x1 = (n1.x + 1) * width / 2;
+                    const y1 = (n1.y + 1) * height / 2;
+                    const x2 = (n2.x + 1) * width / 2;
+                    const y2 = (n2.y + 1) * height / 2;
+                    
+                    ctx.beginPath();
+                    ctx.moveTo(x1, y1);
+                    ctx.lineTo(x2, y2);
+                    ctx.stroke();
+                }
+                
+                // Render nodes
+                for (let node of this.nodes) {
+                    const x = (node.x + 1) * width / 2;
+                    const y = (node.y + 1) * height / 2;
+                    const radius = 10 + node.z * 5;
+                    
+                    const brightness = Math.floor(255 * node.energy);
+                    ctx.fillStyle = `rgb(${brightness}, ${brightness}, ${brightness})`;
+                    
+                    ctx.beginPath();
+                    ctx.arc(x, y, radius, 0, Math.PI * 2);
+                    ctx.fill();
+                    
+                    // Label
+                    ctx.fillStyle = '#0f0';
+                    ctx.font = '10px monospace';
+                    ctx.fillText(node.name, x + 15, y + 5);
+                }
+            }
+        }
+        
+        // Main loop
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        const gpu = new PrologGPU();
+        
+        let lastTime = performance.now();
+        let frameCount = 0;
+        let fpsTime = 0;
+        
+        function animate(currentTime) {
+            const dt = (currentTime - lastTime) / 1000;
+            lastTime = currentTime;
+            
+            gpu.update(dt);
+            gpu.render(ctx, canvas.width, canvas.height);
+            
+            // Update FPS
+            frameCount++;
+            fpsTime += dt;
+            if (fpsTime >= 1.0) {
+                document.getElementById('fps').textContent = frameCount;
+                frameCount = 0;
+                fpsTime = 0;
+            }
+            
+            requestAnimationFrame(animate);
+        }
+        
+        animate(performance.now());
+    </script>
+</body>
+</html>
