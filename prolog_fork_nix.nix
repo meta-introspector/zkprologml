@@ -10,39 +10,51 @@ let
     # Others need custom derivations
   };
 
-  # Fork each Prolog with Nix
+  # Fork each Prolog with Nix + perf recording
   forkProlog = name: impl: pkgs.stdenv.mkDerivation {
     name = "zkprologml-fork-${name}";
     src = impl;
     
-    buildInputs = [ impl pkgs.swiProlog ];
+    buildInputs = [ impl pkgs.swiProlog pkgs.linuxPackages.perf ];
     
     buildPhase = ''
-      # Extract predicates from implementation
-      echo "Forking ${name}..."
+      # Record build with perf
+      echo "Forking ${name} with perf recording..."
       
-      # Analyze with SWI-Prolog
-      ${pkgs.swiProlog}/bin/swipl -g "
+      perf record -o perf_${name}.data ${pkgs.swiProlog}/bin/swipl -g "
         consult('${./data/proofs/prolog_fork_queue.pl}'),
         fork_prolog(${name}),
         halt
-      "
+      " || true
+      
+      # Extract trace
+      perf script -i perf_${name}.data > perf_${name}.trace || true
     '';
     
     installPhase = ''
-      mkdir -p $out/share/zkprologml
+      mkdir -p $out/share/zkprologml/traces
       echo "${name}" > $out/share/zkprologml/name
       echo "forked" > $out/share/zkprologml/state
+      cp perf_${name}.trace $out/share/zkprologml/traces/ || true
     '';
   };
 
-  # Patch with prime complexity ABI
+  # Patch with prime complexity ABI + ingest traces
   patchProlog = name: forked: pkgs.stdenv.mkDerivation {
     name = "zkprologml-patch-${name}";
     src = forked;
     
+    buildInputs = [ pkgs.swiProlog ];
+    
     buildPhase = ''
       echo "Patching ${name} with prime complexity ABI..."
+      
+      # Ingest perf trace
+      ${pkgs.swiProlog}/bin/swipl -g "
+        consult('${./data/proofs/perf_novelty_proof.pl}'),
+        ingest_trace(${name}),
+        halt
+      " || true
       
       ${pkgs.swiProlog}/bin/swipl -g "
         consult('${./data/proofs/prolog_fork_queue.pl}'),
@@ -58,13 +70,22 @@ let
     '';
   };
 
-  # Port to universal ABI
+  # Port to universal ABI + prove novelty
   portProlog = name: patched: pkgs.stdenv.mkDerivation {
     name = "zkprologml-port-${name}";
     src = patched;
     
+    buildInputs = [ pkgs.swiProlog ];
+    
     buildPhase = ''
       echo "Porting ${name} to universal ABI..."
+      
+      # Prove novelty against other implementations
+      ${pkgs.swiProlog}/bin/swipl -g "
+        consult('${./data/proofs/perf_novelty_proof.pl}'),
+        prove_all_novelties,
+        halt
+      " || true
       
       ${pkgs.swiProlog}/bin/swipl -g "
         consult('${./data/proofs/prolog_fork_queue.pl}'),
@@ -74,9 +95,12 @@ let
     '';
     
     installPhase = ''
-      mkdir -p $out/bin $out/share/zkprologml
+      mkdir -p $out/bin $out/share/zkprologml/proofs
       cp -r $src/share/zkprologml/* $out/share/zkprologml/
       echo "ported" > $out/share/zkprologml/state
+      
+      # Copy novelty proofs
+      cp data/proofs/novelty_*.lean $out/share/zkprologml/proofs/ || true
       
       # Generate universal_call wrapper
       cat > $out/bin/universal_call_${name} <<EOF
