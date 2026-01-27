@@ -24,7 +24,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     let mut count = 0;
     let mut iter = reader.get_row_iter(None)?;
     
-    while let Some(record) = iter.next() {
+    while let Some(Ok(record)) = iter.next() {
         if count >= sample_size {
             break;
         }
