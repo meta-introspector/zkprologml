@@ -1,7 +1,21 @@
 [package]
-name = "consume_all_repos"
+name = "zkprologml"
 version = "0.1.0"
 edition = "2021"
 
 [dependencies]
 walkdir = "2"
+parquet = "53"
+arrow = "53"
+
+[[bin]]
+name = "prove_lattice_indexes"
+path = "layer5_analysis/prove_lattice_indexes.rs"
+
+[[bin]]
+name = "complexity_growth_monitor"
+path = "complexity_growth_monitor.rs"
+
+[[bin]]
+name = "consume_all_repos"
+path = "consume_all_repos.rs"
