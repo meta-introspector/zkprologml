@@ -1,0 +1,70 @@
+[[pipelines]]
+name = "prove_lattice"
+description = "Prove lattice indexes from all parquet files"
+
+[[pipelines.steps]]
+name = "list_parquets"
+commands = [
+  "echo '🗂️  Parquet Lists:'",
+  "echo 'Search parquets:'",
+  "ls -1 data/parquets/*_search.parquet",
+  "echo 'Lattice parquets:'",
+  "ls -1 data/parquets/*_lattice.parquet"
+]
+
+[[pipelines.steps]]
+name = "load_parquets"
+commands = [
+  "echo '📊 Loading parquets...'",
+  "cargo run --bin prove_lattice_indexes"
+]
+
+[[pipelines.steps]]
+name = "ingest_traces"
+commands = [
+  "echo '🔍 Ingesting perf traces...'",
+  "swipl -g main -t halt data/proofs/perf_novelty_proof.pl"
+]
+
+[[pipelines.steps]]
+name = "prove_novelty"
+commands = [
+  "echo '🔬 Proving novelty...'",
+  "swipl -g 'prove_all_novelties, halt' data/proofs/perf_novelty_proof.pl"
+]
+
+[[pipelines.steps]]
+name = "export_lean"
+commands = [
+  "echo '📝 Exporting to Lean4...'",
+  "ls data/proofs/*.lean | wc -l",
+  "echo 'Lean4 proofs ready'"
+]
+
+[[pipelines]]
+name = "fork_all_prologs"
+description = "Fork, patch, port all Prolog implementations"
+
+[[pipelines.steps]]
+name = "fork"
+commands = [
+  "echo '🍴 Forking all Prologs...'",
+  "swipl -g main -t halt data/proofs/prolog_fork_queue.pl"
+]
+
+[[pipelines.steps]]
+name = "record_perf"
+commands = [
+  "echo '📊 Recording with perf...'",
+  "nix build .#scryer",
+  "nix build .#swi",
+  "nix build .#gnu",
+  "nix build .#trealla"
+]
+
+[[pipelines.steps]]
+name = "prove_equivalence"
+commands = [
+  "echo '🔬 Proving equivalence...'",
+  "swipl -g main -t halt data/proofs/galois_tower_unification.pl"
+]
