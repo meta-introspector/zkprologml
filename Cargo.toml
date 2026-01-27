@@ -19,3 +19,7 @@ path = "complexity_growth_monitor.rs"
 [[bin]]
 name = "consume_all_repos"
 path = "consume_all_repos.rs"
+
+[[bin]]
+name = "sample_parquet"
+path = "sample_parquet.rs"

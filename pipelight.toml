@@ -13,6 +13,22 @@ commands = [
 ]
 
 [[pipelines.steps]]
+name = "sample_concepts"
+commands = [
+  "echo '📊 Sampling all concepts...'",
+  "cargo run --bin sample_parquet data/parquets/monster_search.parquet 100",
+  "cargo run --bin sample_parquet data/parquets/godel_search.parquet 100",
+  "cargo run --bin sample_parquet data/parquets/athena_search.parquet 100"
+]
+
+[[pipelines.steps]]
+name = "build_models"
+commands = [
+  "echo '🧠 Building expert system models...'",
+  "swipl -g main -t halt data/proofs/expert_system_models.pl"
+]
+
+[[pipelines.steps]]
 name = "load_parquets"
 commands = [
   "echo '📊 Loading parquets...'",
