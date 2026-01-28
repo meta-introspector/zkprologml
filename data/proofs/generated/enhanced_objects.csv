@@ -1,0 +1,4 @@
+path,godel,shard,size,rank_score,access_count,avg_interval,labels,forecast_score,cycles,instructions,cache_misses,complexity_score,composite_number
+generated/merged_constants.pl,3276468913662,45,5770,11540.00,15,2.00,hot;frequent;cache_candidate,1.0000,5000,7500,5,5.50,18020579025141
+generated/llm.txt,19922437417554,39,3942,3952.79,7,5.00,warm;frequent,1.0000,3000,4500,3,3.30,65744043477928
+generated/perf_samples.csv,4632249153798,57,291,436.50,3,30.00,cold;periodic,0.0968,1000,1500,1,1.10,5095474069177
