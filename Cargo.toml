@@ -33,5 +33,9 @@ name = "analyze_ocaml_traces"
 path = "layer5_analysis/analyze_ocaml_traces.rs"
 
 [[bin]]
+name = "prove_it"
+path = "prove_it.rs"
+
+[[bin]]
 name = "prove_congruence"
 path = "layer5_analysis/prove_congruence.rs"
