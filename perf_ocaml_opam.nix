@@ -7,10 +7,10 @@ pkgs.stdenv.mkDerivation {
   name = "perf-ocaml-opam";
   
   buildInputs = with pkgs; [
-    linuxPackages.perf
+    perf
     ocaml
     opam
-    swiProlog
+    swi-prolog
   ];
   
   src = ./.;
@@ -61,6 +61,6 @@ pkgs.stdenv.mkDerivation {
     echo ""
     echo "🧠 Ingesting with Prolog..."
     cd ${./data/proofs}
-    ${pkgs.swiProlog}/bin/swipl -g main -t halt ingest_ocaml_perf.pl || true
+    ${pkgs.swi-prolog}/bin/swipl -g main -t halt ingest_ocaml_perf.pl || true
   '';
 }
