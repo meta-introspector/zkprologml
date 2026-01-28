@@ -1,0 +1,21 @@
+═══════════════════════════════════════════════════════════
+SHARD 11: functions
+═══════════════════════════════════════════════════════════
+
+Prime: 11
+Domain: functions
+Description: def, fn, lambda
+URL: https://github.com/Escaped-RDFa/namespace?prime=11&domain=functions&proof=b
+
+QR Code: [Generate with qrencode]
+qrencode -o shard_11.png "https://github.com/Escaped-RDFa/namespace?prime=11&domain=functions&proof=b"
+
+Meme: [ASCII Art]
+
+    ╔═══════════════════════════════╗
+    ║  PRIME 11: functions║
+    ║                               ║
+    ║      get_emoji(11)                    ║
+    ║                               ║
+    ║  "get_quote(11)"║
+    ╚═══════════════════════════════╝

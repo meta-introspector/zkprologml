@@ -1,0 +1,6 @@
+generated/compiler_symphony.ly
+generated/flag_30_5
+generated/opcode_matrix.lean
+generated/perf_210_2.data
+generated/perf_rust_original.txt
+generated/prolog_symphony.ly

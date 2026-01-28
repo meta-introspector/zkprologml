@@ -1,0 +1,21 @@
+═══════════════════════════════════════════════════════════
+SHARD 71: universe
+═══════════════════════════════════════════════════════════
+
+Prime: 71
+Domain: universe
+Description: Type, Kind, Universe
+URL: https://github.com/Escaped-RDFa/namespace?prime=71&domain=universe&proof=47
+
+QR Code: [Generate with qrencode]
+qrencode -o shard_71.png "https://github.com/Escaped-RDFa/namespace?prime=71&domain=universe&proof=47"
+
+Meme: [ASCII Art]
+
+    ╔═══════════════════════════════╗
+    ║  PRIME 71: universe║
+    ║                               ║
+    ║      get_emoji(71)                    ║
+    ║                               ║
+    ║  "get_quote(71)"║
+    ╚═══════════════════════════════╝

@@ -1,0 +1,6 @@
+generated/convergence.lean
+generated/flag_30_2
+generated/flag_6_7
+generated/godel_2_2_optimized
+generated/MINING_INSTRUCTIONS.md
+generated/regenerated_prime.rs

@@ -1,0 +1,21 @@
+═══════════════════════════════════════════════════════════
+SHARD 23: memory
+═══════════════════════════════════════════════════════════
+
+Prime: 23
+Domain: memory
+Description: malloc, free
+URL: https://github.com/Escaped-RDFa/namespace?prime=23&domain=memory&proof=17
+
+QR Code: [Generate with qrencode]
+qrencode -o shard_23.png "https://github.com/Escaped-RDFa/namespace?prime=23&domain=memory&proof=17"
+
+Meme: [ASCII Art]
+
+    ╔═══════════════════════════════╗
+    ║  PRIME 23: memory║
+    ║                               ║
+    ║      get_emoji(23)                    ║
+    ║                               ║
+    ║  "get_quote(23)"║
+    ╚═══════════════════════════════╝

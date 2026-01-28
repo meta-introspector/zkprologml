@@ -1,0 +1,8 @@
+generated/coq_extracted.cmi
+generated/flag_2_3
+generated/godel_30_5_optimized
+generated/maxwells_equations.v
+generated/mes_verified.rs
+generated/perf_gcc.data
+generated/perf_rust_primes_bin.data
+generated/rust_primes_bin

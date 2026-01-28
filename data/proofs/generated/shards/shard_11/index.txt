@@ -1,0 +1,7 @@
+generated/emoji_patterns.pl
+generated/factorial.c
+generated/flag_30_7
+generated/godel_6_3_optimized
+generated/optimized_order.txt
+generated/perf_llm_activation.data
+generated/perf_tcc.data

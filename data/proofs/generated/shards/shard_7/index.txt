@@ -1,0 +1,5 @@
+generated/convergence.pl
+generated/godel_210_5
+generated/godel_2_2
+generated/perf_210_3.data
+generated/prolog_to_rust.rs

@@ -1,0 +1,21 @@
+═══════════════════════════════════════════════════════════
+SHARD 5: variables
+═══════════════════════════════════════════════════════════
+
+Prime: 5
+Domain: variables
+Description: x, y, z
+URL: https://github.com/Escaped-RDFa/namespace?prime=5&domain=variables&proof=5
+
+QR Code: [Generate with qrencode]
+qrencode -o shard_5.png "https://github.com/Escaped-RDFa/namespace?prime=5&domain=variables&proof=5"
+
+Meme: [ASCII Art]
+
+    ╔═══════════════════════════════╗
+    ║  PRIME 5: variables║
+    ║                               ║
+    ║      get_emoji(5)                    ║
+    ║                               ║
+    ║  "get_quote(5)"║
+    ╚═══════════════════════════════╝

@@ -1,0 +1,21 @@
+═══════════════════════════════════════════════════════════
+SHARD 41: machine
+═══════════════════════════════════════════════════════════
+
+Prime: 41
+Domain: machine
+Description: asm, linking
+URL: https://github.com/Escaped-RDFa/namespace?prime=41&domain=machine&proof=29
+
+QR Code: [Generate with qrencode]
+qrencode -o shard_41.png "https://github.com/Escaped-RDFa/namespace?prime=41&domain=machine&proof=29"
+
+Meme: [ASCII Art]
+
+    ╔═══════════════════════════════╗
+    ║  PRIME 41: machine║
+    ║                               ║
+    ║      get_emoji(41)                    ║
+    ║                               ║
+    ║  "get_quote(41)"║
+    ╚═══════════════════════════════╝

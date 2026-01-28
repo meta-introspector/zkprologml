@@ -1,0 +1,21 @@
+═══════════════════════════════════════════════════════════
+SHARD 17: structures
+═══════════════════════════════════════════════════════════
+
+Prime: 17
+Domain: structures
+Description: struct, record
+URL: https://github.com/Escaped-RDFa/namespace?prime=17&domain=structures&proof=11
+
+QR Code: [Generate with qrencode]
+qrencode -o shard_17.png "https://github.com/Escaped-RDFa/namespace?prime=17&domain=structures&proof=11"
+
+Meme: [ASCII Art]
+
+    ╔═══════════════════════════════╗
+    ║  PRIME 17: structures║
+    ║                               ║
+    ║      get_emoji(17)                    ║
+    ║                               ║
+    ║  "get_quote(17)"║
+    ╚═══════════════════════════════╝

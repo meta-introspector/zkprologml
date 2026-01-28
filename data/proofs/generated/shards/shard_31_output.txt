@@ -1,0 +1,21 @@
+═══════════════════════════════════════════════════════════
+SHARD 31: output
+═══════════════════════════════════════════════════════════
+
+Prime: 31
+Domain: output
+Description: print, write
+URL: https://github.com/Escaped-RDFa/namespace?prime=31&domain=output&proof=1f
+
+QR Code: [Generate with qrencode]
+qrencode -o shard_31.png "https://github.com/Escaped-RDFa/namespace?prime=31&domain=output&proof=1f"
+
+Meme: [ASCII Art]
+
+    ╔═══════════════════════════════╗
+    ║  PRIME 31: output║
+    ║                               ║
+    ║      get_emoji(31)                    ║
+    ║                               ║
+    ║  "get_quote(31)"║
+    ╚═══════════════════════════════╝

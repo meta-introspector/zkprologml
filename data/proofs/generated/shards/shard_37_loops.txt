@@ -1,0 +1,21 @@
+═══════════════════════════════════════════════════════════
+SHARD 37: loops
+═══════════════════════════════════════════════════════════
+
+Prime: 37
+Domain: loops
+Description: loop, iterate
+URL: https://github.com/Escaped-RDFa/namespace?prime=37&domain=loops&proof=25
+
+QR Code: [Generate with qrencode]
+qrencode -o shard_37.png "https://github.com/Escaped-RDFa/namespace?prime=37&domain=loops&proof=25"
+
+Meme: [ASCII Art]
+
+    ╔═══════════════════════════════╗
+    ║  PRIME 37: loops║
+    ║                               ║
+    ║      get_emoji(37)                    ║
+    ║                               ║
+    ║  "get_quote(37)"║
+    ╚═══════════════════════════════╝

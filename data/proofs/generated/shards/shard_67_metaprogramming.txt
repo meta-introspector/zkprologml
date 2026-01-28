@@ -1,0 +1,21 @@
+═══════════════════════════════════════════════════════════
+SHARD 67: metaprogramming
+═══════════════════════════════════════════════════════════
+
+Prime: 67
+Domain: metaprogramming
+Description: eval, compile
+URL: https://github.com/Escaped-RDFa/namespace?prime=67&domain=metaprogramming&proof=43
+
+QR Code: [Generate with qrencode]
+qrencode -o shard_67.png "https://github.com/Escaped-RDFa/namespace?prime=67&domain=metaprogramming&proof=43"
+
+Meme: [ASCII Art]
+
+    ╔═══════════════════════════════╗
+    ║  PRIME 67: metaprogramming║
+    ║                               ║
+    ║      get_emoji(67)                    ║
+    ║                               ║
+    ║  "get_quote(67)"║
+    ╚═══════════════════════════════╝

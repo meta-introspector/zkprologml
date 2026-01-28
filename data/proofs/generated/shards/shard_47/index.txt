@@ -1,0 +1,9 @@
+generated/audio_features.parquet
+generated/factorial_gcc.objdump
+generated/flag_6_2
+generated/monster_lattice_report.log
+generated/monster_literate.nw
+generated/perf_30_2.data
+generated/perf_coq_extracted.txt
+generated/scheme_dependent_type.v
+generated/zkprologml_v3.nw

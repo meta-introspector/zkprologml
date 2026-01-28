@@ -1,0 +1,6 @@
+generated/emoji_patterns.lean
+generated/flag_30_3
+generated/godel_210_2
+generated/godel_30_5.c
+generated/mes_metacoq.v
+generated/test_3_1_profiled_profile.perf.data.old

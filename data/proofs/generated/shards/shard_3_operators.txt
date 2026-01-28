@@ -1,0 +1,21 @@
+═══════════════════════════════════════════════════════════
+SHARD 3: operators
+═══════════════════════════════════════════════════════════
+
+Prime: 3
+Domain: operators
+Description: +, -, *, /
+URL: https://github.com/Escaped-RDFa/namespace?prime=3&domain=operators&proof=3
+
+QR Code: [Generate with qrencode]
+qrencode -o shard_3.png "https://github.com/Escaped-RDFa/namespace?prime=3&domain=operators&proof=3"
+
+Meme: [ASCII Art]
+
+    ╔═══════════════════════════════╗
+    ║  PRIME 3: operators║
+    ║                               ║
+    ║      get_emoji(3)                    ║
+    ║                               ║
+    ║  "get_quote(3)"║
+    ╚═══════════════════════════════╝

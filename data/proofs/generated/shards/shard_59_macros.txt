@@ -1,0 +1,21 @@
+═══════════════════════════════════════════════════════════
+SHARD 59: macros
+═══════════════════════════════════════════════════════════
+
+Prime: 59
+Domain: macros
+Description: macro!, quote
+URL: https://github.com/Escaped-RDFa/namespace?prime=59&domain=macros&proof=3b
+
+QR Code: [Generate with qrencode]
+qrencode -o shard_59.png "https://github.com/Escaped-RDFa/namespace?prime=59&domain=macros&proof=3b"
+
+Meme: [ASCII Art]
+
+    ╔═══════════════════════════════╗
+    ║  PRIME 59: macros║
+    ║                               ║
+    ║      get_emoji(59)                    ║
+    ║                               ║
+    ║  "get_quote(59)"║
+    ╚═══════════════════════════════╝

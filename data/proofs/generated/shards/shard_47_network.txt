@@ -1,0 +1,21 @@
+═══════════════════════════════════════════════════════════
+SHARD 47: network
+═══════════════════════════════════════════════════════════
+
+Prime: 47
+Domain: network
+Description: tcp, http
+URL: https://github.com/Escaped-RDFa/namespace?prime=47&domain=network&proof=2f
+
+QR Code: [Generate with qrencode]
+qrencode -o shard_47.png "https://github.com/Escaped-RDFa/namespace?prime=47&domain=network&proof=2f"
+
+Meme: [ASCII Art]
+
+    ╔═══════════════════════════════╗
+    ║  PRIME 47: network║
+    ║                               ║
+    ║      get_emoji(47)                    ║
+    ║                               ║
+    ║  "get_quote(47)"║
+    ╚═══════════════════════════════╝

@@ -1,0 +1,4 @@
+generated/flag_6_5
+generated/godel_30_2.c
+generated/perf_30_5.data
+generated/prolog_interp.rs

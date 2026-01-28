@@ -1,0 +1,9 @@
+generated/coq_extracted.o
+generated/c_scheme_unification.v
+generated/maxwells_equations.lean
+generated/monster_lattice_report.tex
+generated/perf_6_2.data
+generated/perf_llm_activation.data.old
+generated/perf_tcc.data.old
+generated/prolog_fast.rs
+generated/regenerated_prime.c

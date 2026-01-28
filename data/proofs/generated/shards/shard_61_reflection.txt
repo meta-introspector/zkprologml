@@ -1,0 +1,21 @@
+═══════════════════════════════════════════════════════════
+SHARD 61: reflection
+═══════════════════════════════════════════════════════════
+
+Prime: 61
+Domain: reflection
+Description: typeof, meta
+URL: https://github.com/Escaped-RDFa/namespace?prime=61&domain=reflection&proof=3d
+
+QR Code: [Generate with qrencode]
+qrencode -o shard_61.png "https://github.com/Escaped-RDFa/namespace?prime=61&domain=reflection&proof=3d"
+
+Meme: [ASCII Art]
+
+    ╔═══════════════════════════════╗
+    ║  PRIME 61: reflection║
+    ║                               ║
+    ║      get_emoji(61)                    ║
+    ║                               ║
+    ║  "get_quote(61)"║
+    ╚═══════════════════════════════╝

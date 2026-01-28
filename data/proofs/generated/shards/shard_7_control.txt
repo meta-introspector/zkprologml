@@ -1,0 +1,21 @@
+═══════════════════════════════════════════════════════════
+SHARD 7: control
+═══════════════════════════════════════════════════════════
+
+Prime: 7
+Domain: control
+Description: if, while, for
+URL: https://github.com/Escaped-RDFa/namespace?prime=7&domain=control&proof=7
+
+QR Code: [Generate with qrencode]
+qrencode -o shard_7.png "https://github.com/Escaped-RDFa/namespace?prime=7&domain=control&proof=7"
+
+Meme: [ASCII Art]
+
+    ╔═══════════════════════════════╗
+    ║  PRIME 7: control║
+    ║                               ║
+    ║      get_emoji(7)                    ║
+    ║                               ║
+    ║  "get_quote(7)"║
+    ╚═══════════════════════════════╝

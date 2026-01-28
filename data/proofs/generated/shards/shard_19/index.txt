@@ -1,0 +1,10 @@
+generated/c_scheme_unification.lean
+generated/godel_6_2
+generated/llm_activations.json
+generated/perf_210_7.data
+generated/perf_clang.data
+generated/perf_maxwells_mes.data
+generated/prolog_interp_metacoq.v
+generated/prolog_symphony.pdf
+generated/prolog_symphony.wav
+generated/regenerated_prime.ml

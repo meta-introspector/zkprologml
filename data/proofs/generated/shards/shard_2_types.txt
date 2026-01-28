@@ -1,0 +1,21 @@
+═══════════════════════════════════════════════════════════
+SHARD 2: types
+═══════════════════════════════════════════════════════════
+
+Prime: 2
+Domain: types
+Description: int, bool, char
+URL: https://github.com/Escaped-RDFa/namespace?prime=2&domain=types&proof=2
+
+QR Code: [Generate with qrencode]
+qrencode -o shard_2.png "https://github.com/Escaped-RDFa/namespace?prime=2&domain=types&proof=2"
+
+Meme: [ASCII Art]
+
+    ╔═══════════════════════════════╗
+    ║  PRIME 2: types║
+    ║                               ║
+    ║      get_emoji(2)                    ║
+    ║                               ║
+    ║  "get_quote(2)"║
+    ╚═══════════════════════════════╝

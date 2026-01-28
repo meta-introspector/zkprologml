@@ -1,0 +1,21 @@
+═══════════════════════════════════════════════════════════
+SHARD 29: optimization
+═══════════════════════════════════════════════════════════
+
+Prime: 29
+Domain: optimization
+Description: SSA, inlining
+URL: https://github.com/Escaped-RDFa/namespace?prime=29&domain=optimization&proof=1d
+
+QR Code: [Generate with qrencode]
+qrencode -o shard_29.png "https://github.com/Escaped-RDFa/namespace?prime=29&domain=optimization&proof=1d"
+
+Meme: [ASCII Art]
+
+    ╔═══════════════════════════════╗
+    ║  PRIME 29: optimization║
+    ║                               ║
+    ║      get_emoji(29)                    ║
+    ║                               ║
+    ║  "get_quote(29)"║
+    ╚═══════════════════════════════╝

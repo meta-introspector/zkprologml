@@ -1,0 +1,8 @@
+generated/emoji_patterns.rs
+generated/flag_2_5
+generated/godel_10_5
+generated/godel_30_3
+generated/godel_6_3.c
+generated/musical_score.txt
+generated/perf_rust_verified.data
+generated/rust_verified

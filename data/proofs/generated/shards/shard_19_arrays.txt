@@ -1,0 +1,21 @@
+═══════════════════════════════════════════════════════════
+SHARD 19: arrays
+═══════════════════════════════════════════════════════════
+
+Prime: 19
+Domain: arrays
+Description: [], vector
+URL: https://github.com/Escaped-RDFa/namespace?prime=19&domain=arrays&proof=13
+
+QR Code: [Generate with qrencode]
+qrencode -o shard_19.png "https://github.com/Escaped-RDFa/namespace?prime=19&domain=arrays&proof=13"
+
+Meme: [ASCII Art]
+
+    ╔═══════════════════════════════╗
+    ║  PRIME 19: arrays║
+    ║                               ║
+    ║      get_emoji(19)                    ║
+    ║                               ║
+    ║  "get_quote(19)"║
+    ╚═══════════════════════════════╝

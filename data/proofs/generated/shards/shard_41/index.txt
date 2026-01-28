@@ -1,0 +1,10 @@
+generated/71_memes.json
+generated/closed_loop_heat.csv
+generated/godel_30_2
+generated/godel_6_2.c
+generated/llm_activation.log
+generated/muselang.ll
+generated/perf_10_2.data
+generated/perf_clang.data.old
+generated/prime_harmony.wav
+generated/prolog_symphony.midi

@@ -1,0 +1,21 @@
+═══════════════════════════════════════════════════════════
+SHARD 43: safety
+═══════════════════════════════════════════════════════════
+
+Prime: 43
+Domain: safety
+Description: borrow, lifetime
+URL: https://github.com/Escaped-RDFa/namespace?prime=43&domain=safety&proof=2b
+
+QR Code: [Generate with qrencode]
+qrencode -o shard_43.png "https://github.com/Escaped-RDFa/namespace?prime=43&domain=safety&proof=2b"
+
+Meme: [ASCII Art]
+
+    ╔═══════════════════════════════╗
+    ║  PRIME 43: safety║
+    ║                               ║
+    ║      get_emoji(43)                    ║
+    ║                               ║
+    ║  "get_quote(43)"║
+    ╚═══════════════════════════════╝

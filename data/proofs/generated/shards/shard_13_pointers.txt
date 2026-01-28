@@ -1,0 +1,21 @@
+═══════════════════════════════════════════════════════════
+SHARD 13: pointers
+═══════════════════════════════════════════════════════════
+
+Prime: 13
+Domain: pointers
+Description: *ptr, &ref
+URL: https://github.com/Escaped-RDFa/namespace?prime=13&domain=pointers&proof=d
+
+QR Code: [Generate with qrencode]
+qrencode -o shard_13.png "https://github.com/Escaped-RDFa/namespace?prime=13&domain=pointers&proof=d"
+
+Meme: [ASCII Art]
+
+    ╔═══════════════════════════════╗
+    ║  PRIME 13: pointers║
+    ║                               ║
+    ║      get_emoji(13)                    ║
+    ║                               ║
+    ║  "get_quote(13)"║
+    ╚═══════════════════════════════╝
