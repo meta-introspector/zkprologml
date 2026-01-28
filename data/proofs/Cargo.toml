@@ -1,0 +1,27 @@
+[package]
+name = "zkprologml"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# No external dependencies - pure Rust!
+
+[build-dependencies]
+# Build script dependencies
+
+[[bin]]
+name = "load_global_table"
+path = "load_global_table.rs"
+
+[[bin]]
+name = "update_parquet_formal"
+path = "update_parquet_formal.rs"
+
+[[bin]]
+name = "eigenvector_matrix"
+path = "eigenvector_matrix.rs"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
