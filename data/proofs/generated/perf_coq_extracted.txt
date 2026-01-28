@@ -1,0 +1,19 @@
+# started on Wed Jan 28 07:37:27 2026
+
+
+ Performance counter stats for 'generated/ocaml_primes':
+
+           968,492      cpu_atom/cycles/                 #    1.575 GHz                       
+     <not counted>      cpu_core/cycles/                                                        (0.00%)
+         1,009,136      cpu_atom/instructions/           #    1.04  insn per cycle            
+     <not counted>      cpu_core/instructions/                                                  (0.00%)
+             5,096      cpu_atom/cache-misses/                                                
+     <not counted>      cpu_core/cache-misses/                                                  (0.00%)
+           615,049      cpu-clock                        #    0.449 CPUs utilized             
+
+       0.001370335 seconds time elapsed
+
+       0.000000000 seconds user
+       0.001440000 seconds sys
+
+

@@ -1,0 +1,2006 @@
+"accelerates(gpu
+"action_complexity(analyzing
+"action_complexity(converging
+"action_complexity(fixed_point
+"action_complexity(read_content
+"action_complexity(reading_self
+"adjust_resources(P
+"adjust_schedule(P
+"algorithm(deep_q_network
+"all_congruent([])."
+"all_congruent([_])."
+"(* All factorial implementations *)"
+"all_prime([])."
+"all_same([])."
+"all_same([_])."
+"all_same_result([])."
+"all_same_result([_])."
+"all_theorems(["
+"analyze_body(_
+"analyze_variant_predicates(_
+"apply(gcc_bootstrap
+"apply(metacoq
+"apply(prolog_interpreter
+"apply_transform(Point
+"architecture(transformer
+"assign_complexity(pred(Name/Arity
+"athena_basis_vector(1
+"athena_basis_vector(2
+"athena_basis_vector(3
+"athena_basis_vector(4
+"athena_basis_vector(5
+"athena_basis_vector(6
+"athena_lattice_node(0
+"athena_lattice_node(1
+"athena_lattice_node(2
+"athena_lattice_node(3
+"attention_mechanism(our_system
+"attention_mechanism(transformer
+"audio_feature(File
+"automorphism(gcc_bootstrap
+"automorphism(metacoq
+"automorphism(prolog_interpreter
+"based_on(coq
+"bisimulation(llm_cpu
+"bisimulation(prolog
+"bits_to_tones([]
+"bootstrap_chain(["
+"bott_period(8)."
+"build_pipeline(code
+"build_pipeline(llm
+"build_pipeline(nix
+"build_pipeline(perf
+"bytes_to_audio_samples([]
+"calculate_dissonance([]
+"calculate_dissonance([_]
+"calculate_godel_number([]
+"c_complexity(add_op
+"c_complexity(address_of
+"c_complexity(array_access
+"c_complexity(array_decl
+"c_complexity(array_init
+"c_complexity(asm_stmt
+"c_complexity(cast_expr
+"c_complexity(char_type
+"c_complexity(compound_literal
+"c_complexity(define_macro
+"c_complexity(div_op
+"c_complexity(for_loop
+"c_complexity(free_call
+"c_complexity(func_call
+"c_complexity(func_decl
+"c_complexity(ifdef_directive
+"c_complexity(if_stmt
+"c_complexity(include_directive
+"c_complexity(int_type
+"c_complexity(malloc_call
+"c_complexity(memcpy_call
+"c_complexity(mul_op
+"c_complexity(pointer_decl
+"c_complexity(pointer_deref
+"c_complexity(return_stmt
+"c_complexity(struct_access
+"c_complexity(struct_decl
+"c_complexity(struct_ptr_access
+"c_complexity(sub_op
+"c_complexity(ternary_op
+"c_complexity(var_assign
+"c_complexity(var_decl
+"c_complexity(var_read
+"c_complexity(void_type
+"c_complexity(volatile_asm
+"c_complexity(while_loop
+"c_construct(add_op
+"c_construct(address_of
+"c_construct(array
+"c_construct(array_access
+"c_construct(array_decl
+"c_construct(array_init
+"c_construct(asm_stmt
+"c_construct(cast_expr
+"c_construct(char_type
+"c_construct(compound_literal
+"c_construct(define_macro
+"c_construct(div_op
+"c_construct(for_loop
+"c_construct(free_call
+"c_construct(func_call
+"c_construct(func_decl
+"c_construct(ifdef_directive
+"c_construct(if_stmt
+"c_construct(include_directive
+"c_construct(int_type
+"c_construct(malloc
+"c_construct(malloc_call
+"c_construct(memcpy_call
+"c_construct(mul_op
+"c_construct(pointer
+"c_construct(pointer_decl
+"c_construct(pointer_deref
+"c_construct(return_stmt
+"c_construct(struct
+"c_construct(struct_access
+"c_construct(struct_decl
+"c_construct(struct_ptr_access
+"c_construct(sub_op
+"c_construct(ternary_op
+"c_construct(var_assign
+"c_construct(var_decl
+"c_construct(var_read
+"c_construct(void_type
+"c_construct(volatile_asm
+"c_construct(while_loop
+"c_enum_code(color
+"c_enum(color
+"c_eval(c_int(N)
+"chain(arbitrum
+"chain(avalanche
+"chain(base
+"chain(bitcoin
+"chain(ethereum
+"chain(optimism
+"chain(polygon
+"chain(solana
+"circle([prolog
+"clause_db(["
+"codes_to_emoji([]
+"cohort_member('Bot1'
+"cohort_member('Degen1'
+"cohort_member('Holder1'
+"cohort_member('Trader1'
+"cohort_member('Whale1'
+"combine_encrypted(Fragments
+"compile(code(Layer)
+"compiler_cmd(clang
+"compiler_cmd(gcc
+"compiler_cmd(tcc
+"compiler_passes(clang
+"compiler_passes(compcert
+"compiler_passes(gcc
+"compiler_passes(mes
+"compiler_passes(tcc
+"compiler_signature(gcc
+"compiler_signature(llvm
+"compiler_signature(mes
+"compiler_signature(rustc
+"compiles(gcc
+"compiles(ocaml
+"compiles_to(haskell
+"compiles_to(llvm
+"compiles_to(ocaml
+"compiles_to(rust
+"complexity_lattice([0
+"complexity_lattice([2
+"complexity_matches(o(n)
+"complexity_matches(o(n_squared)
+"complexity_rank(0
+"complexity_rank(1
+"complexity_rank(11
+"complexity_rank(13
+"complexity_rank(17
+"complexity_rank(19
+"complexity_rank(2
+"complexity_rank(23
+"complexity_rank(29
+"complexity_rank(3
+"complexity_rank(31
+"complexity_rank(37
+"complexity_rank(41
+"complexity_rank(43
+"complexity_rank(47
+"complexity_rank(5
+"complexity_rank(53
+"complexity_rank(59
+"complexity_rank(61
+"complexity_rank(67
+"complexity_rank(7
+"complexity_rank(71
+"complexity_source(lmfdb
+"complexity_source(oeis
+"complexity_source(wikidata
+"concept(athena)."
+"concept(godel)."
+"concept(keywords)."
+"concept(kurt)."
+"concept(monster)."
+"concept(platonic)."
+"concept(pnm_lattice)."
+"concept(umberto)."
+"concept(urania)."
+"const _: () = {"
+"const _: [(); 0 - mem::align_of::<Shared>() % 2] = []; // Assert that the alignment of `Shared` is divisible by 2."
+"const ADDR_ELTS: usize = 2;"
+"const ANALYZE_FUNCTION_BASE_COST: u128 = 10;"
+"const ASCII_CASE_MASK: u8 = 0b0010_0000;"
+"const _: () = assert!(BLOOM_SIZE_BYTES.is_power_of_two());"
+"const _: () = assert!(cfg!(panic = "abort")
+"const _: () = assert!(mem::align_of::<Alignment>() == mem::align_of::<usize>());"
+"const _: () = assert!(mem::size_of::<Alignment>() == mem::size_of::<usize>());"
+"const BASE_GAS_FEE: u64 = 500;"
+"const BASE_GAS_FEE: u64 = 75000;"
+"const BASE_GAS_FEE: u64 = 800;"
+"const BIG_T_SIZE: usize = 1 << 14;"
+"const BIT_REVERSE_6BIT: &[u8] = &["
+"const BITS_PER_LIMB: usize = 16;"
+"const BITWISE_OP_LOOKUP_BUS: BusIndex = 9;"
+"const BPF_ALIGN_OF_U128: usize = 8;"
+"const BUILTIN_BIT_SHIFT: usize = 32;"
+"const B: usize = 6;"
+"const COMPACT_BITS_LIMIT: usize = 536;"
+"const COMPRESSION_BUS: PermutationCheckBus = PermutationCheckBus::new(POSEIDON2_DIRECT_BUS);"
+"const CONT_MASK: u8 = 0b0011_1111;"
+"const DATA_MASK: u8 = 0b_0000_1000;"
+"const DATA_SHIFT: u8 = 0;"
+"const DAYS_PER_WEEK: u64 = 7;"
+"const DEFAULT_CHUNK: usize = 8;"
+"const DEFAULT_EXEMPTION_THRESHOLD_AS_U64: u64 = 2;"
+"const DEFAULT_MAX_CELLS_PER_CHIP_IN_SEGMENT: usize = DEFAULT_MAX_SEGMENT_LEN * 120;"
+"const DEFAULT_MAX_SEGMENT_LEN: usize = (1 << 22) - 100;"
+"const DEFAULT_POSEIDON2_MAX_CONSTRAINT_DEGREE: usize = 3;"
+"const DEFAULT_RECORDS_CAPACITY: usize = 1 << 20;"
+"const EDGE_IDX_LEFT_OF_CENTER: usize = B - 1;"
+"const EDGE_IDX_RIGHT_OF_CENTER: usize = B;"
+"const ELF_COMPLEXITY: u32 = "
+"const EMULATE_ATOMIC_BOOL: bool ="
+"const ENTRY_BLOCK_ID: BlockId = 0;"
+"const EOF_NON_RETURNING_FUNCTION: u8 = 0x80;"
+"const EXECUTE_BLOCK_BASE_COST: u128 = 10;"
+"const EXIT_CODE_FAIL: usize = 1;"
+"const EXTRACT_SYMBOLS_COMPLEXITY: u32 = 5;"
+"const F64_EXEMPTION_THRESHOLD_AS_U64: u64 = 4611686018427387904;"
+"const FIELDS: &[NamedField<'static>] = &[NamedField::new("limbs")];"
+"const FLIPH_BITMASK_U64: u64 = 0x7FFFFFFFFFFFFFFF;"
+"const _: fn() = || {"
+"const fn all_bytes_valid(b: &[u8]
+"const fn backslash<const N: usize>(a: ascii::Char) -> ([ascii::Char; N]
+"const fn bitset_search<"
+"const fn bits_u64(n: u64) -> usize {"
+"const fn char_try_from_u32(i: u32) -> Result<char
+"const fn contains_nonascii(v: usize) -> bool {"
+"const fn contains_nonascii(x: usize) -> bool {"
+"const fn contains_zero_byte(x: usize) -> bool {"
+"const fn escape_ascii<const N: usize>(byte: u8) -> ([ascii::Char; N]
+"const fn escape_unicode<const N: usize>(c: char) -> ([ascii::Char; N]
+"const fn expect_failed(msg: &str) -> ! {"
+"const fn from_str_radix_panic(radix: u32) -> ! {"
+"const fn hex_escape<const N: usize>(byte: u8) -> ([ascii::Char; N]
+"const fn in_place_collectible<DEST
+"const fn inst_partition<T
+"const fn is_ascii(s: &[u8]) -> bool {"
+"const fn is_valid_v(v: u64) -> bool {"
+"const fn len_utf16(code: u32) -> usize {"
+"const fn len_utf8(code: u32) -> usize {"
+"const fn less_than_5(val: u32) -> u32 {"
+"const fn log2floor(value: U256) -> u64 {"
+"const fn make_col_map() -> KeccakCols<usize> {"
+"const fn memchr_aligned(x: u8
+"const fn memchr_naive(x: u8
+"const fn min_non_zero_cap(size: usize) -> usize {"
+"const fn murmur3_32(buf: &[u8]
+"const fn needs_realloc<SRC
+"const fn offset<T
+"const fn panic_poisoned() -> ! {"
+"const fn rem_up(a: usize
+"const fn size_align<T>() -> (usize
+"const fn slice_end_index_len_fail(index: usize
+"const fn slice_end_index_overflow_fail() -> ! {"
+"const fn slice_error_fail_ct(_: &str
+"const fn slice_error_fail(s: &str
+"const fn slice_index_order_fail(index: usize
+"const fn slice_start_index_len_fail(index: usize
+"const fn slice_start_index_overflow_fail() -> ! {"
+"const fn str_index_overflow_fail() -> ! {"
+"const fn u128_stages(n: u128) -> u128 {"
+"const fn u16_stages(n: u16) -> u16 {"
+"const fn u32_stages(n: u32) -> u32 {"
+"const fn u64_stages(n: u64) -> u64 {"
+"const fn unpack_amount_and_decimals(instruction_data: &[u8]) -> Result<(u64
+"const fn unpack_amount(instruction_data: &[u8]) -> Result<u64
+"const fn unwrap_failed() -> ! {"
+"const fn utf8_acc_cont_byte(ch: u32
+"const fn utf8_first_byte(byte: u8
+"const fn verbatim<const N: usize>(a: ascii::Char) -> ([ascii::Char; N]
+"const F_ROUND: u64 = 1;"
+"const G1_OUTPUT_LENGTH: usize = 128;"
+"const G2_OUTPUT_LENGTH: usize = 256;"
+"const HEX_DIGITS: [ascii::Char; 16] = *b"0123456789abcdef".as_ascii().unwrap();"
+"const HI_USIZE: usize = usize::repeat_u8(0x80);"
+"const HOURS_PER_DAY: u64 = 24;"
+"const IMM_BITS: usize = 16;"
+"const IMM_BITS: usize = 20;"
+"const IMM_BITS: usize = 24;"
+"const INPUT_LENGTH: usize = 213;"
+"const INPUT_LENGTH: usize = 256;"
+"const INPUT_LENGTH: usize = 384;"
+"const INPUT_LENGTH: usize = 512;"
+"const INSERTION_SORT_THRESHOLD: usize = 16;"
+"const INTERNAL_OVERFLOW_ERROR: &str = "Arc counter overflow";"
+"const INT_POW10: [u64; 16] = ["
+"const IS_SIGNER: u8 = 0b00000001;"
+"const IS_WRITABLE: u8 = 0b00000010;"
+"const ITEM_BYTES: usize = (BLOOM_SIZE_BITS.ilog2() as usize + 7) / 8;"
+"const ITER_PERFORMANCE_TIPPING_SIZE_DIFF: usize = 16;"
+"const IX_HEADER_SIZE: usize = 2;"
+"const KIND_ARC: usize = 0b0;"
+"const KIND_CODE: u8 = 2;"
+"const KIND_CONTAINER: u8 = 3;"
+"const KIND_DATA: u8 = 4;"
+"const KIND_MASK: usize = 0b1;"
+"const KIND_TERMINAL: u8 = 0;"
+"const KIND_TYPES: u8 = 1;"
+"const KIND_VEC: usize = 0b1;"
+"const KV_IDX_CENTER: usize = B - 1;"
+"const LAMPORTS_MASK: u8 = 0b_1000_0000;"
+"const LAMPORTS_SHIFT: u8 = 4;"
+"const LB_BLOCK_SIZE: usize = 3;"
+"const LIMB_MAX: u32 = (1 << RV32_CELL_BITS) - 1;"
+"const LINE_WIDTH: usize = 100;"
+"const LO_USIZE: usize = usize::repeat_u8(0x01);"
+"const MAP_FP_TO_G1_BASE: u64 = 5500;"
+"const MASK: usize = BLOOM_SIZE_BITS - 1;"
+"const MAX_BASE58_LEN: usize = 44;"
+"const MAX_BITS: usize = 55 * 8;"
+"const MAX_FORMATTED_DIGITS: usize = u8::MAX as usize + 2;"
+"const MAX_ONE_B: u32 = 0x80;"
+"const MAX_ORIGINAL_CAPACITY_WIDTH: usize = 17;"
+"const MAX_OWNERS: u32 = 50;"
+"const MAX_REFCOUNT: usize = (isize::MAX) as usize;"
+"const MAX_STACK_ARRAY_SIZE: usize = 4096;"
+"const MAX_STATIC_INNER_SLICE_ALIGNMENT: usize = 16;"
+"const MAX_THREE_B: u32 = 0x10000;"
+"const MAX_TWO_B: u32 = 0x800;"
+"const MAX_U64_EXPONENT: u8 = 19;"
+"const MAX: usize = 32;"
+"const MAX_VEC_POS: usize = usize::MAX >> VEC_POS_OFFSET;"
+"const message: &str = "Hello
+"const MICROS_PER_SEC: u64 = 1_000_000;"
+"const MILLIS_PER_SEC: u64 = 1_000;"
+"const MIN_19DIGIT_INT: u64 = 100_0000_0000_0000_0000;"
+"const MIN_INSERTS_HEIGHT_1: usize = node::CAPACITY + 1;"
+"const MIN_INSERTS_HEIGHT_2: usize = 89;"
+"const MIN_ORIGINAL_CAPACITY_WIDTH: usize = 10;"
+"const MINS_PER_HOUR: u64 = 60;"
+"const MONSTER_PRIMES: [u64; 20] = ["
+"const MSG_PERMUTATION: [usize; 16] = [2
+"const MSM_MULTIPLIER: u64 = 1000;"
+"const NANOS_PER_MICRO: u32 = 1_000;"
+"const NANOS_PER_MILLI: u32 = 1_000_000;"
+"const NANOS_PER_SEC: u32 = 1_000_000_000;"
+"const NONASCII_MASK: usize = usize::repeat_u8(0x80);"
+"const NON_DUP_MARKER: u8 = u8::MAX;"
+"const NORMAL0: &[u8] = &["
+"const NORMAL1: &[u8] = &["
+"const NOT_VEC_POS_MASK: usize = 0b11111;"
+"const NTHREADS: u32 = 10;"
+"const NUM_AS_LIMBS: usize = 1;"
+"const NUM_BITS_PER_BYTE: usize = 8;"
+"const NUM_PHANTOM_OPERANDS: usize = 3;"
+"const _ON_ERC_1155_BATCH_RECEIVED_SELECTOR: [u8; 4] = [0xBC
+"const ON_ERC_1155_RECEIVED_SELECTOR: [u8; 4] = [0xF2
+"const ORIGINAL_CAPACITY_MASK: usize = 0b11100;"
+"const ORIGINAL_CAPACITY_OFFSET: usize = 2;"
+"const OUT_OF_RANGE: &str = "out of range Uint decoding";"
+"const P256VERIFY_BASE: u64 = 3450;"
+"const PAIRING_MULTIPLIER_BASE: u64 = 43000;"
+"const PAIRING_OFFSET_BASE: u64 = 65000;"
+"const PARSE_HEADER_COMPLEXITY: u32 = 7;"
+"const PDA_MARKER: &[u8; 21] = b"ProgramDerivedAddress";"
+"const PER_BACKEDGE_COST: u128 = 10;"
+"const PER_SUCCESSOR_COST: u128 = 10;"
+"const PRIMES: [u64; 20] = [2
+"const PSEUDO_MEDIAN_REC_THRESHOLD: usize = 64;"
+"const PTR_WIDTH: usize = 32;"
+"const PTR_WIDTH: usize = 64;"
+"const RANGE_CHECKER_BUS: BusIndex = 3;"
+"const RANGE_CHECKER_BUS: BusIndex = 4;"
+"const RATE_BITS: usize = 1088;"
+"const RATE_LIMBS: usize = RATE_BITS / BITS_PER_LIMB;"
+"const RC_BITS: [[u8; 64]; 24] = ["
+"const READ_SECTIONS_COMPLEXITY: u32 = 11;"
+"const RV32_LIMB_MAX: u32 = (1 << RV32_CELL_BITS) - 1;"
+"const SECP256K1N_ORDER: U256 ="
+"const SECS_PER_MINUTE: u64 = 60;"
+"const SEGMENTATION_BACKOFF_FACTOR: usize = 4;"
+"const SEGMENT_CHECK_INTERVAL: usize = 100;"
+"const SINGLETONS0L: &[u8] = &["
+"const SINGLETONS0U: &[(u8
+"const SINGLETONS1L: &[u8] = &["
+"const SINGLETONS1U: &[(u8
+"const SMALL_ARR_SIZE: usize = 1 << 16;"
+"const SMALL_POW5: [(u64
+"const SMALL_PRIMES: u64 = 614889782588491410;"
+"const SMALL_SORT_FALLBACK_THRESHOLD: usize = 16;"
+"const SMALL_SORT_GENERAL_THRESHOLD: usize = 32;"
+"const SMALL_SORT_NETWORK_SCRATCH_LEN: usize = SMALL_SORT_NETWORK_THRESHOLD;"
+"const SMALL_SORT_NETWORK_THRESHOLD: usize = 32;"
+"const SPL_TOKEN_ACCOUNT_MINT_OFFSET: usize = 0;"
+"const SPL_TOKEN_ACCOUNT_OWNER_OFFSET: usize = 32;"
+"const STATIC_ACCOUNT_DATA: usize = core::mem::size_of::<Account>() + MAX_PERMITTED_DATA_INCREASE;"
+"const STATIC_VTABLE: Vtable = Vtable {"
+"const SUCCESS: u64 = 0;"
+"const TAG_CONT: u8 = 0b1000_0000;"
+"const TAG_FOUR_B: u8 = 0b1111_0000;"
+"const TAG_THREE_B: u8 = 0b1110_0000;"
+"const TAG_TWO_B: u8 = 0b1100_0000;"
+"const THRESHOLD: i32 = 10;"
+"const TYPE_NODE_COST: u128 = 30;"
+"const U256_NUM_BITS: usize = 256;"
+"const U64_BYTES: usize = 8;"
+"const U64_BYTES: usize = core::mem::size_of::<u64>();"
+"const U8_ISQRT_WITH_REMAINDER: [(u8
+"const UNROLL_INNER: usize = 4;"
+"const unsafe fn get_mut_noubcheck<T>(ptr: *mut [T]
+"const unsafe fn get_noubcheck<T>(ptr: *const [T]
+"const unsafe fn get_offset_len_mut_noubcheck<T>("
+"const unsafe fn get_offset_len_noubcheck<T>("
+"const unsafe fn strlen(ptr: *const c_char) -> usize {"
+"const unsafe fn swap_nonoverlapping_simple_untyped<T>(x: *mut T
+"const UNUSED: BorrowFlag = 0;"
+"const USIZE_BYTES: usize = mem::size_of::<usize>();"
+"const USIZE_SIZE: usize = core::mem::size_of::<usize>();"
+"const UTF8_CHAR_WIDTH: &[u8; 256] = &["
+"const VEC_POS_OFFSET: usize = 5;"
+"const WORD_SIZE: usize = 1;"
+"const WRONG_TRANSACTION_ID: &str = "The user specified an invalid transaction id. Abort.";"
+"const ZERO_STR: &str = "0x0";"
+"content_address(X
+"content_hash(Path
+"control_for_c('"
+"control_for_scheme('"
+"control_if_c('"
+"control_if_scheme('"
+"control_switch_c('"
+"control_switch_prolog(day_name(_
+"control_switch_prolog(day_name(0
+"control_switch_prolog(day_name(1
+"control_switch_prolog(day_name(2
+"control_switch_prolog(day_name(3
+"control_switch_prolog(day_name(4
+"control_switch_prolog(day_name(5
+"control_switch_prolog(day_name(6
+"control_switch_scheme('"
+"control_while_c('"
+"control_while_scheme('"
+"convergence_point(11
+"convergence_point(13
+"convergence_point(17
+"convergence_point(19
+"convergence_point(2
+"convergence_point(23
+"convergence_point(3
+"convergence_point(5
+"convergence_point(7
+"coq_file('lang_model.v'
+"coq_notation('∑u'
+"coq_notation('UU'
+"coq_theorem('Allocation_correct'
+"coq_theorem('Asmgen_correct'
+"coq_theorem('Asm_semantics'
+"coq_theorem('Clight_semantics'
+"coq_theorem('Cminorgen_correct'
+"coq_theorem('Constprop_correct'
+"coq_theorem('Inlining_correct'
+"coq_theorem('Linearize_correct'
+"coq_theorem('LTL_semantics'
+"coq_theorem('Mach_semantics'
+"coq_theorem('RTLgen_correct'
+"coq_theorem('RTL_semantics'
+"coq_theorem('Selection_correct'
+"coq_theorem('SimplLocals_correct'
+"coq_theorem('Tailcall_correct'
+"coq_to_c_mapping('bool'
+"coq_to_c_mapping('Definition'
+"coq_to_c_mapping('Fixpoint'
+"coq_to_c_mapping('if'
+"coq_to_c_mapping('list'
+"coq_to_c_mapping('match'
+"coq_to_c_mapping('nat'
+"coq_to_c_mapping('option'
+"(* Corollary: All are equal *)"
+"(* Corollary: MES bootstrap is self-verifying *)"
+"(* Corollary: Prime preservation *)"
+"(* Correctness theorem *)"
+"correlation_coefficient(0.000)."
+"correlation_coefficient(~3f)."
+"count_registers([]
+"c_program(factorial
+"(* C program in Coq *)"
+"(* C program type *)"
+"cpu_allocation(afternoon_batch
+"cpu_allocation(day_interactive
+"cpu_allocation(evening_analysis
+"cpu_allocation(evening_batch
+"cpu_allocation(lunch_optimize
+"cpu_allocation(morning_analysis
+"cpu_allocation(night_batch
+"cpu_allocation(night_prep
+"c_struct_code(point
+"c_struct(point
+"csv_field(Field) --> """
+"csv_field(Field) --> string(Codes)
+"csv_fields([Field]) --> csv_field(Field)."
+"csv_fields([Field|Fields]) --> csv_field(Field)
+"csv_row(Row) --> csv_fields(Row)
+"csv_rows([]) --> []."
+"csv_rows([Row|Rows]) --> csv_row(Row)
+"c_syntax(add_op
+"c_syntax(address_of
+"c_syntax(array_access
+"c_syntax(array_decl
+"c_syntax(array_init
+"c_syntax(asm_stmt
+"c_syntax(cast_expr
+"c_syntax(char_type
+"c_syntax(define_macro
+"c_syntax(div_op
+"c_syntax(float_type
+"c_syntax(for_loop
+"c_syntax(free_call
+"c_syntax(func_call
+"c_syntax(func_decl
+"c_syntax(if_stmt
+"c_syntax(include_dir
+"c_syntax(int_type
+"c_syntax(malloc_call
+"c_syntax(memcpy_call
+"c_syntax(mul_op
+"c_syntax(pointer_decl
+"c_syntax(pointer_deref
+"c_syntax(return_stmt
+"c_syntax(struct_access
+"c_syntax(struct_decl
+"c_syntax(struct_ptr
+"c_syntax(sub_op
+"c_syntax(switch_stmt
+"c_syntax(ternary_op
+"c_syntax(var_assign
+"c_syntax(var_decl
+"c_syntax(var_read
+"c_syntax(void_type
+"c_syntax(while_loop
+"decode_and_execute(complete_runes)"
+"def all_files : FileList := ⟨[]⟩  -- 5
+"def bott_period : ℕ := 8"
+"def bott_period : Nat := 8"
+"def compcert_passes : List Nat := [2
+"def compcert_primes : List Nat := [2
+"def Complexity := Fin 72"
+"def Complexity := Fin 72  -- 0 to 71"
+"def convergence_primes : List Nat := [2
+"def cpuCycles (p : Nat) : Nat := p * 1000"
+"def CPUCycles (p : Nat) : Nat := p * 1000"
+"def extended_primes : List Nat := [2
+"def extract_symbols_complexity : Nat := 5"
+"def files_as_parquet : Parquet := ⟨"all_files_sharded.csv"
+"def files_enriched : Schema := ⟨"files_enriched_monster"
+"def godel_lattice : Schema := ⟨"godel_lattice"
+"def haskell_athena : AthenaNode := ⟨0
+"def hecke_shards : Schema := ⟨"hecke_shards_rust"
+"(define (color-value c)"
+"(define (day-name day)"
+"(define (eval-prime expr)"
+"(define (lisp-eval expr env)"
+"(define (make-color n)"
+"(define (make-point x y)"
+"(define (max a b)"
+"(define (monster-action g code)"
+"(define (monster-mult g code)"
+"(define (point-distance-sq p)"
+"(define (point-x p) (car p))"
+"(define (point-y p) (cadr p))"
+"(define (prime-preserved? code)"
+"(define primes '(2 3 5 7 11 13 17 19 23 29))"
+"(define (prime-signature n)"
+"(define primes (quote (2 3 5 7 11 13)))"
+"(define (product-range start end)"
+"(define (sum-to-n n)"
+"(define (test-eval-commutes g code)"
+"def instance1_as_parquet : Parquet := ⟨"all_files_sharded.csv"
+"def instance1 : File := ⟨"all_files_sharded.csv"
+"def instance2 : File := ⟨"locate_digest.parquet"
+"def layer42 : ℕ := 42"
+"def lean4_view : MathematicalView := ⟨Lean4
+"def lean_athena : AthenaNode := ⟨3
+"def lists_of_lists : Parquet := ⟨"lists_of_lists.parquet"
+"def locate_digest : Parquet := ⟨"locate_digest.parquet"
+"def metacoq_level : Nat := 41"
+"def metacoq_prime : Nat := 41"
+"def mod8_class (p : Nat) : Fin 8 := ⟨p % 8
+"def MonsterPrimeDivisors : Finset Nat := {2
+"def monster_primes : List ℕ := [2
+"def monster_primes : List Nat := [2
+"def monsterPrimes : List Nat := [2
+"def monster_primes : Vector Nat 71 := sorry  -- [2
+"def muses : ℕ := 9"
+"def NonMonsterPrimes : Finset Nat := {37
+"def num_chords : Nat := 24"
+"def num_muses : ℕ := 9"
+"def parse_header_complexity : Nat := 7"
+"def prime_harmonic (p : Nat) : ℚ := 1 / p"
+"def PrimeLattice : List Nat := [2
+"def primes : List Nat := [2
+"def read_sections_complexity : Nat := 11"
+"def rust_athena_v1 : AthenaNode := ⟨1
+"def rust_athena_v2 : AthenaNode := ⟨2
+"def scholars : ℕ := 5"
+"def syntax_harmonic (p : Nat) : ℚ := 1 / p"
+"def syntax_primes : List Nat := [2
+"def test_primes : List Nat := [2
+"def total_layers : ℕ := 72"
+"def total : ℕ := 21"
+"def unimath_to_prolog : UniMath → Prolog := fun _ => 0"
+"def visionaries : ℕ := 7"
+"derives_from(scheme
+"(display (test-eval-commutes 2 6))"
+"(display "Testing eval commutativity: ")"
+"distribute_to_agda(_)."
+"distribute_to_coq(_)."
+"distribute_to_isabelle(_)."
+"distribute_to_lmfdb(_)."
+"distribute_to_unimath(_)."
+"eigenvector_fixed_point("
+"eigenvector(gcc_bootstrap
+"eigenvector(metacoq
+"eigenvector(prolog_interpreter
+"emoji_patterns(["
+"emoji_prime('🧬'
+"emoji_prime('♾️'
+"emoji_prime('⚙️'
+"emoji_prime('⚡'
+"emoji_prime('🌌'
+"emoji_prime('🌐'
+"emoji_prime('🎨'
+"emoji_prime('🎯'
+"emoji_prime('🏗️'
+"emoji_prime('👉'
+"emoji_prime('💾'
+"emoji_prime('📊'
+"emoji_prime('📤'
+"emoji_prime('📦'
+"emoji_prime('🔀'
+"emoji_prime('🔄'
+"emoji_prime('🔐'
+"emoji_prime('🔢'
+"emoji_prime('🔬'
+"emoji_prime('🤖'
+"emoji_prime(11
+"emoji_prime(13
+"emoji_prime(17
+"emoji_prime(19
+"emoji_prime(2
+"emoji_prime(23
+"emoji_prime(29
+"emoji_prime(3
+"emoji_prime(31
+"emoji_prime(37
+"emoji_prime(41
+"emoji_prime(43
+"emoji_prime(47
+"emoji_prime(5
+"emoji_prime(53
+"emoji_prime(59
+"emoji_prime(61
+"emoji_prime(67
+"emoji_prime(7
+"emoji_prime(71
+"encode_components([]
+"endofunctor(gcc_bootstrap
+"endofunctor(metacoq
+"endofunctor(prolog_interpreter
+"entity_primes(tool(lean4
+"entity_primes(tool(nix
+"entity_primes(tool(prolog
+"entity_primes(tool(python
+"entity_primes(tool(rust
+"entity_primes(tool(shell
+"entity_type_name(dataset(D
+"entity_type_name(operation(Op)
+"entity_type_name(prime(P)
+"entity_type_name(repo(R
+"entity_type_path(_
+"(* Enum example *)"
+"(* Environment: list of clauses *)"
+"equivalent(guile
+"equivalent(haskell
+"equivalent(lean
+"equivalent(lisp
+"equivalent(mes
+"equivalent(metacoq
+"equivalent(ocaml
+"equivalent_output(result(L)
+"equivalent(prolog
+"equivalent(scheme
+"equivalent(unimath
+"eval(true
+"example_c('int factorial(int n) { if (n <= 1) return 1; return n * factorial(n - 1); }')."
+"example_clight('"
+"example_coq_proof('"
+"(* Example: factorial *)"
+"example_metacoq_quote('"
+"example_metacoq_type('"
+"example_universe('"
+"execute() {"
+"execute(binary(Layer)
+"execute_instruction(_
+"execute_instruction(mov
+"execute_level(_)."
+"expected_output(afternoon_batch
+"expected_output(day_interactive
+"expected_output(evening_analysis
+"expected_output(evening_batch
+"expected_output(lunch_optimize
+"expected_output(morning_analysis
+"expected_output(night_batch
+"expected_output(night_prep
+"extended_dimension(46)."
+"extract_agda([])."
+"extract_chunk([]
+"extract_code_lines([]
+"extract_coq([])."
+"extract_coq_stdlib([])."
+"extracted_from(athena_hs
+"(* Extracted from Coq *)"
+"extract_functions(_
+"extract_hole(statement_with_hole(Text
+"extraction_target(coq
+"extract_isabelle([])."
+"extract_lmfdb([])."
+"extract_lmfdb_all([])."
+"extract_number(_
+"extract_operations(_
+"extract_predicates(_
+"extract_predicates(gnu
+"extract_predicates(scryer
+"extract_predicates(swi
+"extract_predicates(tau
+"extract_predicates(yap
+"extract_unimath([])."
+"extract_until_at([]
+"extract_values(_
+"factorial(0
+"factors_to_lisp([]
+"feature_complexity(automorphic_orbit
+"feature_complexity(dependent_types
+"feature_complexity(galois_tower
+"feature_complexity(homomorphic_shard
+"feature_complexity(hott_types
+"feature_complexity(kleene_recursion
+"feature_complexity(lift
+"feature_complexity(linear_types
+"feature_complexity(metacoq_reflection
+"feature_complexity(mirror
+"feature_complexity(oracle
+"feature_complexity(quote
+"feature_complexity(shift
+"feature_complexity(splice
+"feature_complexity(zkproof
+"feature_pattern(arrays
+"feature_pattern(control
+"feature_pattern(functions
+"feature_pattern(loops
+"feature_pattern(machine
+"feature_pattern(memory
+"feature_pattern(operators
+"feature_pattern(output
+"feature_pattern(pointers
+"feature_pattern(structures
+"feature_pattern(types
+"feature_pattern(variables
+"feature_prime(arrays
+"feature_prime(control
+"feature_prime(functions
+"feature_prime(generics
+"feature_prime(loops
+"feature_prime(machine
+"feature_prime(memory
+"feature_prime(network
+"feature_prime(operators
+"feature_prime(optimization
+"feature_prime(output
+"feature_prime(pointers
+"feature_prime(safety
+"feature_prime(structures
+"feature_prime(types
+"feature_prime(variables
+"fib(0
+"fib(1
+"file_type_from_ext(_
+"file_type_from_ext('lean'
+"file_type_from_ext('mzn'
+"file_type_from_ext('nix'
+"file_type_from_ext('pl'
+"file_type_from_ext('rs'
+"file_type_from_ext('sh'
+"file_type_from_ext('toml'
+"fill_hole(Text
+"find_bridge_language(_
+"find_bridge_language(exceptional
+"find_bridge_language(rare
+"find_bridge_language(rarest
+"find_factor(N
+"find_nearest_prime(_
+"find_orbit(_
+"find_orbit_for_complexity(_
+"find_orbit_for_complexity(0
+"find_orbit_for_complexity(1
+"find_orbit_for_complexity(11
+"find_orbit_for_complexity(13
+"find_orbit_for_complexity(17
+"find_orbit_for_complexity(19
+"find_orbit_for_complexity(2
+"find_orbit_for_complexity(3
+"find_orbit_for_complexity(7
+"flag_prime(11
+"flag_prime(13
+"flag_prime(17
+"flag_prime(19
+"flag_prime(2
+"flag_prime(3
+"flag_prime(5
+"flag_prime(7
+"flow(meta_meme
+"flow(verification
+"flow(witness
+"flow(zkml_seed
+"flow(zk_proof
+"format(elf
+"from_metacoq(metacoq_extract(E)
+"from_metacoq(metacoq_proof(P)
+"from_metacoq(metacoq_term(T)
+"galois_extension(base_field
+"galois_extension(binary_field
+"galois_extension(markov_field
+"galois_extension(runtime_field
+"galois_extension(semantic_field
+"galois_extension(syntax_field
+"gcc_tree_path('/mnt/data1/2023/04/27/introspector/test/gcc-10-10.4.0')."
+"generate_instructions(_
+"generate_nix_expression('{ pkgs ? import <nixpkgs> {} }: pkgs.hello')."
+"generate_prompt(11
+"generate_prompt(13
+"generate_prompt(17
+"generate_prompt(19
+"generate_prompt(2
+"generate_prompt(23
+"generate_prompt(29
+"generate_prompt(3
+"generate_prompt(31
+"generate_prompt(37
+"generate_prompt(41
+"generate_prompt(43
+"generate_prompt(47
+"generate_prompt(5
+"generate_prompt(53
+"generate_prompt(59
+"generate_prompt(61
+"generate_prompt(67
+"generate_prompt(7
+"generate_prompt(71
+"generate_rust_template(_
+"generate_rust_template(enum_def
+"generate_rust_template(fn_declaration
+"generate_rust_template(let_statement
+"generate_rust_template(match_statement
+"generate_rust_template(mod_declaration
+"generate_rust_template(struct_def
+"generate_tone_samples(_
+"generate_witness(Theorem
+"generate_wrapper(Impl
+"generation(1
+"generation(2
+"generation(3
+"generation(4
+"generation(5
+"germinate() {"
+"get_code_flavor(11
+"get_code_flavor(13
+"get_code_flavor(17
+"get_code_flavor(19
+"get_code_flavor(2
+"get_code_flavor(23
+"get_code_flavor(29
+"get_code_flavor(3
+"get_code_flavor(31
+"get_code_flavor(37
+"get_code_flavor(41
+"get_code_flavor(43
+"get_code_flavor(47
+"get_code_flavor(5
+"get_code_flavor(53
+"get_code_flavor(59
+"get_code_flavor(61
+"get_code_flavor(7
+"get_code_flavor(71
+"get_theorem_index(0)."
+"goddess(athena
+"godel_program(11
+"godel_program(2
+"godel_program(3
+"godel_program(5
+"godel_program(7
+"greek_athena_mythos("
+"harmonic_layer(0
+"harmonic_layer(1
+"harmonic_layer(2
+"harmonic_layer(3
+"harmonic_layer(4
+"harmonic_layer(5
+"harmonic_layer(6
+"harmonic_layer(7
+"haskell_data('Mythos'
+"haskell_file('athena.hs'
+"high_value_projects(["
+"holes_to_calls(holes(N)
+"homomorphic_decrypt(encrypted(Data
+"homomorphic_encrypt(Data
+"homomorphic_transform(Enc
+"homotopy_group(0
+"homotopy_group(1
+"homotopy_group(2
+"homotopy_group(3
+"homotopy_group(4
+"homotopy_group(5
+"homotopy_group(6
+"homotopy_group(7
+"hott_to_prolog(hott(T)
+"hott_to_system(lean4
+"hott_to_system(prolog
+"hott_translate(H
+"hunger_level(infinite)."
+"idea_definition(factorial
+"idea_definition(fibonacci
+"idea_definition(quicksort
+"implements(mes
+"implements(ocaml
+"index_file(_).  % Skip non-code files"
+"infer_math_property(_
+"instruction_class(0
+"instruction_class(1
+"instruction_class(2
+"instruction_class(3
+"instruction_class(4
+"instruction_class(5
+"instruction_class(6
+"instruction_class(7
+"instruction_prime(add
+"instruction_prime(and
+"instruction_prime(call
+"instruction_prime(cmp
+"instruction_prime(div
+"instruction_prime(je
+"instruction_prime(jmp
+"instruction_prime(jne
+"instruction_prime(lea
+"instruction_prime(mov
+"instruction_prime(mul
+"instruction_prime(or
+"instruction_prime(pop
+"instruction_prime(push
+"instruction_prime(ret
+"instruction_prime(sub
+"instruction_prime(test
+"instruction_prime(xor
+"invariant_proven(binary
+"invariant_proven(runtime
+"invariant_proven(semantics
+"invariant_proven(syntax
+"is_automorphic(2).  % Base"
+"is_automorphic(3).  % Base"
+"is_automorphic(5).  % Base"
+"is_automorphic(71). % 🍄 Fixed point"
+"is_automorphic(7).  % Base"
+"is_prime(2)."
+"is_prime(3)."
+"k_class(0
+"k_class(1
+"k_class(2
+"k_class(3
+"k_class(4
+"k_class(5
+"k_class(6
+"k_class(7
+"known_project('coq-of-rust'
+"known_project('scryer-prolog'
+"known_project('zkprologml'
+"language(coq
+"language(gcc
+"language(haskell
+"language_lattice_point(guile
+"language_lattice_point(haskell
+"language_lattice_point(lean
+"language_lattice_point(lisp
+"language_lattice_point(metacoq
+"language_lattice_point(prolog
+"language(lean4
+"language(lisp
+"language(llvm
+"language_max_complexity(emacs
+"language_max_complexity(guile
+"language_max_complexity(haskell
+"language_max_complexity(lean
+"language_max_complexity(lisp
+"language_max_complexity(mes
+"language_max_complexity(metacoq
+"language_max_complexity(ocaml
+"language_max_complexity(prolog
+"language(mes
+"language(metacoq
+"language(minizinc
+"language(ocaml
+"language(prolog
+"language(rust
+"language(scheme
+"language_transform(haskell
+"language_transform(L
+"language_transform(lean
+"language_transform(metacoq
+"language_transform(prolog
+"latex_abstract('\begin{abstract}"
+"latex_bibliography('\begin{thebibliography}{99}"
+"latex_conclusion('\section{Conclusion}"
+"latex_experiments('\section{Experimental Results}"
+"latex_introduction('\section{Introduction}"
+"latex_preamble('\documentclass[12pt]{amsart}"
+"latex_prime_lattice('\section{The Prime Lattice}"
+"latex_proofs('\section{Proofs}"
+"latex_theorems('\section{Main Theorems}"
+"lattice_dimension(24)."
+"lattice_to_field(0
+"lattice_to_field(11
+"lattice_to_field(2
+"lattice_to_field(3
+"lattice_to_field(5
+"lattice_to_field(7
+"lattice_to_field(71
+"lean_file('athena_lattice.lean'
+"lean_file('nine_muses.lean'
+"lean_file('theorem_42.lean'
+"learns(transformer
+"level_complexity(0
+"level_complexity(1
+"level_complexity(2
+"level_complexity(3
+"level_complexity(4
+"level_complexity(5
+"library(crossbeam
+"library(goblin
+"lift_level(0
+"lift_level(1
+"lift_level(2
+"lift_level(3
+"lift_level(4
+"lift_level(5
+"lift_level(6
+"lifts_to(haskell
+"lifts_to(lean4
+"lifts_to(metacoq
+"lifts_to(prolog
+"lifts_to(unimath
+"(* Lisp eval *)"
+"lisp_eval('(eval (quote (+ 1 2)))'
+"lisp_form_prime(apply
+"lisp_form_prime(atom
+"lisp_form_prime(cons
+"lisp_form_prime(define
+"lisp_form_prime(eval
+"lisp_form_prime(if
+"lisp_form_prime(lambda
+"lisp_form_prime(let
+"lisp_form_prime(macro
+"lisp_form_prime(quote
+"lisp_quote('(quote x)'
+"literate_conclusion('\section{Conclusion}"
+"literate_executable_code('\section{Executable Verification}"
+"literate_preamble('% -*- mode: noweb; noweb-code-mode: prolog-mode -*-"
+"llm_bisimulation(pure
+"llm_execution(impure
+"llm_execution(pure
+"lmfdb_function(a
+"lmfdb_function(ai
+"lmfdb_function(aii
+"lmfdb_function(aiii
+"lmfdb_function(bdi
+"lmfdb_function(c
+"lmfdb_function(ci
+"lmfdb_function(cii
+"lmfdb_function(d
+"lmfdb_function(diii
+"lmfdb_function_for_pass(allocation
+"lmfdb_function_for_pass(cminorgen
+"lmfdb_function_for_pass(constprop
+"lmfdb_function_for_pass(cparser
+"lmfdb_function_for_pass(cse
+"lmfdb_function_for_pass(cshmgen
+"lmfdb_function_for_pass(inlining
+"lmfdb_function_for_pass(linearize
+"lmfdb_function_for_pass(postpass
+"lmfdb_function_for_pass(reload
+"lmfdb_function_for_pass(renumber
+"lmfdb_function_for_pass(rtlgen
+"lmfdb_function_for_pass(selection
+"lmfdb_function_for_pass(simplify
+"lmfdb_function_for_pass(tailcall
+"lmfdb_prime(11
+"lmfdb_prime(13
+"lmfdb_prime(17
+"lmfdb_prime(19
+"lmfdb_prime(2
+"lmfdb_prime(23
+"lmfdb_prime(29
+"lmfdb_prime(3
+"lmfdb_prime(31
+"lmfdb_prime(37
+"lmfdb_prime(41
+"lmfdb_prime(43
+"lmfdb_prime(47
+"lmfdb_prime(5
+"lmfdb_prime(53
+"lmfdb_prime(59
+"lmfdb_prime(61
+"lmfdb_prime(67
+"lmfdb_prime(7
+"lmfdb_prime(71
+"lmfdb_query(_
+"load_implementation(_
+"(* Load ~w *)"
+"matches_prime_focus('lean4')."
+"matches_prime_focus('minizinc')."
+"matches_prime_focus('rust-analyzer')."
+"matches_prime_focus('rustc')."
+"matches_prime_focus('scryer-prolog')."
+"matches_prime_focus('swi-prolog')."
+"maxwell_equation(ampere_law
+"maxwell_equation(faraday_law
+"maxwell_equation(gauss_law
+"maxwell_equation(no_monopole
+"measure_hour_temp(_
+"measures(perf
+"meme(dependent_types
+"meme(linear_types
+"meme(mirror
+"meme(oracle
+"meme(zkproof
+"merge_code([]
+"mes_c_program(factorial
+"(* MES C program in Clight *)"
+"mes_path('/mnt/data1/nix/time/2024/05/30/mes')."
+"metacoq_extract(_
+"metacoq_property(extractable
+"metacoq_property(proof_carrying
+"metacoq_property(reflective
+"metacoq_property(self_referential
+"metacoq_property(type_safe
+"meta_parquet('/mnt/data1/time2/time/2023/07/30/meta-meme/plocate_witness/lists_of_lists.parquet')."
+"meta_parquet('/mnt/data1/time2/time/2023/07/30/meta-meme/plocate_witness/locate_digest.parquet')."
+"meta_parquet('/mnt/data1/time2/time/2023/07/30/meta-meme/plocate_witness/meta_meta_structures.parquet')."
+"minizinc_model('build_schedule.mzn'
+"minizinc_model('optimal_build_plan.mzn'
+"minizinc_model('universe_of_minizinc.mzn'
+"monad(gcc_bootstrap)."
+"monad(metacoq)."
+"monad(prolog_interpreter)."
+"(* Monster group action *)"
+"(* Monster group primes *)"
+"monster_order('2^46 × 3^20 × 5^9 × 7^6 × 11^2 × 13^3 × 17 × 19 × 23 × 29 × 31 × 41 × 47 × 59 × 71')."
+"monster_prime(11
+"monster_prime(11)."
+"monster_prime(11). monster_prime(13). monster_prime(17). monster_prime(19)."
+"monster_prime(13
+"monster_prime(13)."
+"monster_prime(17
+"monster_prime(17)."
+"monster_prime(19
+"monster_prime(19)."
+"monster_prime(2
+"monster_prime(2)."
+"monster_prime(23
+"monster_prime(23)."
+"monster_prime(23). monster_prime(29). monster_prime(31). monster_prime(41)."
+"monster_prime(29
+"monster_prime(29)."
+"monster_prime(2). monster_prime(3). monster_prime(5). monster_prime(7)."
+"monster_prime(3
+"monster_prime(3)."
+"monster_prime(31
+"monster_prime(31)."
+"monster_prime(37
+"monster_prime(41
+"monster_prime(41)."
+"monster_prime(43
+"monster_prime(47
+"monster_prime(47)."
+"monster_prime(47). monster_prime(59). monster_prime(71)."
+"monster_prime(5
+"monster_prime(5)."
+"monster_prime(53
+"monster_prime(59
+"monster_prime(59)."
+"monster_prime(61
+"monster_prime(67
+"monster_prime(7
+"monster_prime(7)."
+"monster_prime(71
+"monster_prime(71)."
+"monster_primes([[2
+"monster_primes([2
+"monster_primes([~w])."
+"monster_symmetry(identity)."
+"monster_symmetry(reflection)."
+"monster_symmetry(rotation(_))."
+"multiply_list([]
+"muse(calliope
+"muse(clio
+"muse(erato
+"muse(euterpe
+"muse(melpomene
+"muse(polyhymnia
+"muse(terpsichore
+"muse(thalia
+"muse(urania
+"mythos("
+"my_wallet(bitcoin
+"my_wallet(ethereum
+"my_wallet(polygon
+"my_wallet(solana
+"natural_transformation(System
+"(newline)"
+"nix_eval(expr(layer(Layer))
+"nix_expression(Layer
+"nix_package(clang
+"nix_package(coq
+"nix_package(gcc
+"nix_package(lean4
+"nix_package(tcc
+"nix_prolog('GNU Prolog'
+"nix_prolog('Scryer Prolog'
+"nix_prolog('SICStus Prolog'
+"nix_prolog('SWI-Prolog'
+"nix_prolog('Trealla Prolog'
+"nix_prolog('YAP'
+"nix_store_contains(path(Layer)
+"non_monster_prime(37)."
+"non_monster_prime(43)."
+"non_monster_prime(53)."
+"non_monster_prime(61)."
+"non_monster_prime(67)."
+"non_sable_instruction(rdrand).   % Random"
+"non_sable_instruction(rdtsc).    % Time"
+"non_sable_instruction(syscall).  % I/O"
+"ocaml_to_rust(function
+"ocaml_to_rust(functor
+"ocaml_to_rust(let_binding
+"ocaml_to_rust(match_expr
+"ocaml_to_rust(module
+"ocaml_to_rust(record
+"ocaml_to_rust(type_def
+"ocaml_to_rust(variant
+"opcode_prime(add
+"opcode_prime(and
+"opcode_prime(call
+"opcode_prime(cmp
+"opcode_prime(div
+"opcode_prime(imul
+"opcode_prime(je
+"opcode_prime(jle
+"opcode_prime(jmp
+"opcode_prime(jne
+"opcode_prime(lea
+"opcode_prime(mov
+"opcode_prime(mul
+"opcode_prime(nop
+"opcode_prime(or
+"opcode_prime(pop
+"opcode_prime(push
+"opcode_prime(ret
+"opcode_prime(shl
+"opcode_prime(shr
+"opcode_prime(sub
+"opcode_prime(test
+"opcode_prime(xor
+"oracle_accuracy(_
+"oracle_predictions_valid(_)."
+"orbit_id(orbit_0)."
+"orbit_id(orbit_1)."
+"orbit_id(orbit_11)."
+"orbit_id(orbit_13)."
+"orbit_id(orbit_17)."
+"orbit_id(orbit_19)."
+"orbit_id(orbit_2)."
+"orbit_id(orbit_3)."
+"orbit_id(orbit_7)."
+"orbit_length(gcc_bootstrap
+"orbit_length(metacoq
+"orbit_length(prolog_interpreter
+"our_system(rust)."
+"(* Output: *)"
+"parallel_execution(24_workers
+"parquet_category(lattice
+"parquet_category(search
+"parquet_path('/mnt/data1/time2/time/2023/07/30/meta-meme/plocate_witness')."
+"parse_commits([]
+"parse_lattice_line(_)."
+"parse_perf_output(File
+"parse_perf_trace(File
+"perf_measured_binary(Layer
+"perf_metadata(Layer
+"perf_trace(0
+"perf_trace(1
+"perf_trace(2
+"perf_trace(3
+"perf_trace(4
+"perf_trace(5
+"perf_trace(6
+"perf_trace(7
+"perf_trace_contains(monster_primes
+"platform(cuda
+"predict_complexity(godel_statement
+"prime(17). prime(19). prime(23). prime(29). prime(31)."
+"prime(2). prime(3). prime(5). prime(7). prime(11). prime(13)."
+"(* Prime checker *)"
+"prime_complexity(11
+"prime_complexity(13
+"prime_complexity(17
+"prime_complexity(19
+"prime_complexity(2
+"prime_complexity(23
+"prime_complexity(29
+"prime_complexity(3
+"prime_complexity(31
+"prime_complexity(41
+"prime_complexity(5
+"prime_complexity(7
+"prime_complexity(71
+"prime_complexity(compute
+"prime_complexity(consensus
+"prime_complexity(inject
+"prime_complexity_lattice([2
+"prime_complexity(load
+"prime_complexity(measure
+"prime_complexity(prove
+"prime_complexity(store
+"prime_complexity(transform
+"prime_complexity(verify
+"prime_complexity(witness
+"prime_domain(11
+"prime_domain(13
+"prime_domain(17
+"prime_domain(19
+"prime_domain(2
+"prime_domain(23
+"prime_domain(29
+"prime_domain(3
+"prime_domain(31
+"prime_domain(37
+"prime_domain(41
+"prime_domain(43
+"prime_domain(47
+"prime_domain(5
+"prime_domain(53
+"prime_domain(59
+"prime_domain(61
+"prime_domain(67
+"prime_domain(7
+"prime_domain(71
+"prime_emoji(11
+"prime_emoji(13
+"prime_emoji(17
+"prime_emoji(19
+"prime_emoji(2
+"prime_emoji(23
+"prime_emoji(29
+"prime_emoji(3
+"prime_emoji(31
+"prime_emoji(37
+"prime_emoji(41
+"prime_emoji(43
+"prime_emoji(47
+"prime_emoji(5
+"prime_emoji(53
+"prime_emoji(59
+"prime_emoji(61
+"prime_emoji(67
+"prime_emoji(7
+"prime_emoji(71
+"prime_feature(11
+"prime_feature(13
+"prime_feature(17
+"prime_feature(19
+"prime_feature(2
+"prime_feature(23
+"prime_feature(29
+"prime_feature(3
+"prime_feature(31
+"prime_feature(41
+"prime_feature(5
+"prime_feature(7
+"prime_feature(71
+"prime_frequency(_
+"prime_frequency(11
+"prime_frequency(13
+"prime_frequency(17
+"prime_frequency(19
+"prime_frequency(2
+"prime_frequency(23
+"prime_frequency(29
+"prime_frequency(3
+"prime_frequency(31
+"prime_frequency(37
+"prime_frequency(41
+"prime_frequency(43
+"prime_frequency(47
+"prime_frequency(5
+"prime_frequency(53
+"prime_frequency(59
+"prime_frequency(61
+"prime_frequency(67
+"prime_frequency(7
+"prime_frequency(71
+"prime_harmonic(11
+"prime_harmonic(13
+"prime_harmonic(17
+"prime_harmonic(19
+"prime_harmonic(2
+"prime_harmonic(23
+"prime_harmonic(29
+"prime_harmonic(3
+"prime_harmonic(31
+"prime_harmonic(41
+"prime_harmonic(5
+"prime_harmonic(7
+"prime_harmonic(71
+"prime_harmony(11
+"prime_harmony(13
+"prime_harmony(17
+"prime_harmony(19
+"prime_harmony(2
+"prime_harmony(23
+"prime_harmony(29
+"prime_harmony(3
+"prime_harmony(31
+"prime_harmony(37
+"prime_harmony(41
+"prime_harmony(43
+"prime_harmony(47
+"prime_harmony(5
+"prime_harmony(53
+"prime_harmony(59
+"prime_harmony(61
+"prime_harmony(67
+"prime_harmony(7
+"prime_harmony(71
+"prime_invariant(0
+"prime_invariant(1
+"prime_invariant(2
+"prime_invariant(3
+"prime_invariant(4
+"prime_invariant(5
+"prime_invariant(6
+"prime_invariant(7
+"(* Prime lattice *)"
+"prime_lattice([2
+"(* Prime lattice mapping *)"
+"prime_llvm(11
+"prime_llvm(13
+"prime_llvm(17
+"prime_llvm(19
+"prime_llvm(2
+"prime_llvm(23
+"prime_llvm(29
+"prime_llvm(3
+"prime_llvm(31
+"prime_llvm(37
+"prime_llvm(41
+"prime_llvm(43
+"prime_llvm(47
+"prime_llvm(5
+"prime_llvm(53
+"prime_llvm(59
+"prime_llvm(61
+"prime_llvm(67
+"prime_llvm(7
+"prime_llvm(71
+"(* Prime signature *)"
+"prime_to_note(_
+"prime_to_note(11
+"prime_to_note(13
+"prime_to_note(17
+"prime_to_note(19
+"prime_to_note(2
+"prime_to_note(23
+"prime_to_note(29
+"prime_to_note(3
+"prime_to_note(31
+"prime_to_note(37
+"prime_to_note(41
+"prime_to_note(43
+"prime_to_note(47
+"prime_to_note(5
+"prime_to_note(53
+"prime_to_note(59
+"prime_to_note(61
+"prime_to_note(67
+"prime_to_note(7
+"prime_to_note(71
+"prime_to_position(_
+"prime_to_position(11
+"prime_to_position(13
+"prime_to_position(17
+"prime_to_position(19
+"prime_to_position(2
+"prime_to_position(23
+"prime_to_position(29
+"prime_to_position(3
+"prime_to_position(31
+"prime_to_position(5
+"prime_to_position(7
+"print(json.dumps(weights))"
+"print("🗿 Prolog system reconstructed from runestone shards!")"
+"process_parquet_line(_)."
+"product([]
+"program_has_feature(test_program
+"prolog_enum(color
+"(* Prolog goals *)"
+"(* Prolog interpreter *)"
+"prolog_predicate(factorial
+"prolog_queue(bprolog
+"prolog_queue(ciao
+"prolog_queue(datalog
+"prolog_queue(gnu
+"prolog_queue(lambda_prolog
+"prolog_queue(logtalk
+"prolog_queue(mercury
+"prolog_queue(minikanren
+"prolog_queue(picat
+"prolog_queue(scryer
+"prolog_queue(sicstus
+"prolog_queue(swi
+"prolog_queue(tau
+"prolog_queue(trealla
+"prolog_queue(xsb
+"prolog_queue(yap
+"prolog_target('GNU Prolog'
+"prolog_target('Scryer'
+"prolog_target('SICStus'
+"prolog_target('SWI-Prolog'
+"prolog_target('Trealla'
+"prolog_target('YAP'
+"(* Prolog terms *)"
+"prolog_to_hott(T
+"proof_data(~q)."
+"proof(lean4
+"proof_method(trisimulation
+"proof(unimath
+"property(crossbeam
+"property(cuda
+"property(dqn
+"property(gcc
+"property(haskell
+"property(lean4
+"property(lisp
+"property(llvm
+"property(mes
+"property(metacoq
+"property(minizinc
+"property(rust
+"property(transformer
+"prove_encrypted(Enc
+"prove_pairwise([])."
+"prove_pairwise([_])."
+"proves(coq
+"pump_token_balance(14.983088791).  % From account data"
+"pump_token('BwUTq7fS6sfUmHDwAiCQZ3asSiPEapW5zDrsbwtapump')."
+"purpose(coq
+"purpose(crossbeam
+"purpose(cuda
+"purpose(dqn
+"purpose(gcc
+"purpose(goblin
+"purpose(haskell
+"purpose(lean4
+"purpose(lisp
+"purpose(llvm
+"purpose(mes
+"purpose(metacoq
+"purpose(minizinc
+"purpose(ocaml
+"purpose(perf
+"purpose(prolog
+"purpose(rust
+"purpose(scheme
+"purpose(transformer
+"r(c
+"read_json(_
+"read_nix_result(Path
+"read_parquet_markov(File
+"read_result(File
+"reasons_about(minizinc
+"reflects_on(metacoq
+"register_prime(eax
+"register_prime(ebp
+"register_prime(ebx
+"register_prime(ecx
+"register_prime(edi
+"register_prime(edx
+"register_prime(esi
+"register_prime(esp
+"register_prime(r10
+"register_prime(r11
+"register_prime(r12
+"register_prime(r13
+"register_prime(r14
+"register_prime(r15
+"register_prime(r8
+"register_prime(r9
+"register_prime(rax
+"register_prime(rbp
+"register_prime(rbx
+"register_prime(rcx
+"register_prime(rdi
+"register_prime(rdx
+"register_prime(rsi
+"register_prime(rsp
+"related_project('agda'
+"related_project('arrow-rs'
+"related_project('cvc5'
+"related_project('duckdb'
+"related_project('gcc'
+"related_project('idris2'
+"related_project('isabelle'
+"related_project('lean4'
+"related_project('llvm'
+"related_project('mes'
+"related_project('minizinc'
+"related_project('polars'
+"related_project('prolog-analyzer'
+"related_project('rocq'
+"related_project('rust-analyzer'
+"related_project('rustc'
+"related_project('swi-prolog'
+"related_project('tau-prolog'
+"related_project('vampire'
+"related_project('z3'
+"replicate() {"
+"resonance(13
+"resonance(19
+"resonance(2
+"resonance(29
+"resonance(3
+"resonance(7
+"resources_available(_)."
+"results_to_facts([]
+"rust_binary(Layer
+"rust_can_execute(binary(_))."
+"rust_file('add_athena.rs'
+"rust_file('athena_unified.rs'
+"rust_program(Layer
+"sable_instruction(add)."
+"sable_instruction(call)."
+"sable_instruction(cmp)."
+"sable_instruction(jmp)."
+"sable_instruction(mov)."
+"sable_instruction(pop)."
+"sable_instruction(push)."
+"sable_instruction(ret)."
+"sable_instruction(sub)."
+"save_unimath_theorem(_)."
+"schedule(0
+"schedule(1
+"schedule(10
+"schedule(11
+"schedule(12
+"schedule(13
+"schedule(14
+"schedule(15
+"schedule(16
+"schedule(17
+"schedule(18
+"schedule(19
+"schedule(2
+"schedule(20
+"schedule(21
+"schedule(22
+"schedule(23
+"schedule(3
+"schedule(4
+"schedule(5
+"schedule(6
+"schedule(7
+"schedule(8
+"schedule(9
+"(* Scheme as dependent type of C *)"
+"scheme_construct(add
+"scheme_construct(apply
+"scheme_construct(boolean
+"scheme_construct(call
+"scheme_construct(car
+"scheme_construct(case
+"scheme_construct(c_call
+"scheme_construct(cdr
+"scheme_construct(char
+"scheme_construct(cond
+"scheme_construct(cons
+"scheme_construct(define
+"scheme_construct(if
+"scheme_construct(lambda
+"scheme_construct(let
+"scheme_construct(mul
+"scheme_construct(number
+"scheme_construct(pointer
+"scheme_construct(quasiquote
+"scheme_construct(record
+"scheme_construct(set
+"scheme_construct(sub
+"scheme_construct(syntax_rules
+"scheme_construct(vector
+"scheme_enum(color
+"scheme_eval('(eval expr env)'
+"scheme_eval(s_lambda(Args
+"scheme_eval(s_num(N)
+"scheme_program(factorial
+"scheme_program(factorial_proof
+"(* Scheme program in Coq *)"
+"(* Scheme program type *)"
+"scheme_struct(point
+"self_aware(emacs
+"self_aware(guile
+"self_aware(haskell
+"self_aware(lean
+"self_aware(lisp
+"self_aware(mes
+"self_aware(metacoq
+"self_aware(ocaml
+"self_aware(prolog
+"self_referential_pattern("
+"shamir_reconstruct(Shards
+"shard(haskell
+"shard(lean4
+"shard(lmfdb
+"shard(metacoq
+"shard(prolog
+"shard(unimath
+"simulate_instructions([]
+"solana_rpc('https://api.mainnet-beta.solana.com')."
+"source_repo(compcert
+"source_repo(gcc
+"source_repo(llvm
+"source_repo(mes
+"source_repo(metacoq
+"split_list([]
+"split_list(List
+"split_theorem(T
+"spore_generation(0)."
+"state(collapsed
+"state(potential
+"state(proven
+"state(seed
+"state(verified
+"strange_loop_closes(scheme
+"strange_loop_property(gcc
+"strange_loop_property(lean4
+"strange_loop_property(metacoq
+"strange_loop_property(scheme
+"(* Struct example *)"
+"(* Substitution *)"
+"sum_alternating([]
+"sum_alternating([X]
+"sum_sines([]
+"symmetry_group(2^_
+"symmetry_group(3^_
+"symmetry_group(5^_
+"(* Syntax constructs *)"
+"syntax_prime(array
+"syntax_prime(bool
+"syntax_prime(char
+"syntax_prime(closure
+"syntax_prime(enum
+"syntax_prime(for
+"syntax_prime(generic
+"syntax_prime(if
+"syntax_prime(int
+"syntax_prime(match
+"syntax_prime(pointer
+"syntax_prime(struct
+"syntax_prime(switch
+"syntax_prime(trait
+"syntax_prime(union
+"syntax_prime(while
+"syntax_to_proof(address_of
+"syntax_to_proof(array_access
+"syntax_to_proof(asm_stmt
+"syntax_to_proof(char_type
+"syntax_to_proof(for_loop
+"syntax_to_proof(func_call
+"syntax_to_proof(if_stmt
+"syntax_to_proof(int_type
+"syntax_to_proof(malloc_call
+"syntax_to_proof(pointer_deref
+"syntax_to_proof(return_stmt
+"syntax_to_proof(struct_access
+"syntax_to_proof(var_assign
+"syntax_to_proof(var_decl
+"syntax_to_proof(while_loop
+"system(agda
+"system(coq
+"system(godel_lattice
+"system(haskell
+"system(hecke_shards
+"system(isabelle
+"system_key(haskell
+"system_key(lean4
+"system_key(lmfdb
+"system_key(metacoq
+"system_key(prolog
+"system_key(unimath
+"system(lean4
+"system(llm_cpu
+"system(llm_gpu
+"system(lmfdb
+"system(metacoq
+"system(prime_harmonics
+"system(prolog
+"system_proof(System
+"system_to_hott(lean4
+"system_to_hott(prolog
+"system(tool_index
+"system(unimath
+"system(zk_urls
+"take(_
+"take_until_at([]
+"task_prime('analyze data'
+"task_prime('build system'
+"task_prime('execute command'
+"task_prime('find parquet files'
+"task_prime('optimize layout'
+"task_prime('prove theorem'
+"task_prime('query database'
+"test_case(11
+"test_case(13
+"test_case(17
+"test_case(19
+"test_case(2
+"test_case(23
+"test_case(29
+"test_case(3
+"test_case(31
+"test_case(41
+"test_case(5
+"test_case(7
+"test_inputs(factorial
+"test_inputs(fibonacci
+"test_program(11
+"test_program(13
+"test_program(17
+"test_program(19
+"test_program(2
+"test_program(23
+"test_program(3
+"test_program(5
+"test_program(7
+"(* The 1980s dream: Verified unification! *)"
+"(* Theorem: All constructs map to primes *)"
+"(* Theorem: All Monster primes are prime *)"
+"(* Theorem: eval commutes with monster action *)"
+"theorem_index(0)."
+"(* Theorem: Prime signature preserves structure *)"
+"(* Theorem: Scheme can verify C *)"
+"theorem(scheme_verifies_c
+"(* Theorem: Translation preserves semantics *)"
+"tmp_file(prolog
+"to_metacoq(zkprologml_extract(E)
+"to_metacoq(zkprologml_proof(P)
+"to_metacoq(zkprologml_term(T)
+"tool_at_layer(goblin
+"tool(perf
+"tool_prime(lean4
+"tool_prime(minizinc
+"tool_prime(nix
+"tool_prime(prolog
+"tool_prime(python
+"tool_prime(rust
+"tool_prime(shell
+"topology(genus_0
+"topology(genus_1
+"topology(genus_2
+"topology(genus_n(N)
+"tor_proxy('127.0.0.1:9050')."
+"total_consumed(0)."
+"tower_level(0
+"tower_level(1
+"tower_level(2
+"tower_level(3
+"tower_level(4
+"tower_level(5
+"trace(llm_cpu
+"trace(llm_gpu
+"trace(prolog
+"transfer_record("
+"transform_via_bridge(DNA
+"transition(collapsed
+"transition(potential
+"transition(proven
+"transition(verified
+"translate_ast(AST
+"(* Translated from OCaml *)"
+"(* Translated from Rust *)"
+"translator(c
+"translator(ocaml
+"translator(prolog
+"translator(rust
+"translator(typescript
+"tree_node('ADDR_EXPR'
+"tree_node('ARRAY_RANGE_REF'
+"tree_node('ARRAY_REF'
+"tree_node('ARRAY_TYPE'
+"tree_node('ASM_EXPR'
+"tree_node('BIND_EXPR'
+"tree_node('BOOLEAN_TYPE'
+"tree_node('CALL_EXPR'
+"tree_node('COMPONENT_REF'
+"tree_node('COMPOUND_EXPR'
+"tree_node('COND_EXPR'
+"tree_node('CONST_DECL'
+"tree_node('CONSTRUCTOR'
+"tree_node('FIELD_DECL'
+"tree_node('FUNCTION_DECL'
+"tree_node('FUNCTION_TYPE'
+"tree_node('GIMPLE_ASSIGN'
+"tree_node('GOTO_EXPR'
+"tree_node('INDIRECT_REF'
+"tree_node('INTEGER_TYPE'
+"tree_node('LABEL_EXPR'
+"tree_node('MEM_REF'
+"tree_node('MINUS_EXPR'
+"tree_node('MULT_EXPR'
+"tree_node('PARM_DECL'
+"tree_node('PHI_NODE'
+"tree_node('PLUS_EXPR'
+"tree_node('POINTER_TYPE'
+"tree_node('REAL_TYPE'
+"tree_node('RECORD_TYPE'
+"tree_node('REFERENCE_TYPE'
+"tree_node('RESULT_DECL'
+"tree_node('RETURN_EXPR'
+"tree_node('SSA_NAME'
+"tree_node('STATEMENT_LIST'
+"tree_node('SWITCH_EXPR'
+"tree_node('TARGET_EXPR'
+"tree_node('TARGET_MEM_REF'
+"tree_node('TRUNC_DIV_EXPR'
+"tree_node('UNION_TYPE'
+"tree_node('VAR_DECL'
+"tree_node('VOID_TYPE'
+"trisimulation(prolog
+"(* Type: Prop *)"
+"(* Unification *)"
+"(* Unification: C ≅ Scheme *)"
+"(* Unification theorem *)"
+"unify(X
+"unimath_empty('∅'
+"unimath_type('UU'
+"(* Universe: Set (level 0) *)"
+"variation(11
+"variation(2
+"variation(3
+"variation(5
+"variation(7
+"verify_bisimulation(_
+"verify_homomorphic(_
+"verify_lattice_preserved(_
+"verify_monotonic_pairs([])."
+"verify_monotonic_pairs([_])."
+"verify_oracle_agreement(_
+"view(haskell
+"view(lean4
+"view(lmfdb
+"view(metacoq
+"view(prolog
+"view(unimath
+"which_binary(_
+"written_in(gcc
+"zkprologml_property(extractable
+"zkprologml_property(proof_carrying
+"zkprologml_property(reflective
+"zkprologml_property(self_referential
+"zkprologml_property(self_replicating
+"zk_prove(Enc
+"zk_verify(zk_proof(_)

@@ -1,0 +1,19 @@
+# started on Wed Jan 28 07:37:26 2026
+
+
+ Performance counter stats for 'generated/rust_primes_bin':
+
+       137,001,146      cpu_atom/cycles/                 #    1.357 GHz                         (5.17%)
+       442,252,626      cpu_core/cycles/                 #    4.381 GHz                         (94.83%)
+       433,617,200      cpu_atom/instructions/           #    3.17  insn per cycle              (5.17%)
+     2,279,130,110      cpu_core/instructions/           #    5.15  insn per cycle              (94.83%)
+            94,662      cpu_atom/cache-misses/                                                  (5.17%)
+             1,266      cpu_core/cache-misses/                                                  (94.83%)
+       100,946,559      cpu-clock                        #    0.991 CPUs utilized             
+
+       0.101845483 seconds time elapsed
+
+       0.100758000 seconds user
+       0.000997000 seconds sys
+
+

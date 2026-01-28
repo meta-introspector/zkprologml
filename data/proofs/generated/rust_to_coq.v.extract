@@ -1,0 +1,53 @@
+
+Require Import Coq.ZArith.ZArith.
+Require Import Coq.Lists.List.
+Import ListNotations.
+
+(* Translated from Rust *)
+
+(* Prime checker *)
+Fixpoint is_prime_helper (n k : Z) : bool :=
+  match k with
+  | 0 => true
+  | _ => 
+      if (k * k >? n) then true
+      else if (n mod k =? 0) then false
+      else is_prime_helper n (k + 2)
+  end.
+
+Definition is_prime (n : Z) : bool :=
+  if (n <? 2) then false
+  else if (n =? 2) then true
+  else if (n mod 2 =? 0) then false
+  else is_prime_helper n 3.
+
+(* Monster group primes *)
+Definition monster_primes : list Z :=
+  [2; 3; 5; 7; 11; 13; 17; 19; 23; 29; 31; 37; 41; 43; 47; 53; 59; 61; 67; 71].
+
+(* Prime signature *)
+Definition prime_signature (n : Z) : list Z :=
+  filter (fun p => (n mod p =? 0)) monster_primes.
+
+(* Theorem: All Monster primes are prime *)
+Theorem monster_primes_are_prime :
+  forall p, In p monster_primes -> is_prime p = true.
+Proof.
+  intros p Hin.
+  repeat (destruct Hin as [Heq | Hin]; [subst; reflexivity |]).
+  contradiction.
+Qed.
+
+(* Theorem: Prime signature preserves structure *)
+Theorem prime_signature_subset :
+  forall n, incl (prime_signature n) monster_primes.
+Proof.
+  intros n.
+  unfold prime_signature.
+  apply filter_incl.
+Qed.
+
+
+Require Extraction.
+Extraction Language OCaml.
+Extraction "generated/coq_extracted.ml" is_prime monster_primes prime_signature.
