@@ -1,0 +1,50 @@
+// Emoji patterns from audiocraft
+
+pub const EMOJI_PATTERNS: &[&str] = &[
+    "🔢",
+    "⚡",
+    "📦",
+    "🔀",
+    "🎯",
+    "👉",
+    "🏗️",
+    "📊",
+    "💾",
+    "⚙️",
+    "📤",
+    "🔄",
+    "🤖",
+    "🔐",
+    "🌐",
+    "🧬",
+    "🎨",
+    "🔬",
+    "🌌",
+    "♾️",
+];
+
+pub fn emoji_to_prime(emoji: &str) -> Option<u64> {
+    match emoji {
+        "🔢" => Some(2),
+        "⚡" => Some(3),
+        "📦" => Some(5),
+        "🔀" => Some(7),
+        "🎯" => Some(11),
+        "👉" => Some(13),
+        "🏗️" => Some(17),
+        "📊" => Some(19),
+        "💾" => Some(23),
+        "⚙️" => Some(29),
+        "📤" => Some(31),
+        "🔄" => Some(37),
+        "🤖" => Some(41),
+        "🔐" => Some(43),
+        "🌐" => Some(47),
+        "🧬" => Some(53),
+        "🎨" => Some(59),
+        "🔬" => Some(61),
+        "🌌" => Some(67),
+        "♾️" => Some(71),
+        _ => None,
+    }
+}
