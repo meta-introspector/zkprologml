@@ -1,0 +1,32 @@
+name: Deploy to Hugging Face Spaces
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'data/proofs/deploy/**'
+  workflow_dispatch:
+
+jobs:
+  sync-to-hub:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          lfs: true
+      
+      - name: Copy deploy files to root
+        run: |
+          cp -r data/proofs/deploy/* .
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add .
+          git commit -m "Sync deploy files" || echo "No changes"
+      
+      - name: Push to Hugging Face Space
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          git remote add space https://huggingface.co/spaces/meta-introspector/zkprologml-dashboard || true
+          git push https://meta-introspector:$HF_TOKEN@huggingface.co/spaces/meta-introspector/zkprologml-dashboard main --force
