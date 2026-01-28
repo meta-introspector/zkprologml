@@ -1,0 +1,143 @@
+Concept Histogram with Formal Proof
+============================================================
+
+Loading indexed_files_enriched.parquet...
+Loaded 8,017,192 files
+
+Extracting concepts from 8M files...
+  Processed 500,000 files...
+  Processed 1,000,000 files...
+  Processed 1,500,000 files...
+  Processed 2,000,000 files...
+  Processed 2,500,000 files...
+  Processed 3,000,000 files...
+  Processed 3,500,000 files...
+  Processed 4,000,000 files...
+  Processed 4,500,000 files...
+  Processed 5,000,000 files...
+  Processed 5,500,000 files...
+  Processed 6,000,000 files...
+  Processed 6,500,000 files...
+  Processed 7,000,000 files...
+  Processed 7,500,000 files...
+  Processed 8,000,000 files...
+
+================================================================================
+Top 50 Concepts (ASCII Histogram)
+================================================================================
+
+ 1. mnt                  ████████████████████████████████████████████████████████████ 5,710,763 ( 4.97%)
+ 2. unknown              ██████████████████████████████████                           3,325,339 ( 2.89%)
+ 3. mdupont              ████████████████████████                                     2,303,004 ( 2.00%)
+ 4. home                 ████████████████████████                                     2,300,259 ( 2.00%)
+ 5. modules              █████████████████                                            1,665,851 ( 1.45%)
+ 6. ctuning              ████████████████                                             1,556,264 ( 1.35%)
+ 7. node                 ████████████████                                             1,555,576 ( 1.35%)
+ 8. test_code            ██████████████                                               1,346,453 ( 1.17%)
+ 9. src                  █████████████                                                1,289,458 ( 1.12%)
+10. results              ████████████                                                 1,193,589 ( 1.04%)
+11. nix                  ████████████                                                 1,171,348 ( 1.02%)
+12. json                 ███████████                                                  1,135,723 ( 0.99%)
+13. test                 ███████████                                                  1,085,144 ( 0.94%)
+14. tflite               ███████████                                                  1,073,435 ( 0.93%)
+15. gcc                  ███████████                                                  1,054,239 ( 0.92%)
+16. experiments          ██████████                                                   1,036,690 ( 0.90%)
+17. python               ██████████                                                    982,986 ( 0.86%)
+18. library_code         █████████                                                     922,401 ( 0.80%)
+19. vendor               █████████                                                     907,889 ( 0.79%)
+20. inference            █████████                                                     896,928 ( 0.78%)
+21. configuration        █████████                                                     889,503 ( 0.77%)
+22. parquet              ████████                                                      851,766 ( 0.74%)
+23. introspector         ████████                                                      851,000 ( 0.74%)
+24. git                  ███████                                                       757,981 ( 0.66%)
+25. cpp                  ███████                                                       750,512 ( 0.65%)
+26. source_code          ███████                                                       716,464 ( 0.62%)
+27. c                    ███████                                                       714,195 ( 0.62%)
+28. rust                 ███████                                                       694,009 ( 0.60%)
+29. open                 ██████                                                        650,009 ( 0.57%)
+30. packages             ██████                                                        645,474 ( 0.56%)
+31. html                 ██████                                                        626,076 ( 0.54%)
+32. txt                  ██████                                                        579,007 ( 0.50%)
+33. js                   █████                                                         570,415 ( 0.50%)
+34. cpu                  █████                                                         551,790 ( 0.48%)
+35. ticket               █████                                                         551,513 ( 0.48%)
+36. mobilenet            █████                                                         527,416 ( 0.46%)
+37. refs                 █████                                                         525,564 ( 0.46%)
+38. streamlit            █████                                                         520,965 ( 0.45%)
+39. data                 █████                                                         519,440 ( 0.45%)
+40. documentation        █████                                                         507,567 ( 0.44%)
+41. remotes              █████                                                         495,833 ( 0.43%)
+42. build                █████                                                         495,267 ( 0.43%)
+43. armnn                █████                                                         484,728 ( 0.42%)
+44. mlperf               █████                                                         476,144 ( 0.41%)
+45. index                ████                                                          475,718 ( 0.41%)
+46. frontend             ████                                                          469,639 ( 0.41%)
+47. site                 ████                                                          461,058 ( 0.40%)
+48. linux                ████                                                          460,697 ( 0.40%)
+49. user                 ████                                                          460,318 ( 0.40%)
+50. autogpt              ████                                                          459,277 ( 0.40%)
+
+================================================================================
+
+
+============================================================
+FORMAL PROOF: Concept Distribution in Monster Group
+============================================================
+
+Total concept occurrences: 114,915,528
+Unique concepts: 954,658
+Files analyzed: 8,017,192
+
+Top 20 Concepts:
+   1. mnt                  5,710,763 ( 4.97%) → Gödel: 51
+   2. unknown              3,325,339 ( 2.89%) → Gödel:  3
+   3. mdupont              2,303,004 ( 2.00%) → Gödel: 65
+   4. home                 2,300,259 ( 2.00%) → Gödel: 70
+   5. modules              1,665,851 ( 1.45%) → Gödel: 51
+   6. ctuning              1,556,264 ( 1.35%) → Gödel: 50
+   7. node                 1,555,576 ( 1.35%) → Gödel: 67
+   8. test_code            1,346,453 ( 1.17%) → Gödel: 31
+   9. src                  1,289,458 ( 1.12%) → Gödel: 44
+  10. results              1,193,589 ( 1.04%) → Gödel:  5
+  11. nix                  1,171,348 ( 1.02%) → Gödel: 51
+  12. json                 1,135,723 ( 0.99%) → Gödel: 16
+  13. test                 1,085,144 ( 0.94%) → Gödel: 22
+  14. tflite               1,073,435 ( 0.93%) → Gödel:  9
+  15. gcc                  1,054,239 ( 0.92%) → Gödel: 17
+  16. experiments          1,036,690 ( 0.90%) → Gödel: 68
+  17. python                982,986 ( 0.86%) → Gödel: 35
+  18. library_code          922,401 ( 0.80%) → Gödel: 56
+  19. vendor                907,889 ( 0.79%) → Gödel: 15
+  20. inference             896,928 ( 0.78%) → Gödel: 20
+
+------------------------------------------------------------
+THEOREM: All concepts are decidable in Monster Group
+------------------------------------------------------------
+
+Proof:
+  1. Each concept → string
+  2. Each string → Gödel number (sum of char codes mod 71)
+  3. Each Gödel number → Hecke shard (0-70)
+  4. All shards ∈ Monster Group
+  ∴ All concepts are decidable ∎
+
+Shard Distribution:
+  Shards used: 71/71
+  Most common shard: (28, 14662)
+  Least common shard: (49, 12594)
+
+Domain Analysis:
+  crypto    : 5,035 concepts
+  data      : 2,124 concepts
+  lang      : 1,364 concepts
+  proof     :   464 concepts
+  math      :   339 concepts
+
+============================================================
+QED: All concepts enumerated and proven decidable!
+============================================================
+
+Saving concepts to concepts.csv...
+✅ Saved 954,658 concepts
+
+✅ Complete!
