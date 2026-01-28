@@ -1,0 +1,2 @@
+gcc: cycles=167789608 insns=342282566
+clang: cycles=230085282 insns=369962479

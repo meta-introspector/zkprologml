@@ -1,0 +1,197 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📄 data/proofs/horizontal_meme_transfer.pl
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔍 Checking for constants...
+✅ No obvious constants
+
+🔍 Checking for oracle integration...
+✅ Has oracle integration
+
+🔍 Checking for measurements...
+❌ Missing measurement calls
+
+🔍 Testing load...
+Warning: /home/mdupont/nix/vendor/rust/github/data/proofs/horizontal_meme_transfer.pl:146:
+Warning:    Singleton variables: [Path]
+✅ Loaded successfully
+✅ Load successful
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📄 data/proofs/universal_port.pl
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔍 Checking for constants...
+✅ No obvious constants
+
+🔍 Checking for oracle integration...
+✅ Has oracle integration
+
+🔍 Checking for measurements...
+❌ Missing measurement calls
+
+🔍 Testing load...
+Warning: /home/mdupont/nix/vendor/rust/github/data/proofs/universal_port.pl:58:
+Warning:    Singleton variables: [Vec,Type,Nat,Nil,Cons]
+✅ Loaded successfully
+✅ Load successful
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📄 data/proofs/monster_lattice_features.pl
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔍 Checking for constants...
+⚠️  Found constants:
+lattice_dimension(24).
+extended_dimension(46).
+
+🔍 Checking for oracle integration...
+✅ Has oracle integration
+
+🔍 Checking for measurements...
+❌ Missing measurement calls
+
+🔍 Testing load...
+✅ Loaded successfully
+✅ Load successful
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📄 data/proofs/monster_port.pl
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔍 Checking for constants...
+✅ No obvious constants
+
+🔍 Checking for oracle integration...
+❌ Missing oracle integration
+
+🔍 Checking for measurements...
+❌ Missing measurement calls
+
+🔍 Testing load...
+Warning: /home/mdupont/nix/vendor/rust/github/data/proofs/universal_port.pl:58:
+Warning:    Singleton variables: [Vec,Type,Nat,Nil,Cons]
+Warning: /home/mdupont/nix/vendor/rust/github/data/proofs/universal_port.pl:328:
+Warning:    Redefined static procedure main/0
+Warning:    Previously defined at /home/mdupont/nix/vendor/rust/github/data/proofs/monster_lattice_features.pl:301
+Warning: /home/mdupont/nix/vendor/rust/github/data/proofs/monster_port.pl:48:
+Warning:    Singleton variables: [Point]
+Warning: /home/mdupont/nix/vendor/rust/github/data/proofs/monster_port.pl:188:
+Warning:    Redefined static procedure main/0
+Warning:    Previously defined at /home/mdupont/nix/vendor/rust/github/data/proofs/monster_lattice_features.pl:301
+✅ Loaded successfully
+✅ Load successful
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📄 data/proofs/eternal_proof_loop.pl
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔍 Checking for constants...
+⚠️  Found constants:
+theorem_index(0).
+get_theorem_index(0).
+handle_choice(1) :-
+handle_choice(2) :-
+handle_choice(3) :-
+
+🔍 Checking for oracle integration...
+❌ Missing oracle integration
+
+🔍 Checking for measurements...
+✅ Has measurement calls
+
+🔍 Testing load...
+Warning: /home/mdupont/nix/vendor/rust/github/data/proofs/universal_port.pl:58:
+Warning:    Singleton variables: [Vec,Type,Nat,Nil,Cons]
+Warning: /home/mdupont/nix/vendor/rust/github/data/proofs/universal_port.pl:328:
+Warning:    Redefined static procedure main/0
+Warning:    Previously defined at /home/mdupont/nix/vendor/rust/github/data/proofs/monster_lattice_features.pl:301
+Warning: /home/mdupont/nix/vendor/rust/github/data/proofs/eternal_proof_loop.pl:363:
+Warning:    Redefined static procedure main/0
+Warning:    Previously defined at /home/mdupont/nix/vendor/rust/github/data/proofs/monster_lattice_features.pl:301
+✅ Loaded successfully
+✅ Load successful
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📄 data/proofs/complexity_growth_proof.pl
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔍 Checking for constants...
+✅ No obvious constants
+
+🔍 Checking for oracle integration...
+❌ Missing oracle integration
+
+🔍 Checking for measurements...
+✅ Has measurement calls
+
+🔍 Testing load...
+Warning: /home/mdupont/nix/vendor/rust/github/data/proofs/universal_port.pl:58:
+Warning:    Singleton variables: [Vec,Type,Nat,Nil,Cons]
+Warning: /home/mdupont/nix/vendor/rust/github/data/proofs/universal_port.pl:328:
+Warning:    Redefined static procedure main/0
+Warning:    Previously defined at /home/mdupont/nix/vendor/rust/github/data/proofs/monster_lattice_features.pl:301
+Warning: /home/mdupont/nix/vendor/rust/github/data/proofs/eternal_proof_loop.pl:363:
+Warning:    Redefined static procedure main/0
+Warning:    Previously defined at /home/mdupont/nix/vendor/rust/github/data/proofs/monster_lattice_features.pl:301
+Warning: /home/mdupont/nix/vendor/rust/github/data/proofs/complexity_growth_proof.pl:70:
+Warning:    Singleton variables: [Load1,Miss1,Time1,Load2,Miss2,Time2,Load3,Miss3,Time3]
+Warning: /home/mdupont/nix/vendor/rust/github/data/proofs/complexity_growth_proof.pl:215:
+Warning:    Redefined static procedure main/0
+Warning:    Previously defined at /home/mdupont/nix/vendor/rust/github/data/proofs/monster_lattice_features.pl:301
+✅ Loaded successfully
+✅ Load successful
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📄 data/proofs/24h_resource_plan.pl
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔍 Checking for constants...
+✅ No obvious constants
+
+🔍 Checking for oracle integration...
+❌ Missing oracle integration
+
+🔍 Checking for measurements...
+✅ Has measurement calls
+
+🔍 Testing load...
+✅ Loaded successfully
+✅ Load successful
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📄 data/proofs/solana_predictor.pl
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔍 Checking for constants...
+✅ No obvious constants
+
+🔍 Checking for oracle integration...
+❌ Missing oracle integration
+
+🔍 Checking for measurements...
+✅ Has measurement calls
+
+🔍 Testing load...
+Warning: /home/mdupont/nix/vendor/rust/github/data/proofs/solana_predictor.pl:29:
+Warning:    Singleton variables: [Response]
+Warning: /home/mdupont/nix/vendor/rust/github/data/proofs/solana_predictor.pl:66:
+Warning:    Singleton variables: [SW,TW]
+Warning: /home/mdupont/nix/vendor/rust/github/data/proofs/solana_predictor.pl:185:
+Warning:    Singleton variables: [ActualNextSlot]
+Warning: /home/mdupont/nix/vendor/rust/github/data/proofs/solana_predictor.pl:242:
+Warning:    Singleton variables: [LastPredTx]
+Warning: /home/mdupont/nix/vendor/rust/github/data/proofs/solana_predictor.pl:242:
+Warning:    Singleton variable in branch: LastPredTx
+Warning: /home/mdupont/nix/vendor/rust/github/data/proofs/solana_predictor.pl:290:
+Warning:    Singleton variables: [Time]
+✅ Loaded successfully
+✅ Load successful
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📄 data/proofs/pump_token_tracker.pl
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔍 Checking for constants...
+✅ No obvious constants
+

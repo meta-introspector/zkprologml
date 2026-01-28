@@ -69,7 +69,9 @@ analyze_congruence :-
     nl,
     monster_primes(Primes),
     findall(C, trace_metric(C, _, _), Compilers0),
-    sort(Compilers0, Compilers),
+    list_to_set(Compilers0, Compilers),
+    length(Compilers, NumCompilers),
+    format('Compilers: ~w~n~n', [Compilers]),
     forall(
         member(Prime, Primes),
         check_congruence_mod(Prime, Compilers)

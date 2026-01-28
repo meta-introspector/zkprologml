@@ -1,0 +1,20 @@
+Lowering default frequency rate from 4000 to 2000.
+Please consider tweaking /proc/sys/kernel/perf_event_max_sample_rate.
+
+🚀 Starting LLM activation lattice test
+Programs: [2,3,5,7,11]
+
+🔬 Testing Gödel program 2
+❌ File not found: generated/test_2_1.c
+
+🔬 Testing Gödel program 3
+📤 Sending to LLM (string_length(Analyze this C program and describe its computational complexity, register usage, and semantic meaning:
+
+#include <stdio.h>
+
+int main() { return 1 + 2; }
+
+
+Provide: 1) Complexity analysis 2) Key operations 3) Register predictions) chars)
+[ perf record: Woken up 1 times to write data ]
+[ perf record: Captured and wrote 0.398 MB generated/perf_llm_activation.data (7601 samples) ]

@@ -1,0 +1,3 @@
+ test_labeled.c. 1097847 720116.139933:     249999 cpu_atom/cycles/:  ffffffff943c0ec3 next_uptodate_folio+0xd3 ([kernel.kallsyms])
+ test_labeled.c. 1097847 720116.139997:     249999 cpu_atom/cycles/:  ffffffff951a0b15 xas_start+0x75 ([kernel.kallsyms])
+ test_labeled.c. 1097847 720116.140061:     464808 cpu_atom/cycles/:      7ffff7fd45c2 _dl_relocate_object+0x892 (/nix/store/j193mfi0f921y0kfs8vjc1znnr45ispv-glibc-2.40-66/lib/ld-linux-x86-64.so.2)
