@@ -37,5 +37,9 @@ name = "prove_it"
 path = "prove_it.rs"
 
 [[bin]]
+name = "read_meta_parquets"
+path = "read_meta_parquets.rs"
+
+[[bin]]
 name = "prove_congruence"
 path = "layer5_analysis/prove_congruence.rs"
