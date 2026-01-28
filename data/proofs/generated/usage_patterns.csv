@@ -1,0 +1,5 @@
+path,frequency,avg_interval,labels,forecast_score
+generated/godel_lattice.csv,10,1.00,warm;frequent;cache_candidate,1.0000
+generated/merged_constants.pl,15,2.00,hot;frequent;cache_candidate,1.0000
+generated/perf_samples.csv,3,30.00,cold;periodic,0.0968
+generated/llm.txt,7,5.00,warm;frequent,1.0000
