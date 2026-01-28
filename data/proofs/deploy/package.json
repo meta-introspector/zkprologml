@@ -1,0 +1,13 @@
+{
+  "name": "zkprologml-dashboard",
+  "version": "1.0.0",
+  "description": "zkPrologML auto-updating dashboard with Monster Group visualization",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python3 -m http.server 8000",
+    "build": "echo 'No build needed - static site'"
+  },
+  "keywords": ["prolog", "zkp", "monster-group", "tau-prolog", "dashboard"],
+  "author": "zkPrologML",
+  "license": "MIT"
+}
