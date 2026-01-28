@@ -1,0 +1,4 @@
+path,size,access_count,chunks,godel,shard,value_score,content_score,total_score
+generated/merged_constants.pl,5770,0,2,3276468913662,45,0.00,11540.00,11540.00
+generated/llm.txt,3942,3,1,19922437417554,39,10.79,3942.00,3952.79
+generated/perf_samples.csv,291,0,1,4632249153798,57,0.00,436.50,436.50
