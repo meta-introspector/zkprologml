@@ -31,3 +31,7 @@ path = "read_lists_of_lists.rs"
 [[bin]]
 name = "analyze_ocaml_traces"
 path = "layer5_analysis/analyze_ocaml_traces.rs"
+
+[[bin]]
+name = "prove_congruence"
+path = "layer5_analysis/prove_congruence.rs"
