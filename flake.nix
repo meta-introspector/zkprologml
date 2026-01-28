@@ -1,83 +1,69 @@
 {
-  description = "Test compiler equivalence at each prime complexity level";
+  description = "zkPrologML - Universal Prolog Meta-Language";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    gemini-cli.url = "github:meta-introspector/gemini-cli?ref=feature/CRQ-016-nixify-2025-10-06";
   };
 
-  outputs = { self, nixpkgs }:
+  outputs = { self, nixpkgs, gemini-cli }:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
     in
     {
-      packages.${system}.default = pkgs.stdenv.mkDerivation {
-        name = "compiler-equivalence-tests";
-        
-        buildInputs = with pkgs; [
-          gcc
-          clang
-          tinycc
-          swi-prolog
-        ];
-        
-        src = ./.;
-        
-        buildPhase = ''
-          mkdir -p $out/tests
-          cd $out/tests
-          
-          echo "🔬 COMPILER EQUIVALENCE TESTS"
-          echo "═══════════════════════════════════════════════════════════"
-          echo ""
-          
-          # Copy test script
-          cp ${./data/proofs/test_compiler_equivalence.pl} test_compiler_equivalence.pl
-          
-          # Update compiler paths in Prolog
-          cat > compiler_paths.pl << 'EOF'
-compiler_cmd(gcc, '${pkgs.gcc}/bin/gcc').
-compiler_cmd(clang, '${pkgs.clang}/bin/clang').
-compiler_cmd(tcc, '${pkgs.tinycc}/bin/tcc').
-EOF
-          
-          echo "✅ Compilers available:"
-          echo "  GCC: ${pkgs.gcc}/bin/gcc"
-          echo "  Clang: ${pkgs.clang}/bin/clang"
-          echo "  TCC: ${pkgs.tinycc}/bin/tcc"
-          echo ""
-          
-          # Run tests
-          ${pkgs.swi-prolog}/bin/swipl -g main -t halt test_compiler_equivalence.pl 2>&1 | tee results.txt
-        '';
-        
-        installPhase = ''
-          echo ""
-          echo "✅ Tests complete"
-          ls -lh $out/tests/
-        '';
-      };
-      
-      # Development shell
       devShells.${system}.default = pkgs.mkShell {
+        name = "zkprologml";
+        
         buildInputs = with pkgs; [
-          gcc
-          clang
-          tinycc
-          swi-prolog
-          perf
+          # Core
+          swipl
+          rustc
+          cargo
+          
+          # Proof systems
+          lean4
+          coq
+          
+          # Audio
+          lilypond
+          alsa-utils
+          
+          # Data
+          python3
+          python3Packages.pandas
+          python3Packages.pyarrow
+          
+          # LLM interface
+          gemini-cli.packages.${system}.default
+          
+          # Utils
+          qrencode
+          git
         ];
         
         shellHook = ''
-          echo "🔬 Compiler Equivalence Test Environment"
           echo ""
-          echo "Available compilers:"
-          echo "  gcc: $(which gcc)"
-          echo "  clang: $(which clang)"
-          echo "  tcc: $(which tcc)"
+          echo "♾️  zkPrologML Environment"
+          echo "═══════════════════════════════════════════════════════════"
           echo ""
-          echo "Run: cd data/proofs && swipl -g main -t halt test_compiler_equivalence.pl"
+          echo "Run: ./boot.sh to bootstrap"
+          echo ""
+          
+          # Load Gödel lattice
+          export ZKPROLOG_LATTICE="$PWD/data/proofs/generated/godel_lattice.parquet"
+          
+          # Gemini CLI available
+          export GEMINI_CLI="$(which gemini)"
+          
+          echo "Gödel lattice: $ZKPROLOG_LATTICE"
+          echo "Gemini CLI: $GEMINI_CLI"
+          echo ""
         '';
       };
+      
+      packages.${system}.default = pkgs.writeShellScriptBin "zkprologml" ''
+        ${pkgs.swipl}/bin/swipl -g boot -t halt ${./boot.pl}
+      '';
     };
 }
