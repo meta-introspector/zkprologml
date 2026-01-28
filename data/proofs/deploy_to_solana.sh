@@ -3,8 +3,11 @@
 
 set -euo pipefail
 
-REMOTE_HOST="${SOLANA_HOST:-solana.solfunmeme.com}"
-REMOTE_USER="${SOLANA_USER:-root}"
+# Source keys if available
+[ -f ~/.agentrc ] && source ~/.agentrc
+
+REMOTE_HOST="${SOLANA_HOST:-localhost}"
+REMOTE_USER="${SOLANA_USER:-$USER}"
 REMOTE_PATH="${SOLANA_PATH:-/var/www/html}"
 LOCAL_DIR="./deploy"
 
