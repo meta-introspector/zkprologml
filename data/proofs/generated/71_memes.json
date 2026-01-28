@@ -1,0 +1,162 @@
+[
+  {
+    "prime": 2,
+    "prompt": "Generate a meme about types: int, bool, char. Show the foundation of computation.",
+    "model": "Stable Diffusion",
+    "reward": 2000,
+    "miner": "miner_2@zkprolog.network",
+    "url": "https://zkprolog.network/meme/2?reward=2*1000&model=auto&shard=2"
+  },
+  {
+    "prime": 3,
+    "prompt": "Create a meme about operators: +, -, *, /. Visualize mathematical operations.",
+    "model": "GPT-4-Vision",
+    "reward": 3000,
+    "miner": "miner_3@zkprolog.network",
+    "url": "https://zkprolog.network/meme/3?reward=3*1000&model=auto&shard=3"
+  },
+  {
+    "prime": 5,
+    "prompt": "Design a meme about variables: x, y, z. Illustrate state and mutation.",
+    "model": "Gemini-Pro-Vision",
+    "reward": 5000,
+    "miner": "miner_5@zkprolog.network",
+    "url": "https://zkprolog.network/meme/5?reward=5*1000&model=auto&shard=5"
+  },
+  {
+    "prime": 7,
+    "prompt": "Make a meme about control flow: if, while, for. Show branching paths.",
+    "model": "Flux",
+    "reward": 7000,
+    "miner": "miner_7@zkprolog.network",
+    "url": "https://zkprolog.network/meme/7?reward=7*1000&model=auto&shard=7"
+  },
+  {
+    "prime": 11,
+    "prompt": "Craft a meme about functions: def, fn, lambda. Depict abstraction.",
+    "model": "Parti",
+    "reward": 11000,
+    "miner": "miner_11@zkprolog.network",
+    "url": "https://zkprolog.network/meme/11?reward=11*1000&model=auto&shard=11"
+  },
+  {
+    "prime": 13,
+    "prompt": "Build a meme about pointers: *ptr, &ref. Visualize memory references.",
+    "model": "ERNIE-ViLG",
+    "reward": 13000,
+    "miner": "miner_13@zkprolog.network",
+    "url": "https://zkprolog.network/meme/13?reward=13*1000&model=auto&shard=13"
+  },
+  {
+    "prime": 17,
+    "prompt": "Compose a meme about structures: struct, record. Show data organization.",
+    "model": "DreamBooth",
+    "reward": 17000,
+    "miner": "miner_17@zkprolog.network",
+    "url": "https://zkprolog.network/meme/17?reward=17*1000&model=auto&shard=17"
+  },
+  {
+    "prime": 19,
+    "prompt": "Create a meme about arrays: [], vector. Illustrate collections.",
+    "model": "InstructPix2Pix",
+    "reward": 19000,
+    "miner": "miner_19@zkprolog.network",
+    "url": "https://zkprolog.network/meme/19?reward=19*1000&model=auto&shard=19"
+  },
+  {
+    "prime": 23,
+    "prompt": "Generate a meme about memory: malloc, free. Show resource management.",
+    "model": "Textual Inversion",
+    "reward": 23000,
+    "miner": "miner_23@zkprolog.network",
+    "url": "https://zkprolog.network/meme/23?reward=23*1000&model=auto&shard=23"
+  },
+  {
+    "prime": 29,
+    "prompt": "Design a meme about optimization: SSA, inlining. Visualize speed.",
+    "model": "CLIP Guidance",
+    "reward": 29000,
+    "miner": "miner_29@zkprolog.network",
+    "url": "https://zkprolog.network/meme/29?reward=29*1000&model=auto&shard=29"
+  },
+  {
+    "prime": 31,
+    "prompt": "Make a meme about output: print, write. Show communication.",
+    "model": "BLIP-2",
+    "reward": 31000,
+    "miner": "miner_31@zkprolog.network",
+    "url": "https://zkprolog.network/meme/31?reward=31*1000&model=auto&shard=31"
+  },
+  {
+    "prime": 37,
+    "prompt": "Craft a meme about loops: loop, iterate. Depict repetition.",
+    "model": "Otter",
+    "reward": 37000,
+    "miner": "miner_37@zkprolog.network",
+    "url": "https://zkprolog.network/meme/37?reward=37*1000&model=auto&shard=37"
+  },
+  {
+    "prime": 41,
+    "prompt": "Build a meme about machine code: asm, linking. Show low-level execution.",
+    "model": "Gemini-Ultra",
+    "reward": 41000,
+    "miner": "miner_41@zkprolog.network",
+    "url": "https://zkprolog.network/meme/41?reward=41*1000&model=auto&shard=41"
+  },
+  {
+    "prime": 43,
+    "prompt": "Compose a meme about safety: borrow, lifetime. Illustrate Rust's guarantees.",
+    "model": "Mistral-Vision",
+    "reward": 43000,
+    "miner": "miner_43@zkprolog.network",
+    "url": "https://zkprolog.network/meme/43?reward=43*1000&model=auto&shard=43"
+  },
+  {
+    "prime": 47,
+    "prompt": "Create a meme about networking: tcp, http. Show distributed systems.",
+    "model": "InternVL",
+    "reward": 47000,
+    "miner": "miner_47@zkprolog.network",
+    "url": "https://zkprolog.network/meme/47?reward=47*1000&model=auto&shard=47"
+  },
+  {
+    "prime": 53,
+    "prompt": "Generate a meme about generics: <T>, impl. Visualize polymorphism.",
+    "model": "AnimateDiff",
+    "reward": 53000,
+    "miner": "miner_53@zkprolog.network",
+    "url": "https://zkprolog.network/meme/53?reward=53*1000&model=auto&shard=53"
+  },
+  {
+    "prime": 59,
+    "prompt": "Design a meme about macros: macro!, quote. Show metaprogramming.",
+    "model": "Imagen-Video",
+    "reward": 59000,
+    "miner": "miner_59@zkprolog.network",
+    "url": "https://zkprolog.network/meme/59?reward=59*1000&model=auto&shard=59"
+  },
+  {
+    "prime": 61,
+    "prompt": "Make a meme about reflection: typeof, meta. Illustrate introspection.",
+    "model": "CogVideo",
+    "reward": 61000,
+    "miner": "miner_61@zkprolog.network",
+    "url": "https://zkprolog.network/meme/61?reward=61*1000&model=auto&shard=61"
+  },
+  {
+    "prime": 67,
+    "prompt": "Craft a meme about metaprogramming: eval, compile. Depict code generation.",
+    "model": "Control-A-Video",
+    "reward": 67000,
+    "miner": "miner_67@zkprolog.network",
+    "url": "https://zkprolog.network/meme/67?reward=67*1000&model=auto&shard=67"
+  },
+  {
+    "prime": 71,
+    "prompt": "Build a meme about the universe: Type, Kind, Universe. Show the infinite.",
+    "model": "Custom-Video",
+    "reward": 71000,
+    "miner": "miner_71@zkprolog.network",
+    "url": "https://zkprolog.network/meme/71?reward=71*1000&model=auto&shard=71"
+  }
+]
