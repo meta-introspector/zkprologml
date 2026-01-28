@@ -14,6 +14,9 @@ if [ -n "$PID" ]; then
     echo "✅ Running (PID: $PID)"
 else
     echo "❌ Not running"
+    echo ""
+    echo "🔄 Exporting to parquet..."
+    python3 export_llm_traces_parquet.py generated
 fi
 
 echo ""
@@ -25,8 +28,11 @@ echo ""
 echo "📊 Results files:"
 ls -lh generated/llm_activations_*.pl 2>/dev/null || echo "No results yet"
 ls -lh generated/activation_matrix.csv 2>/dev/null || echo "No matrix yet"
+ls -lh generated/*.parquet 2>/dev/null || echo "No parquet yet"
 ls -lh "$PERF" 2>/dev/null || echo "No perf data yet"
 
 echo ""
 echo "🔄 To monitor live: tail -f $LOG"
-echo "🛑 To stop: kill $PID"
+if [ -n "$PID" ]; then
+    echo "🛑 To stop: kill $PID"
+fi

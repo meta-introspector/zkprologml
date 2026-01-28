@@ -33,6 +33,15 @@ Feed each Gödel-numbered program to LLM (qwen2.5-coder:7b) and trace:
 2. **`activation_matrix.csv`** - Gödel × Prime activation counts
 3. **`perf_llm_activation.data`** - Perf trace of entire test
 
+### Parquet Meta-Dataset (NEW!)
+
+4. **`llm_activation_traces.parquet`** - Full trace records (timestamp, godel, status, duration, prompt_length)
+5. **`llm_activation_results.parquet`** - Result records (godel, duration, response_length, activations)
+6. **`llm_activation_matrix.parquet`** - Activation matrix (Gödel × Prime counts)
+7. **`llm_activation_meta.parquet`** - Meta-index with dataset info and perf stats
+
+**Export**: `python3 export_llm_traces_parquet.py generated`
+
 ## Analysis Plan
 
 Once complete:
