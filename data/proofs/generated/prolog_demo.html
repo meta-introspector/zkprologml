@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prolog-in-Browser via MetaCoq</title>
+    <style>
+        body { font-family: monospace; padding: 20px; }
+        #output { border: 1px solid #ccc; padding: 10px; margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <h1>🧠 Prolog Interpreter in Browser</h1>
+    <p>Path: Prolog → Coq → MetaCoq → OCaml → Rust → WASM</p>
+    
+    <button onclick="runProlog()">Run factorial(3, X)</button>
+    <div id="output"></div>
+    
+    <script>
+        async function runProlog() {
+            const response = await fetch("generated/prolog_interp.wasm");
+            const bytes = await response.arrayBuffer();
+            const module = await WebAssembly.instantiate(bytes);
+            
+            const result = module.instance.exports.prolog_eval(100);
+            document.getElementById("output").innerHTML = 
+                "Result: " + (result ? "Success ✅" : "Failed ❌");
+        }
+    </script>
+</body>
+</html>
