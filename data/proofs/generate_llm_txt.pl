@@ -22,7 +22,8 @@ generate_llm_txt :-
     write(S, '- Monster group primes (2-71)\n'),
     write(S, '- Hecke operators (sharding into 71 buckets)\n'),
     write(S, '- ZK RDF URLs (every entity is addressable)\n'),
-    write(S, '- Perf data (every predicate has cycles/instructions)\n\n'),
+    write(S, '- Perf data (every predicate has cycles/instructions)\n'),
+    write(S, '- Query optimizer using resonance (shared prime factors)\n\n'),
     
     % Core Concepts
     write(S, '## Core Concepts\n\n'),
@@ -34,8 +35,12 @@ generate_llm_txt :-
     forall(emoji_prime(P, E), format(S, '- ~w → ~w~n', [P, E])),
     write(S, '\n'),
     
-    write(S, '### Type Encoding\n'),
+    write(S, '### Type Encoding (Gödel)\n'),
     forall(type_prime(T, P), format(S, '- ~w → Prime ~w~n', [T, P])),
+    write(S, '\n'),
+    
+    write(S, '### Universe Levels\n'),
+    forall(universe_level(L, N), format(S, '- Level ~w: ~w~n', [L, N])),
     write(S, '\n'),
     
     % Architecture
@@ -48,11 +53,24 @@ generate_llm_txt :-
     
     % Files
     write(S, '## Key Files\n\n'),
-    write(S, '- `generated/merged_constants.pl` - All constants in one place\n'),
+    write(S, '### Constants & Data\n'),
+    write(S, '- `generated/merged_constants.pl` - All constants in one place (132 lines)\n'),
     write(S, '- `generated/godel_lattice.csv` - 384 entities with Gödel numbers\n'),
-    write(S, '- `generated/perf_data.csv` - Performance data for all predicates\n'),
+    write(S, '- `generated/perf_data.csv` - Performance data for 60 predicates\n'),
+    write(S, '- `generated/all_constants_perf.csv` - 2,409 constants with perf\n\n'),
+    
+    write(S, '### Core Systems\n'),
     write(S, '- `godel_planner.pl` - Query optimizer using resonance\n'),
-    write(S, '- `perf_predicates.pl` - Attach perf to every fact\n\n'),
+    write(S, '- `perf_predicates.pl` - Attach perf to every fact\n'),
+    write(S, '- `find_optimizers.pl` - Use plocate to find code\n'),
+    write(S, '- `auto_register_tables.pl` - Auto-discover schemas\n'),
+    write(S, '- `audit_constants.sh` - Deduplicate hardcoded data\n\n'),
+    
+    write(S, '### Proofs\n'),
+    write(S, '- `schema_of_schemas.lean` - Schema ≅ UniMath\n'),
+    write(S, '- `partial_bijection.lean` - Files ⇄ Parquets ⇄ Contents\n'),
+    write(S, '- `universal_unification.lean` - Everything = Everything\n'),
+    write(S, '- `universe_of_universes.lean` - Universe = Parquet of Parquets\n\n'),
     
     % Usage
     write(S, '## Usage\n\n'),
@@ -60,21 +78,54 @@ generate_llm_txt :-
     write(S, '% Load constants\n'),
     write(S, '?- consult(\'generated/merged_constants.pl\').\n\n'),
     write(S, '% Get Monster primes\n'),
-    write(S, '?- monster_primes(Ps).\n\n'),
+    write(S, '?- monster_primes(Ps).\n'),
+    write(S, 'Ps = [2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59,61,67,71].\n\n'),
     write(S, '% Encode as Gödel number\n'),
     write(S, '?- godel_encode([2,3,5], G).\n'),
     write(S, 'G = 30.\n\n'),
     write(S, '% Query perf data\n'),
     write(S, '?- entity_perf(\'monster_prime/1\', C, I, M, T).\n'),
+    write(S, 'C = 7442, I = 11163, M = 11, T = 3576.\n\n'),
+    write(S, '% Find optimizers with plocate\n'),
+    write(S, '?- find_datafusion(Files).\n'),
+    write(S, 'Files = [datafusion-optimizer-43.0.0, ...].\n'),
     write(S, '```\n\n'),
+    
+    % Query Optimizer
+    write(S, '## Query Optimizer\n\n'),
+    write(S, 'Uses Gödel resonance to find optimal execution plans:\n\n'),
+    write(S, '1. Encode goal as Gödel number\n'),
+    write(S, '2. Find functions with shared prime factors (resonance)\n'),
+    write(S, '3. Calculate cost: size × log(rows) + cycles\n'),
+    write(S, '4. Sort by resonance (desc) + cost (asc)\n\n'),
+    write(S, 'Lifts data from: PostgreSQL, MySQL, LLVM, MiniZinc, DataFusion\n\n'),
     
     % Stats
     write(S, '## Statistics\n\n'),
-    format(S, '- Constants: 2,409 (deduplicated to 2,006)~n', []),
+    format(S, '- Constants: 2,409 (deduplicated to 2,006, 16.72%% savings)~n', []),
     format(S, '- Perf measurements: 3,177 rows~n', []),
     format(S, '- Gödel entities: 384~n', []),
     format(S, '- Monster primes: 20~n', []),
-    format(S, '- Shards: 71~n~n', []),
+    format(S, '- Shards: 71~n', []),
+    format(S, '- Files sharded: 5,277~n', []),
+    format(S, '- Total cycles: 52,171~n', []),
+    format(S, '- Total instructions: 78,271~n~n', []),
+    
+    % Data Sources
+    write(S, '## Data Sources\n\n'),
+    write(S, '### Meta Parquets\n'),
+    write(S, '```\n'),
+    write(S, '/mnt/data1/time2/time/2023/07/30/meta-meme/plocate_witness/\n'),
+    write(S, '├── lists_of_lists.parquet (5.8KB) - 400K parquets\n'),
+    write(S, '├── locate_digest.parquet (47KB) - 3M files\n'),
+    write(S, '└── meta_meta_structures.parquet (6.9KB)\n'),
+    write(S, '```\n\n'),
+    
+    % Links
+    write(S, '## Links\n\n'),
+    write(S, '- GitHub: https://github.com/introspector/zkprologml\n'),
+    write(S, '- HuggingFace Space: https://huggingface.co/spaces/introspector/zkprologml\n'),
+    write(S, '- Dataset: https://huggingface.co/datasets/introspector/llm.txt\n\n'),
     
     close(S),
     format('✅ Generated llm.txt~n', []).

@@ -1,17 +1,159 @@
 # zkPrologML - Zero-Knowledge Prolog Meta-Language
 
-> Universal Prolog system with Gödel encoding and Monster primes
+> Universal Prolog system with Gödel encoding, Monster group primes, and ZK proofs
 
-## Monster Primes
-[2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71]
+## Overview
+
+zkPrologML unifies facts, files, functions, and proofs through:
+- Gödel encoding (everything → prime factorization)
+- Monster group primes (2-71)
+- Hecke operators (sharding into 71 buckets)
+- ZK RDF URLs (every entity is addressable)
+- Perf data (every predicate has cycles/instructions)
+- Query optimizer using resonance (shared prime factors)
+
+## Core Concepts
+
+### Monster Primes
+[2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59,61,67,71]
+
+### Emoji Mappings
+- 2 → 🌊
+- 3 → 🔺
+- 5 → ⭐
+- 7 → 🌈
+- 11 → 🎯
+- 13 → 🔮
+- 17 → ⚡
+- 19 → 🌙
+- 23 → 🎨
+- 29 → 🎭
+- 31 → 🎪
+- 37 → 🎬
+- 41 → 🎮
+- 43 → 🎲
+- 47 → 🎰
+- 53 → 🎸
+- 59 → 🎺
+- 61 → 🎻
+- 67 → 🎼
+- 71 → 🎵
+
+### Type Encoding (Gödel)
+- file → Prime 2
+- function → Prime 3
+- fact → Prime 5
+- proof → Prime 7
+- parquet → Prime 11
+- repo → Prime 13
+- module → Prime 17
+- struct → Prime 19
+- enum → Prime 23
+- trait → Prime 29
+- impl → Prime 31
+- const → Prime 37
+- static → Prime 41
+- fn → Prime 43
+- macro → Prime 47
+- type → Prime 53
+- use → Prime 59
+- mod → Prime 61
+- pub → Prime 67
+- crate → Prime 71
+
+### Universe Levels
+- Level 0: table
+- Level 1: meta
+- Level 2: meta_meta
+- Level 71: universe
 
 ## Architecture
+
 ```
-Facts → Gödel → Hecke → ZK URLs → Proofs
+Facts → Gödel Numbers → Hecke Shards → ZK URLs → Proofs
+  ↓         ↓              ↓            ↓         ↓
+Prolog    Prime         71 Buckets   RDFa      Lean4
 ```
 
-## Files
-- merged_constants.pl - All constants
-- godel_lattice.csv - 384 entities
-- perf_data.csv - Performance metrics
+## Key Files
+
+### Constants & Data
+- `generated/merged_constants.pl` - All constants in one place (132 lines)
+- `generated/godel_lattice.csv` - 384 entities with Gödel numbers
+- `generated/perf_data.csv` - Performance data for 60 predicates
+- `generated/all_constants_perf.csv` - 2,409 constants with perf
+
+### Core Systems
+- `godel_planner.pl` - Query optimizer using resonance
+- `perf_predicates.pl` - Attach perf to every fact
+- `find_optimizers.pl` - Use plocate to find code
+- `auto_register_tables.pl` - Auto-discover schemas
+- `audit_constants.sh` - Deduplicate hardcoded data
+
+### Proofs
+- `schema_of_schemas.lean` - Schema ≅ UniMath
+- `partial_bijection.lean` - Files ⇄ Parquets ⇄ Contents
+- `universal_unification.lean` - Everything = Everything
+- `universe_of_universes.lean` - Universe = Parquet of Parquets
+
+## Usage
+
+```prolog
+% Load constants
+?- consult('generated/merged_constants.pl').
+
+% Get Monster primes
+?- monster_primes(Ps).
+Ps = [2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59,61,67,71].
+
+% Encode as Gödel number
+?- godel_encode([2,3,5], G).
+G = 30.
+
+% Query perf data
+?- entity_perf('monster_prime/1', C, I, M, T).
+C = 7442, I = 11163, M = 11, T = 3576.
+
+% Find optimizers with plocate
+?- find_datafusion(Files).
+Files = [datafusion-optimizer-43.0.0, ...].
+```
+
+## Query Optimizer
+
+Uses Gödel resonance to find optimal execution plans:
+
+1. Encode goal as Gödel number
+2. Find functions with shared prime factors (resonance)
+3. Calculate cost: size × log(rows) + cycles
+4. Sort by resonance (desc) + cost (asc)
+
+Lifts data from: PostgreSQL, MySQL, LLVM, MiniZinc, DataFusion
+
+## Statistics
+
+- Constants: 2,409 (deduplicated to 2,006, 16.72%% savings)
+- Perf measurements: 3,177 rows
+- Gödel entities: 384
+- Monster primes: 20
+- Shards: 71
+- Files sharded: 5,277
+- Total cycles: 52,171
+- Total instructions: 78,271
+
+## Data Sources
+
+### Meta Parquets
+```
+/mnt/data1/time2/time/2023/07/30/meta-meme/plocate_witness/
+├── lists_of_lists.parquet (5.8KB) - 400K parquets
+├── locate_digest.parquet (47KB) - 3M files
+└── meta_meta_structures.parquet (6.9KB)
+```
+
+## Links
+
+- GitHub: https://github.com/introspector/zkprologml
+- HuggingFace Space: https://huggingface.co/spaces/introspector/zkprologml
+- Dataset: https://huggingface.co/datasets/introspector/llm.txt
 
