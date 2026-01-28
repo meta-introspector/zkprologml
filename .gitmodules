@@ -1,0 +1,9 @@
+[submodule "discovered_repos/crypto-primes"]
+	path = discovered_repos/crypto-primes
+	url = https://github.com/entropyxyz/crypto-primes
+[submodule "discovered_repos/algebra"]
+	path = discovered_repos/algebra
+	url = https://github.com/arkworks-rs/algebra
+[submodule "discovered_repos/ark-ff"]
+	path = discovered_repos/ark-ff
+	url = https://github.com/arkworks-rs/algebra
