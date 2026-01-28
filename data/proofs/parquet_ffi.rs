@@ -3,6 +3,13 @@
 use std::ffi::{CStr, CString};
 use std::os::raw::c_char;
 
+/// SWI-Prolog install function (required for foreign library)
+#[no_mangle]
+pub extern "C" fn install() {
+    // Initialize the library
+    // SWI-Prolog will call this when loading
+}
+
 /// FFI: Read parquet file and return row count
 #[no_mangle]
 pub extern "C" fn parquet_row_count(path: *const c_char) -> i64 {
