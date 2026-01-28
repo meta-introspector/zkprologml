@@ -1,0 +1,4 @@
+stage,prime,description,cycles,instructions,time_sec,heat_joules,heat_mj
+rust_original,2,Rust original implementation,,,0.101845483,,
+coq_extracted,5,Extracted to OCaml,,,0.001370335,,
+rust_verified,11,Verified Rust (closed loop),,,0.002009903,,

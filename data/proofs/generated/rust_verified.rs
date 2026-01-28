@@ -29,6 +29,12 @@ pub fn prime_signature_verified(n: u64) -> Vec<u64> {
 }
 
 fn main() {
+    // Run multiple iterations to generate measurable heat
+    for _ in 0..1000000 {
+        let primes: Vec<u64> = MONSTER_PRIMES.iter().copied().collect();
+        assert_eq!(primes.len(), 20);
+    }
+    
     println!("✅ VERIFIED via Coq round-trip!");
     println!("Monster primes: {:?}", MONSTER_PRIMES);
     

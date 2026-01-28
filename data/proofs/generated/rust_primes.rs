@@ -49,8 +49,13 @@ mod tests {
 }
 
 fn main() {
-    let primes = monster_primes();
-    println!("Monster group primes: {:?}", primes);
+    // Run multiple iterations to generate measurable heat
+    for _ in 0..1000000 {
+        let primes = monster_primes();
+        assert_eq!(primes.len(), 20);
+    }
+    
+    println!("Monster group primes: {:?}", monster_primes());
     
     // Test prime signatures
     for n in [6, 10, 30, 210] {
