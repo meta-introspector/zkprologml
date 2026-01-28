@@ -1,0 +1,57 @@
+═══════════════════════════════════════════════════════════
+           PROLOG SYMPHONY - MUSICAL SCORE
+═══════════════════════════════════════════════════════════
+
+[⚡]  all_repos.pl  [3]
+  ··●··················
+[⚡]  compcert_monster.pl  [3]
+  ··●··················
+[⚡]  coq_proof_harmonics.pl  [3]
+  ··●··················
+[🔢,⚡]  automorphic_orbits.pl  [2,3]
+  ●·●··················
+[🔢,⚡]  c_syntax_harmonics.pl  [2,3]
+  ●·●··················
+[🔢,⚡]  comprehend_lean_core.pl  [2,3]
+  ●·●··················
+[⚡,🔀]  coq_of_rust_integration.pl  [3,7]
+  ··●···●··············
+[⚡,🔀]  eco_unification.pl  [3,7]
+  ··●···●··············
+[⚡,👉]  bott_k_theory.pl  [3,13]
+  ··●·······●··········
+[⚡,🏗️]  escher_loop.pl  [3,17]
+  ··●·········●········
+[🔢,⚡,🏗️]  c_complexity_lattice.pl  [2,3,17]
+  ●·●·········●········
+[⚡,📦,🔀]  bootstrap_proof.pl  [3,5,7]
+  ··●·●·●··············
+[⚡,📦,🔀]  consume_prolog_variants.pl  [3,5,7]
+  ··●·●·●··············
+[⚡,📦,🎯]  dataset_complexity_binding.pl  [3,5,11]
+  ··●·●···●············
+[⚡,🔀,👉]  analyze_all.pl  [3,7,13]
+  ··●···●···●··········
+[⚡,🔀,🏗️]  bisimulation.pl  [3,7,17]
+  ··●···●·····●········
+[⚡,🔀,🏗️]  consume_parquet_git_prolog.pl  [3,7,17]
+  ··●···●·····●········
+[⚡,🔀,📊]  closed_loop_primes.pl  [3,7,19]
+  ··●···●·······●······
+[🔢,⚡,🔀,📊]  analyze_all_repos.pl  [2,3,7,19]
+  ●·●···●·······●······
+[🔢,⚡,🔀,📊]  complexity_lattice_key.pl  [2,3,7,19]
+  ●·●···●·······●······
+[🔢,⚡,👉,📊]  analyze_everything.pl  [2,3,13,19]
+  ●·●·······●···●······
+[⚡,🏗️,🔄]  24h_resource_plan.pl  [3,17,37]
+  ··●·······●·●········
+[⚡,🔀,📊,🔄]  complexity_growth_proof.pl  [3,7,19,37]
+  ··●···●···●···●······
+[🔢,⚡,📦,🔀,👉,🔄]  c_complexity_facts.pl  [2,3,5,7,13,37]
+  ●·●·●·●···●··········
+
+═══════════════════════════════════════════════════════════
+Legend: Each line = 0.5 seconds
+Vertical position = frequency (higher = higher pitch)
+Total duration: 12 seconds
