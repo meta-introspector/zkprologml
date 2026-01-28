@@ -1,0 +1,17 @@
+/home/mdupont/.local/share/toolchain-analysis/bash/nix_store_grammars.parquet
+/home/mdupont/.local/share/toolchain-analysis/cargo/nix_store_grammars.parquet
+/home/mdupont/.local/share/toolchain-analysis/gcc/nix_store_grammars.parquet
+/home/mdupont/.local/share/toolchain-analysis/rustc/nix_store_grammars.parquet
+/mnt/data1/meta-introspector/nix_store_grammars.parquet
+/mnt/data1/nix-store/store/12jsxndfnlcvfh540vn1qycppsk7xwdv-source/nix_store_grammars.parquet
+/mnt/data1/nix-store/store/19va8nr5lixbz1am6lq664wi0biq8fqp-source/nix_store_grammars.parquet
+/mnt/data1/nix-store/store/3y7bay207qh2b95bddlpmga10pz3asvj-source/nix_store_grammars.parquet
+/mnt/data1/nix-store/store/57j22sfh66pyc0c5qhqj71q3q2rga26y-source/nix_store_grammars.parquet
+/mnt/data1/nix-store/store/ibaggb5p7b8577ggak4y53qqq08wsn5l-source/nix_store_grammars.parquet
+/mnt/data1/nix-store/store/jdw9zxvqdr3a1w7nxmv7p1gl292axh48-source/nix_store_grammars.parquet
+/mnt/data1/nix-store/store/qbjkrc1aq5pj0zfv0059kafjwv9r90a5-source/nix_store_grammars.parquet
+/mnt/data1/nix-store/store/r84i0ws2r5di293aaacw97r43kgpn65m-source/nix_store_grammars.parquet
+/mnt/data1/nix-store/store/sacds4jigw0zvyqa7zzda9qdv98whpla-source/nix_store_grammars.parquet
+/mnt/data1/nix-store/store/xf8v2ds8qd9vhvpyz1zkk6g3qvms5827-source/nix_store_grammars.parquet
+/mnt/data1/nix-store/store/yp8n07xknr592a8j946nq0b8073d2zkc-source/nix_store_grammars.parquet
+/mnt/data1/nix-store/store/zafyp1n6i3i7s86z8bf2f4w3c4l2fgxy-source/nix_store_grammars.parquet

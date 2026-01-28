@@ -1,0 +1,5 @@
+/home/mdupont/.local/share/toolchain-analysis/bash/markov_symbol_scores.parquet
+/home/mdupont/.local/share/toolchain-analysis/cargo/markov_symbol_scores.parquet
+/home/mdupont/.local/share/toolchain-analysis/gcc/markov_symbol_scores.parquet
+/home/mdupont/.local/share/toolchain-analysis/rustc/markov_symbol_scores.parquet
+/mnt/data1/meta-introspector/markov_symbol_scores.parquet

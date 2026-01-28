@@ -1,0 +1,46 @@
+warning: unused import: `parquet::record::RowAccessor`
+ --> read_lists_of_lists.rs:3:5
+  |
+3 | use parquet::record::RowAccessor;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: `zkprologml` (bin "read_lists_of_lists") generated 1 warning (run `cargo fix --bin "read_lists_of_lists"` to apply 1 suggestion)
+    Finished `release` profile [optimized] target(s) in 0.04s
+     Running `/mnt/data1/nix/vendor/rust/github/target/release/read_lists_of_lists`
+📂 Reading lists_of_lists.parquet...
+
+Schema:
+  category: Some(String)
+  path: Some(String)
+  size: None
+  weight: None
+  resonates: None
+
+Rows: 84
+
+First 20 entries:
+─────────────────────────────────────────────────────────
+0: Row { fields: [("category", Str("Misc")), ("path", Str("/home/mdupont/.cargo/git/checkouts/burn-6c277d792b0d5d7a/3cd0671/crates/burn-ndarray/build.rs")), ("size", Long(185)), ("weight", Long(185)), ("resonates", Bool(true))] }
+1: Row { fields: [("category", Str("Misc")), ("path", Str("/home/mdupont/.cargo/git/checkouts/burn-6c277d792b0d5d7a/3cd0671/crates/burn-onnx/model-checks/albert/build.rs")), ("size", Long(2818)), ("weight", Long(2818)), ("resonates", Bool(true))] }
+2: Row { fields: [("category", Str("Misc")), ("path", Str("/home/mdupont/.cargo/git/checkouts/burn-6c277d792b0d5d7a/3cd0671/crates/burn-onnx/model-checks/all-minilm-l6-v2/build.rs")), ("size", Long(1130)), ("weight", Long(1130)), ("resonates", Bool(true))] }
+3: Row { fields: [("category", Str("Misc")), ("path", Str("/home/mdupont/.cargo/git/checkouts/burn-6c277d792b0d5d7a/3cd0671/crates/burn-onnx/model-checks/clip-vit-b-32-text/build.rs")), ("size", Long(1202)), ("weight", Long(1202)), ("resonates", Bool(true))] }
+4: Row { fields: [("category", Str("Misc")), ("path", Str("/home/mdupont/.cargo/git/checkouts/burn-6c277d792b0d5d7a/3cd0671/crates/burn-onnx/model-checks/clip-vit-b-32-vision/build.rs")), ("size", Long(1228)), ("weight", Long(1228)), ("resonates", Bool(true))] }
+5: Row { fields: [("category", Str("Misc")), ("path", Str("/home/mdupont/.cargo/git/checkouts/burn-6c277d792b0d5d7a/3cd0671/crates/burn-onnx/model-checks/modernbert-base/build.rs")), ("size", Long(1128)), ("weight", Long(1128)), ("resonates", Bool(true))] }
+6: Row { fields: [("category", Str("Misc")), ("path", Str("/home/mdupont/.cargo/git/checkouts/burn-6c277d792b0d5d7a/3cd0671/crates/burn-onnx/model-checks/rf-detr/build.rs")), ("size", Long(1034)), ("weight", Long(1034)), ("resonates", Bool(true))] }
+7: Row { fields: [("category", Str("Misc")), ("path", Str("/home/mdupont/.cargo/git/checkouts/burn-6c277d792b0d5d7a/3cd0671/crates/burn-onnx/model-checks/silero-vad/build.rs")), ("size", Long(958)), ("weight", Long(958)), ("resonates", Bool(true))] }
+8: Row { fields: [("category", Str("Misc")), ("path", Str("/home/mdupont/.cargo/git/checkouts/burn-6c277d792b0d5d7a/3cd0671/crates/burn-onnx/model-checks/yolo/build.rs")), ("size", Long(2863)), ("weight", Long(2863)), ("resonates", Bool(true))] }
+9: Row { fields: [("category", Str("Misc")), ("path", Str("/home/mdupont/.cargo/git/checkouts/burn-6c277d792b0d5d7a/3cd0671/crates/burn-onnx/onnx-tests/build.rs")), ("size", Long(19997)), ("weight", Long(19997)), ("resonates", Bool(false))] }
+10: Row { fields: [("category", Str("Misc")), ("path", Str("/home/mdupont/.cargo/git/checkouts/burn-6c277d792b0d5d7a/3cd0671/crates/burn-tch/build.rs")), ("size", Long(8995)), ("weight", Long(8995)), ("resonates", Bool(true))] }
+11: Row { fields: [("category", Str("Misc")), ("path", Str("/home/mdupont/.cargo/git/checkouts/burn-6c277d792b0d5d7a/3cd0671/crates/onnx-ir/build.rs")), ("size", Long(478)), ("weight", Long(478)), ("resonates", Bool(true))] }
+12: Row { fields: [("category", Str("Misc")), ("path", Str("/home/mdupont/.cargo/git/checkouts/burn-6c277d792b0d5d7a/3cd0671/examples/image-classification-web/build.rs")), ("size", Long(2280)), ("weight", Long(2280)), ("resonates", Bool(true))] }
+13: Row { fields: [("category", Str("Misc")), ("path", Str("/home/mdupont/.cargo/git/checkouts/burn-6c277d792b0d5d7a/3cd0671/examples/onnx-inference/build.rs")), ("size", Long(280)), ("weight", Long(280)), ("resonates", Bool(true))] }
+14: Row { fields: [("category", Str("Misc")), ("path", Str("/home/mdupont/.cargo/git/checkouts/burn-6c277d792b0d5d7a/3cd0671/examples/raspberry-pi-pico/build.rs")), ("size", Long(1710)), ("weight", Long(1710)), ("resonates", Bool(true))] }
+15: Row { fields: [("category", Str("Misc")), ("path", Str("/home/mdupont/.cargo/git/checkouts/burn-6c277d792b0d5d7a/3cd0671/xtask/src/commands/build.rs")), ("size", Long(3683)), ("weight", Long(3683)), ("resonates", Bool(true))] }
+16: Row { fields: [("category", Str("Misc")), ("path", Str("/home/mdupont/.cargo/git/checkouts/burn-6c277d792b0d5d7a/5843c6e/crates/burn-ndarray/build.rs")), ("size", Long(185)), ("weight", Long(185)), ("resonates", Bool(true))] }
+17: Row { fields: [("category", Str("Misc")), ("path", Str("/home/mdupont/.cargo/git/checkouts/burn-6c277d792b0d5d7a/5843c6e/crates/burn-onnx/model-checks/albert/build.rs")), ("size", Long(2818)), ("weight", Long(2818)), ("resonates", Bool(true))] }
+18: Row { fields: [("category", Str("Misc")), ("path", Str("/home/mdupont/.cargo/git/checkouts/burn-6c277d792b0d5d7a/5843c6e/crates/burn-onnx/model-checks/all-minilm-l6-v2/build.rs")), ("size", Long(1130)), ("weight", Long(1130)), ("resonates", Bool(true))] }
+19: Row { fields: [("category", Str("Misc")), ("path", Str("/home/mdupont/.cargo/git/checkouts/burn-6c277d792b0d5d7a/5843c6e/crates/burn-onnx/model-checks/clip-vit-b-32-text/build.rs")), ("size", Long(1202)), ("weight", Long(1202)), ("resonates", Bool(true))] }
+
+✅ Total rows shown: 20
