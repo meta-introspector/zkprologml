@@ -28,5 +28,5 @@ jobs:
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
-          git remote add space https://huggingface.co/spaces/meta-introspector/zkprologml-dashboard || true
-          git push https://meta-introspector:$HF_TOKEN@huggingface.co/spaces/meta-introspector/zkprologml-dashboard main --force
+          git remote add space https://huggingface.co/spaces/introspector/zkprologml || true
+          git push https://introspector:$HF_TOKEN@huggingface.co/spaces/introspector/zkprologml main --force

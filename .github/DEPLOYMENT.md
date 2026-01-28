@@ -45,7 +45,7 @@ Once secrets are configured, deployments happen automatically:
 
 ## URLs After Deployment
 
-- **HuggingFace**: https://huggingface.co/spaces/meta-introspector/zkprologml-dashboard
+- **HuggingFace**: https://huggingface.co/spaces/introspector/zkprologml
 - **Vercel**: https://zkprologml-dashboard.vercel.app
 - **Cloudflare**: https://zkprologml-dashboard.pages.dev
 
