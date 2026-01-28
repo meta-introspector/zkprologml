@@ -7,3 +7,9 @@
 [submodule "discovered_repos/ark-ff"]
 	path = discovered_repos/ark-ff
 	url = https://github.com/arkworks-rs/algebra
+[submodule "datasets/data-moonshine"]
+	path = datasets/data-moonshine
+	url = git@hf.co:datasets/introspector/data-moonshine
+[submodule "datasets/data-const71"]
+	path = datasets/data-const71
+	url = git@hf.co:datasets/introspector/data-const71
