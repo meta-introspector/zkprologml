@@ -1,6 +1,9 @@
 #!/bin/bash
 # push_to_huggingface.sh - Push to HuggingFace Space via SSH
 
+# Load SSH credentials
+source ~/.agentrc
+
 SPACE="introspector/zkprologml"
 HF_REPO="git@hf.co:spaces/$SPACE"
 
