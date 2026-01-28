@@ -1,0 +1,140 @@
+{
+  "prime": 2,
+  "domain": "types",
+  "description": "Foundation of computation",
+  "constant": true,
+  "dataset": "const71"
+}
+{
+  "prime": 3,
+  "domain": "operators",
+  "description": "Mathematical operations",
+  "constant": true,
+  "dataset": "const71"
+}
+{
+  "prime": 5,
+  "domain": "variables",
+  "description": "State and mutation",
+  "constant": true,
+  "dataset": "const71"
+}
+{
+  "prime": 7,
+  "domain": "control",
+  "description": "Branching and flow",
+  "constant": true,
+  "dataset": "const71"
+}
+{
+  "prime": 11,
+  "domain": "functions",
+  "description": "Abstraction and composition",
+  "constant": true,
+  "dataset": "const71"
+}
+{
+  "prime": 13,
+  "domain": "pointers",
+  "description": "Memory references",
+  "constant": true,
+  "dataset": "const71"
+}
+{
+  "prime": 17,
+  "domain": "structures",
+  "description": "Data organization",
+  "constant": true,
+  "dataset": "const71"
+}
+{
+  "prime": 19,
+  "domain": "arrays",
+  "description": "Collections and sequences",
+  "constant": true,
+  "dataset": "const71"
+}
+{
+  "prime": 23,
+  "domain": "memory",
+  "description": "Resource management",
+  "constant": true,
+  "dataset": "const71"
+}
+{
+  "prime": 29,
+  "domain": "optimization",
+  "description": "Performance tuning",
+  "constant": true,
+  "dataset": "const71"
+}
+{
+  "prime": 31,
+  "domain": "output",
+  "description": "Communication and I/O",
+  "constant": true,
+  "dataset": "const71"
+}
+{
+  "prime": 37,
+  "domain": "loops",
+  "description": "Iteration and repetition",
+  "constant": true,
+  "dataset": "const71"
+}
+{
+  "prime": 41,
+  "domain": "machine",
+  "description": "Low-level execution",
+  "constant": true,
+  "dataset": "const71"
+}
+{
+  "prime": 43,
+  "domain": "safety",
+  "description": "Correctness guarantees",
+  "constant": true,
+  "dataset": "const71"
+}
+{
+  "prime": 47,
+  "domain": "network",
+  "description": "Distributed systems",
+  "constant": true,
+  "dataset": "const71"
+}
+{
+  "prime": 53,
+  "domain": "generics",
+  "description": "Polymorphism",
+  "constant": true,
+  "dataset": "const71"
+}
+{
+  "prime": 59,
+  "domain": "macros",
+  "description": "Metaprogramming",
+  "constant": true,
+  "dataset": "const71"
+}
+{
+  "prime": 61,
+  "domain": "reflection",
+  "description": "Introspection",
+  "constant": true,
+  "dataset": "const71"
+}
+{
+  "prime": 67,
+  "domain": "metaprogramming",
+  "description": "Code generation",
+  "constant": true,
+  "dataset": "const71"
+}
+{
+  "prime": 71,
+  "domain": "universe",
+  "description": "Type theory and foundations",
+  "constant": true,
+  "dataset": "const71"
+}
