@@ -1,0 +1,39 @@
+digraph MonsterGraph {
+  rankdir=LR;
+  node [shape=box, style=filled];
+
+  // Nodes colored by Monster Group shard
+  "load_global_table.rs" [label="load_global_table.rs\nrust\nShard 42", fillcolor="0.591549,0.7,0.9"];
+  "update_parquet_formal.rs" [label="update_parquet_formal.rs\nrust\nShard 43", fillcolor="0.605634,0.7,0.9"];
+  "eigenvector_matrix.rs" [label="eigenvector_matrix.rs\nrust\nShard 44", fillcolor="0.619718,0.7,0.9"];
+  "global_object_table.pl" [label="global_object_table.pl\nprolog\nShard 33", fillcolor="0.464789,0.7,0.9"];
+  "prolog_to_nix.pl" [label="prolog_to_nix.pl\nprolog\nShard 34", fillcolor="0.478873,0.7,0.9"];
+  "power_of_2_model.pl" [label="power_of_2_model.pl\nprolog\nShard 35", fillcolor="0.492958,0.7,0.9"];
+  "prove_eigenvector.lean" [label="prove_eigenvector.lean\nlean4\nShard 53", fillcolor="0.746479,0.7,0.9"];
+  "eigenvector_matrix.lean" [label="eigenvector_matrix.lean\nlean4\nShard 54", fillcolor="0.760563,0.7,0.9"];
+  "prove_all_databases_monster.lean" [label="prove_all_databases_monster.lean\nlean4\nShard 55", fillcolor="0.774648,0.7,0.9"];
+  "eigenvector_matrix.mzn" [label="eigenvector_matrix.mzn\nminizinc\nShard 12", fillcolor="0.169014,0.7,0.9"];
+  "find_eigenvector.mzn" [label="find_eigenvector.mzn\nminizinc\nShard 13", fillcolor="0.183099,0.7,0.9"];
+  "deep_insights.py" [label="deep_insights.py\npython\nShard 60", fillcolor="0.845070,0.7,0.9"];
+  "learn_interesting_bytes.py" [label="learn_interesting_bytes.py\npython\nShard 61", fillcolor="0.859155,0.7,0.9"];
+  "parse_formal_files.py" [label="parse_formal_files.py\npython\nShard 62", fillcolor="0.873239,0.7,0.9"];
+  "master.parquet" [label="master.parquet\nparquet\nShard 70", fillcolor="0.985915,0.5,0.9", shape=cylinder];
+  "global_objects.pl" [label="global_objects.pl\nprolog\nShard 0", fillcolor="0.000000,0.5,0.9", shape=cylinder];
+  "global_objects.nix" [label="global_objects.nix\nnix\nShard 1", fillcolor="0.014085,0.5,0.9", shape=cylinder];
+  "eigenvector_class_summary.csv" [label="eigenvector_class_summary.csv\ncsv\nShard 2", fillcolor="0.028169,0.5,0.9", shape=cylinder];
+  "learned_byte_patterns.json" [label="learned_byte_patterns.json\njson\nShard 3", fillcolor="0.042254,0.5,0.9", shape=cylinder];
+  "prove_eigenvector.lean" [label="prove_eigenvector.lean\nlean4\nShard 53", fillcolor="0.746479,0.9,0.9", shape=diamond];
+  "eigenvector_matrix.lean" [label="eigenvector_matrix.lean\nlean4\nShard 54", fillcolor="0.760563,0.9,0.9", shape=diamond];
+  "prove_all_databases_monster.lean" [label="prove_all_databases_monster.lean\nlean4\nShard 55", fillcolor="0.774648,0.9,0.9", shape=diamond];
+
+  // Edges
+  "load_global_table.rs" -> "prove_eigenvector.lean" [color=gray];
+  "load_global_table.rs" -> "eigenvector_matrix.lean" [color=gray];
+  "load_global_table.rs" -> "prove_all_databases_monster.lean" [color=gray];
+  "update_parquet_formal.rs" -> "prove_eigenvector.lean" [color=gray];
+  "update_parquet_formal.rs" -> "eigenvector_matrix.lean" [color=gray];
+  "update_parquet_formal.rs" -> "prove_all_databases_monster.lean" [color=gray];
+  "eigenvector_matrix.rs" -> "prove_eigenvector.lean" [color=gray];
+  "eigenvector_matrix.rs" -> "eigenvector_matrix.lean" [color=gray];
+  "eigenvector_matrix.rs" -> "prove_all_databases_monster.lean" [color=gray];
+}
