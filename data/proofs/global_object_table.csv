@@ -1,0 +1,8 @@
+godel,path,shard,type,num_uses
+8,"/usr/lib/libstd.so",8,library,0
+25,"/etc/mime.types",25,config,0
+53,"data/proofs/prove_eigenvector.lean",53,proof,0
+33,"data/proofs/eigenvector_matrix.pl",33,source,0
+12,"data/proofs/eigenvector_matrix.mzn",12,constraint,0
+12,"/usr/bin/rustc",12,executable,1
+42,"data/proofs/eigenvector_matrix.rs",42,source,1
