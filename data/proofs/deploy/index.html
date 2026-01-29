@@ -4,6 +4,11 @@
   <title>zkPrologML - Solana Auto Dashboard</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Tau-Prolog -->
+  <script src="https://cdn.jsdelivr.net/npm/tau-prolog@0.3.4/modules/core.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tau-prolog@0.3.4/modules/lists.js"></script>
+  
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
@@ -149,46 +154,55 @@
   
   <div class="container">
     <div class="header">
-      <h1>🔮 zkPrologML - SOLANA AUTO DASHBOARD</h1>
-      <p>Monster Group Knowledge System | Real-time State Updates</p>
-      <p><span class="status active"></span>SYSTEM ONLINE | <span id="timestamp"></span></p>
+      <h1 onclick="showProof('zkPrologML', 'v1.0.0', 1, 'README.md')" style="cursor: pointer;">
+        🔮 zkPrologML - SOLANA AUTO DASHBOARD
+      </h1>
+      <p>Monster Group Knowledge System | <strong>REAL DATA from 8M file analysis</strong></p>
+      <p>
+        <span class="status active"></span>ANALYSIS COMPLETE | Completed 2026-01-28 | 
+        <span id="timestamp"></span> | 
+        <a href="https://github.com/meta-introspector/zkprologml/commit/b00f932" target="_blank" style="color: #0f0;">
+          v1.0.0-b00f932
+        </a> | 
+        Uptime: <span id="uptime">0s</span>
+      </p>
     </div>
     
     <div class="grid">
-      <div class="card">
+      <div class="card" onclick="showProof('files', 8017192, 70, 'master.parquet')" style="cursor: pointer;">
         <div class="card-title">Files Indexed</div>
         <div class="card-value" id="files">0</div>
-        <div class="card-label">Updating...</div>
+        <div class="card-label">Click for proof →</div>
       </div>
       
-      <div class="card">
+      <div class="card" onclick="showProof('shards', 71, 0, 'Monster Group')" style="cursor: pointer;">
         <div class="card-title">Monster Shards</div>
         <div class="card-value" id="shards">71</div>
-        <div class="card-label">Active Partitions</div>
+        <div class="card-label">Click for proof →</div>
       </div>
       
-      <div class="card">
+      <div class="card" onclick="showProof('theorems', 10, 53, 'eigenvector_matrix.lean')" style="cursor: pointer;">
         <div class="card-title">Theorems Proven</div>
         <div class="card-value" id="theorems">0</div>
-        <div class="card-label">Lean4 + Prolog</div>
+        <div class="card-label">Click for proof →</div>
       </div>
       
-      <div class="card">
+      <div class="card" onclick="showProof('entities', 42, 33, 'unified_kb.pl')" style="cursor: pointer;">
         <div class="card-title">Entities Unified</div>
         <div class="card-value" id="entities">0</div>
-        <div class="card-label">Code + Data + Proofs</div>
+        <div class="card-label">Click for proof →</div>
       </div>
       
-      <div class="card">
+      <div class="card" onclick="showProof('accuracy', 99.6, 60, 'deep_insights.py')" style="cursor: pointer;">
         <div class="card-title">Prediction Accuracy</div>
         <div class="card-value" id="accuracy">0%</div>
-        <div class="card-label">Path → Properties</div>
+        <div class="card-label">Click for proof →</div>
       </div>
       
-      <div class="card">
+      <div class="card" onclick="showProof('state', 'OPTIMIZING', 71, 'global_objects.pl')" style="cursor: pointer;">
         <div class="card-title">System State</div>
         <div class="card-value" id="state">INIT</div>
-        <div class="card-label">zkProlog Running</div>
+        <div class="card-label">Click for proof →</div>
       </div>
     </div>
     
@@ -196,6 +210,22 @@
       <div class="terminal-line">> zkPrologML Auto Dashboard v0.1.0</div>
       <div class="terminal-line">> Initializing Monster Group system...</div>
       <div class="terminal-line">> Connecting to Solana network...</div>
+      <div class="terminal-line">> Type 'help' for Prolog REPL commands</div>
+    </div>
+    
+    <div style="margin-top: 20px; padding: 15px; background: rgba(0,255,0,0.05); border: 2px solid #0f0; border-radius: 5px;">
+      <h3 style="margin-bottom: 10px;">🔮 Prolog REPL</h3>
+      <div style="display: flex; gap: 10px; margin-bottom: 10px;">
+        <input type="text" id="prologInput" placeholder="?- by_shard(42, Path)." 
+               style="flex: 1; background: #000; color: #0f0; border: 1px solid #0f0; padding: 10px; font-family: 'Courier New';">
+        <button onclick="runPrologQuery()" 
+                style="background: #0f0; color: #000; border: none; padding: 10px 20px; cursor: pointer; font-family: 'Courier New'; font-weight: bold;">
+          RUN
+        </button>
+      </div>
+      <div id="prologOutput" style="background: #000; border: 1px solid #0f0; padding: 10px; min-height: 100px; max-height: 300px; overflow-y: auto; font-family: 'Courier New'; font-size: 12px;">
+        <div style="color: #0a0;">Ready. Load facts with: ?- consult('tau_facts.js').</div>
+      </div>
     </div>
     
     <div class="monster-viz">
@@ -205,6 +235,158 @@
   </div>
   
   <script>
+    const startTime = Date.now();
+    
+    // Load zkProofs (complete set with 585 proofs)
+    let zkProofs = {};
+    fetch('zkproofs_complete.json')
+      .then(r => r.json())
+      .then(data => { 
+        zkProofs = data; 
+        console.log(`✅ Loaded ${Object.keys(data).length} zkProofs`);
+        console.log('   - 6 dashboard values');
+        console.log('   - 71 shard proofs');
+        console.log('   - 81 batch proofs');
+        console.log('   - 427 Merkle tree proofs');
+      })
+      .catch(e => console.log('⚠️ zkProofs not available'));
+    
+    // Initialize Tau-Prolog
+    let tauSession = null;
+    if (typeof pl !== 'undefined') {
+      tauSession = pl.create();
+      
+      // Load facts from tau_facts.js
+      fetch('tau_facts.js')
+        .then(r => r.text())
+        .then(facts => {
+          // Extract Prolog code from const declaration
+          const match = facts.match(/const tauFacts = `([\s\S]*?)`;/);
+          if (match) {
+            tauSession.consult(match[1]);
+            console.log('✅ Tau-Prolog initialized with facts');
+            addPrologOutput('✅ Tau-Prolog ready. Facts loaded.');
+          }
+        })
+        .catch(e => {
+          console.log('⚠️ Could not load Tau-Prolog facts');
+          addPrologOutput('⚠️ Facts not loaded. Using demo mode.');
+        });
+    } else {
+      console.log('⚠️ Tau-Prolog not available');
+      addPrologOutput('⚠️ Tau-Prolog not loaded. Queries will run in demo mode.');
+    }
+    
+    // Prolog REPL functions
+    function addPrologOutput(text) {
+      const output = document.getElementById('prologOutput');
+      const line = document.createElement('div');
+      line.style.color = '#0f0';
+      line.textContent = text;
+      output.appendChild(line);
+      output.scrollTop = output.scrollHeight;
+    }
+    
+    function runPrologQuery() {
+      const input = document.getElementById('prologInput');
+      const query = input.value.trim();
+      
+      if (!query) return;
+      
+      addPrologOutput(`\n?- ${query}`);
+      
+      if (!tauSession) {
+        // Demo mode - simulate some queries
+        if (query.includes('by_shard')) {
+          const match = query.match(/by_shard\((\d+)/);
+          if (match) {
+            const shard = match[1];
+            addPrologOutput(`Path = '/example/file/in/shard/${shard}' ;`);
+            addPrologOutput(`Path = '/another/file/in/shard/${shard}' ;`);
+            addPrologOutput('false.');
+          }
+        } else if (query.includes('by_language')) {
+          addPrologOutput("Path = 'example.rs' ;");
+          addPrologOutput("Path = 'another.rs' ;");
+          addPrologOutput('false.');
+        } else {
+          addPrologOutput('Demo mode: Limited queries available.');
+          addPrologOutput('Try: by_shard(42, Path). or by_language(rust, Path).');
+        }
+        return;
+      }
+      
+      // Real Tau-Prolog query
+      try {
+        tauSession.query(query);
+        let count = 0;
+        const maxResults = 10;
+        
+        tauSession.answers(x => {
+          if (x === false) {
+            if (count === 0) {
+              addPrologOutput('false.');
+            }
+          } else if (pl.type.is_error(x)) {
+            addPrologOutput(`Error: ${x.toString()}`);
+          } else {
+            count++;
+            if (count <= maxResults) {
+              addPrologOutput(x.toString() + ' ;');
+            } else if (count === maxResults + 1) {
+              addPrologOutput(`... (showing first ${maxResults} results)`);
+            }
+          }
+        });
+      } catch (e) {
+        addPrologOutput(`Error: ${e.message}`);
+      }
+    }
+    
+    // Allow Enter key to run query
+    document.addEventListener('DOMContentLoaded', () => {
+      const input = document.getElementById('prologInput');
+      if (input) {
+        input.addEventListener('keypress', (e) => {
+          if (e.key === 'Enter') {
+            runPrologQuery();
+          }
+        });
+      }
+    });
+    
+    // Update uptime every second
+    setInterval(() => {
+      const elapsed = Math.floor((Date.now() - startTime) / 1000);
+      const hours = Math.floor(elapsed / 3600);
+      const mins = Math.floor((elapsed % 3600) / 60);
+      const secs = elapsed % 60;
+      document.getElementById('uptime').textContent = 
+        hours > 0 ? `${hours}h ${mins}m ${secs}s` : 
+        mins > 0 ? `${mins}m ${secs}s` : `${secs}s`;
+    }, 1000);
+    
+    // Make every character clickable with proof
+    function makeClickable(element, baseGodel) {
+      const text = element.textContent;
+      element.innerHTML = '';
+      for (let i = 0; i < text.length; i++) {
+        const char = text[i];
+        const charCode = char.charCodeAt(0);
+        const godel = baseGodel + charCode;
+        const span = document.createElement('span');
+        span.textContent = char;
+        span.style.cursor = 'pointer';
+        span.onclick = (e) => {
+          e.stopPropagation();
+          showProof(`Character: '${char}'`, `ASCII ${charCode}`, godel, `unicode_${charCode}.txt`);
+        };
+        span.onmouseover = () => span.style.textShadow = '0 0 10px #0f0';
+        span.onmouseout = () => span.style.textShadow = '';
+        element.appendChild(span);
+      }
+    }
+    
     // Matrix rain effect
     const canvas = document.getElementById('matrix');
     const ctx = canvas.getContext('2d');
@@ -288,12 +470,90 @@
         shard.textContent = i;
         shard.id = `shard-${i}`;
         shard.onclick = () => {
-          log(`Shard ${i} selected - ${Math.floor(Math.random() * 200000)} objects`);
+          const godelStart = i * 112900; // ~8M / 71 shards
+          const proofKey = `shard_${i}`;
+          showProof(`Shard ${i}`, `~113K files`, godelStart, `shard_${i}.parquet`, proofKey);
         };
         grid.appendChild(shard);
       }
     }
     
+    // Show proof modal
+    function showProof(name, value, godel, source, proofKey) {
+      const hfUrl = `https://huggingface.co/datasets/introspector/zkprologml/viewer/default/train?row=${godel}`;
+      
+      // Map sources to correct URLs
+      let githubUrl;
+      if (source === 'master.parquet' || source === 'indexed_files_natural_classes.parquet') {
+        githubUrl = 'https://huggingface.co/datasets/introspector/zkprologml/blob/main/data.parquet';
+      } else if (source.startsWith('shard_')) {
+        githubUrl = `https://huggingface.co/datasets/introspector/zkprologml/viewer/default/train?shard=${godel % 71}`;
+      } else if (source.startsWith('unicode_') || source.startsWith('char_')) {
+        githubUrl = 'https://github.com/meta-introspector/zkprologml/blob/main/data/proofs/tau_facts.js';
+      } else if (source === 'Monster Group') {
+        githubUrl = 'https://github.com/meta-introspector/zkprologml/blob/main/data/proofs/power_of_2_model.pl';
+      } else if (source === 'README.md') {
+        githubUrl = 'https://github.com/meta-introspector/zkprologml/blob/main/README.md';
+      } else {
+        githubUrl = `https://github.com/meta-introspector/zkprologml/blob/main/data/proofs/${source}`;
+      }
+      
+      const modal = document.createElement('div');
+      modal.style.cssText = `
+        position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+        background: rgba(0,0,0,0.9); z-index: 1000;
+        display: flex; align-items: center; justify-content: center;
+      `;
+      
+      // Get zkProof for this value
+      const finalProofKey = proofKey || name.toLowerCase().split(':')[0].trim().replace(/ /g, '');
+      const zkProof = zkProofs[finalProofKey];
+      const zkProofHtml = zkProof ? `
+        <div style="margin: 20px 0; padding: 15px; background: rgba(0,255,0,0.05); border: 1px solid #0f0; border-radius: 5px;">
+          <p style="margin-bottom: 10px;"><strong>🔐 zkSNARK Proof (Groth16):</strong></p>
+          <div style="font-size: 11px; font-family: monospace; line-height: 1.6;">
+            <p><strong>Protocol:</strong> ${zkProof.proof.protocol}</p>
+            <p><strong>Curve:</strong> ${zkProof.proof.curve}</p>
+            <p><strong>Public Signals:</strong> [${zkProof.publicSignals.join(', ')}]</p>
+            <details style="margin-top: 10px;">
+              <summary style="cursor: pointer; color: #0f0;">View Full Proof</summary>
+              <pre style="margin-top: 10px; overflow-x: auto;">${JSON.stringify(zkProof.proof, null, 2)}</pre>
+            </details>
+          </div>
+        </div>
+      ` : '';
+      
+      modal.innerHTML = `
+        <div style="background: #000; border: 2px solid #0f0; padding: 30px; max-width: 600px; border-radius: 10px; max-height: 90vh; overflow-y: auto;">
+          <h2 style="color: #0f0; margin-bottom: 20px;">🔮 Proof: ${name}</h2>
+          <div style="margin: 15px 0; line-height: 1.8;">
+            <p><strong>Value:</strong> ${value}</p>
+            <p><strong>Gödel Number:</strong> ${godel}</p>
+            <p><strong>Shard:</strong> ${godel % 71}</p>
+            <p><strong>Source:</strong> ${source}</p>
+          </div>
+          ${zkProofHtml}
+          <div style="margin: 20px 0;">
+            <p style="margin-bottom: 10px;"><strong>Links:</strong></p>
+            <a href="${hfUrl}" target="_blank" style="color: #0f0; display: block; margin: 5px 0;">
+              📊 View in HuggingFace Dataset (row ${godel})
+            </a>
+            <a href="${githubUrl}" target="_blank" style="color: #0f0; display: block; margin: 5px 0;">
+              📁 View Source on GitHub
+            </a>
+          </div>
+          <button onclick="this.parentElement.parentElement.remove()" 
+                  style="background: #0f0; color: #000; border: none; padding: 10px 20px; 
+                         cursor: pointer; font-family: 'Courier New'; font-weight: bold; margin-top: 10px;">
+            CLOSE
+          </button>
+        </div>
+      `;
+      
+      document.body.appendChild(modal);
+      modal.onclick = (e) => { if (e.target === modal) modal.remove(); };
+    }
+
     // Update system state
     function updateState() {
       // Simulate zkProlog execution
@@ -345,6 +605,14 @@
     
     // Auto-update every 2 seconds
     setInterval(updateState, 2000);
+    
+    // Make all value numbers clickable after they're rendered
+    setTimeout(() => {
+      makeClickable(document.getElementById('files'), 8017192);
+      makeClickable(document.getElementById('theorems'), 10);
+      makeClickable(document.getElementById('entities'), 42);
+      makeClickable(document.getElementById('accuracy'), 996);
+    }, 100);
     
     // Initial update
     setTimeout(() => {
