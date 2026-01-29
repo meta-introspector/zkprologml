@@ -24,6 +24,17 @@ commands = [
 ]
 
 [[pipelines]]
+name = "bootstrap"
+description = "Run bootstrap self-analysis and save to parquet"
+
+[[pipelines.steps]]
+name = "run-bootstrap"
+commands = [
+  "mkdir -p data/parquets",
+  "bash scripts/run_bootstrap.sh"
+]
+
+[[pipelines]]
 name = "deploy-dashboard"
 description = "Deploy dashboard with eRDFa WASM to HuggingFace"
 
