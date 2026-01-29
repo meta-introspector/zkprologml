@@ -1,0 +1,170 @@
+{
+  "files": {
+    "proof": {
+      "pi_a": [
+        "0xbf66683ebacda",
+        "0xeb5393878fa8a"
+      ],
+      "pi_b": [
+        [
+          "0xc29a372d5fcd6",
+          "0xc165dbd158d75"
+        ],
+        [
+          "0xdff0d7b81e751",
+          "0xfa4a8dc9bf1db"
+        ]
+      ],
+      "pi_c": [
+        "0xd9c349f8f202d",
+        "0xfcb803be63acf"
+      ],
+      "protocol": "groth16",
+      "curve": "bn128"
+    },
+    "publicSignals": [
+      70,
+      70
+    ]
+  },
+  "shards": {
+    "proof": {
+      "pi_a": [
+        "0x7545bea07dccc",
+        "0x27b0815c9af14"
+      ],
+      "pi_b": [
+        [
+          "0x92547b8142da1",
+          "0xbc2df81392b03"
+        ],
+        [
+          "0x46c43ed17b54a",
+          "0x10e967d401b8e"
+        ]
+      ],
+      "pi_c": [
+        "0xce512d30f8be4",
+        "0x0dbba1a607085"
+      ],
+      "protocol": "groth16",
+      "curve": "bn128"
+    },
+    "publicSignals": [
+      0,
+      0
+    ]
+  },
+  "theorems": {
+    "proof": {
+      "pi_a": [
+        "0xf0385a67a56e",
+        "0xdd0e72411beef"
+      ],
+      "pi_b": [
+        [
+          "0x2d06520060d91",
+          "0xce2e5a7c4c046"
+        ],
+        [
+          "0x8639aaca23a62",
+          "0xba3197e44c86f"
+        ]
+      ],
+      "pi_c": [
+        "0x6a92c0ad35c75",
+        "0x7bdf4756f8f0a"
+      ],
+      "protocol": "groth16",
+      "curve": "bn128"
+    },
+    "publicSignals": [
+      53,
+      53
+    ]
+  },
+  "entities": {
+    "proof": {
+      "pi_a": [
+        "0x44caacab0e47d",
+        "0xdf5b23c09daf4"
+      ],
+      "pi_b": [
+        [
+          "0x5e6f378bfdea3",
+          "0x1c23213a2eebf"
+        ],
+        [
+          "0xf05db7642301e",
+          "0x9dd2b4e358a97"
+        ]
+      ],
+      "pi_c": [
+        "0x47ae2e5442366",
+        "0x24d45bfd5158c"
+      ],
+      "protocol": "groth16",
+      "curve": "bn128"
+    },
+    "publicSignals": [
+      33,
+      33
+    ]
+  },
+  "accuracy": {
+    "proof": {
+      "pi_a": [
+        "0xd9a5bf75bff6d",
+        "0x46e77b772dc2e"
+      ],
+      "pi_b": [
+        [
+          "0xb02f525edbb3d",
+          "0x97b458c2f8154"
+        ],
+        [
+          "0x3e185c33068a8",
+          "0x8693de5e7f1ce"
+        ]
+      ],
+      "pi_c": [
+        "0xe70c2cbf0fe56",
+        "0x2b907e941f79"
+      ],
+      "protocol": "groth16",
+      "curve": "bn128"
+    },
+    "publicSignals": [
+      60,
+      60
+    ]
+  },
+  "state": {
+    "proof": {
+      "pi_a": [
+        "0xf5442e73b0343",
+        "0xb225b0d9e31ed"
+      ],
+      "pi_b": [
+        [
+          "0xabc853d953ddd",
+          "0x9fafb30c84b9a"
+        ],
+        [
+          "0x43c10eef4de85",
+          "0x25f2abf338f06"
+        ]
+      ],
+      "pi_c": [
+        "0x4bc5cc5becb4a",
+        "0xfac0e329ef671"
+      ],
+      "protocol": "groth16",
+      "curve": "bn128"
+    },
+    "publicSignals": [
+      71,
+      0
+    ]
+  }
+}

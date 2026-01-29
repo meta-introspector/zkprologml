@@ -1,0 +1,68 @@
+{
+  "total_processed": 1000,
+  "verified_facts": 7,
+  "failed_verifications": 993,
+  "verification_rate": 0.7000000000000001,
+  "failed_rows": [
+    [
+      0,
+      "/bin",
+      46,
+      46
+    ],
+    [
+      1,
+      "/boot",
+      26,
+      26
+    ],
+    [
+      2,
+      "/cache",
+      2,
+      2
+    ],
+    [
+      4,
+      "/data",
+      69,
+      69
+    ],
+    [
+      5,
+      "/dev",
+      6,
+      6
+    ],
+    [
+      6,
+      "/emacspeak.log.Jb4qIS",
+      50,
+      50
+    ],
+    [
+      7,
+      "/emacspeak.log.K8xURs",
+      43,
+      43
+    ],
+    [
+      8,
+      "/emacspeak.log.fpmK0n",
+      49,
+      49
+    ],
+    [
+      9,
+      "/etc",
+      64,
+      64
+    ],
+    [
+      10,
+      "/gnu",
+      43,
+      43
+    ]
+  ]
+}
