@@ -221,6 +221,232 @@ export_fixed_point_to_rust(OutputFile) :-
 % EXAMPLE
 % ============================================================================
 
+% ============================================================================
+% SYSTEM IDENTITY VIA FIXED POINT
+% ============================================================================
+
+% The fixed point gives the system its identity
+% Identity = The unique fixed point of the IP function
+system_identity(Identity) :-
+    % Identity is the set of all reachable fixed points
+    findall(FP, (
+        member(Init, ["", "concept", "concept_definition"]),
+        converge_to_fixed_point(Init, ["(", ")", ".", ",", "atom", "string"], FP),
+        fixed_point_reached(FP)
+    ), FixedPoints),
+    Identity = identity(fixed_points(FixedPoints)).
+
+% ============================================================================
+% PROGRAM STRUCTURE: IP + INSTRUCTIONS + CONSTANTS + VARIABLES + FUNCTIONS
+% ============================================================================
+
+% program(IP, Instructions, Constants, Variables, Functions)
+:- dynamic program/5.
+
+% Instruction in program
+instruction(Index, Type, Args) :-
+    program(_, Instructions, _, _, _),
+    nth0(Index, Instructions, instruction(Type, Args)).
+
+% Constant in program
+constant(Name, Value) :-
+    program(_, _, Constants, _, _),
+    member(constant(Name, Value), Constants).
+
+% Variable in program
+variable(Name, Type) :-
+    program(_, _, _, Variables, _),
+    member(variable(Name, Type), Variables).
+
+% Function in program
+function(Name, Arity, Body) :-
+    program(_, _, _, _, Functions),
+    member(function(Name, Arity, Body), Functions).
+
+% ============================================================================
+% INSTRUCTION POINTER IN PROGRAM
+% ============================================================================
+
+% IP points to current instruction in program
+ip_at_instruction(IP, Instruction) :-
+    program(IP, Instructions, _, _, _),
+    nth0(IP, Instructions, Instruction).
+
+% Advance IP to next instruction
+advance_program_ip(CurrentIP, NextIP) :-
+    program(CurrentIP, Instructions, _, _, _),
+    length(Instructions, Len),
+    (CurrentIP < Len - 1 ->
+        NextIP is CurrentIP + 1
+    ;
+        NextIP = halt
+    ).
+
+% ============================================================================
+% PROGRAM EXECUTION MODEL
+% ============================================================================
+
+% Execute program from IP
+execute_program(IP, Result) :-
+    (IP = halt ->
+        Result = halted
+    ;
+        ip_at_instruction(IP, Instruction),
+        execute_instruction(Instruction, InstructionResult),
+        advance_program_ip(IP, NextIP),
+        (InstructionResult = continue ->
+            execute_program(NextIP, Result)
+        ;
+            Result = InstructionResult
+        )
+    ).
+
+% Execute single instruction
+execute_instruction(instruction(Type, Args), Result) :-
+    (Type = load_constant ->
+        Args = [Name],
+        constant(Name, Value),
+        format('  LOAD_CONST ~w = ~w~n', [Name, Value]),
+        Result = continue
+    ; Type = call_function ->
+        Args = [FuncName|FuncArgs],
+        function(FuncName, Arity, Body),
+        length(FuncArgs, Arity),
+        format('  CALL ~w(~w)~n', [FuncName, FuncArgs]),
+        Result = continue
+    ; Type = store_variable ->
+        Args = [VarName, Value],
+        format('  STORE ~w = ~w~n', [VarName, Value]),
+        Result = continue
+    ; Type = return ->
+        Args = [Value],
+        format('  RETURN ~w~n', [Value]),
+        Result = returned(Value)
+    ;
+        Result = continue
+    ).
+
+% ============================================================================
+% PROGRAM AS PROLOG PREDICATES
+% ============================================================================
+
+% Example program: concept(topology).
+example_program :-
+    retractall(program(_, _, _, _, _)),
+    assertz(program(
+        0,  % IP starts at 0
+        [   % Instructions
+            instruction(load_constant, [concept_functor]),
+            instruction(load_constant, [topology_atom]),
+            instruction(call_function, [concept, topology_atom]),
+            instruction(return, [concept(topology)])
+        ],
+        [   % Constants
+            constant(concept_functor, 'concept'),
+            constant(topology_atom, 'topology'),
+            constant(period, '.')
+        ],
+        [   % Variables
+            variable(result, term)
+        ],
+        [   % Functions
+            function(concept, 1, 'concept(X).')
+        ]
+    )).
+
+% ============================================================================
+% FIXED POINT OF PROGRAM EXECUTION
+% ============================================================================
+
+% Program reaches fixed point when IP = halt
+program_fixed_point(Program, FinalState) :-
+    Program = program(InitIP, _, _, _, _),
+    execute_program(InitIP, Result),
+    FinalState = state(ip(halt), result(Result)).
+
+% ============================================================================
+% IDENTITY = FIXED POINT OF PROGRAM
+% ============================================================================
+
+% System identity is the fixed point of its program execution
+% Identity(System) = FixedPoint(Execute(System))
+system_identity_from_program(Identity) :-
+    example_program,
+    program(IP, Instructions, Constants, Variables, Functions),
+    program_fixed_point(program(IP, Instructions, Constants, Variables, Functions), FinalState),
+    Identity = identity(
+        program(Instructions),
+        constants(Constants),
+        variables(Variables),
+        functions(Functions),
+        fixed_point(FinalState)
+    ).
+
+% ============================================================================
+% SELF-REFERENCE: PROGRAM MODELS ITSELF
+% ============================================================================
+
+% Program that generates itself
+self_generating_program(Program) :-
+    Program = program(
+        0,
+        [
+            instruction(load_constant, [self]),
+            instruction(call_function, [generate, self]),
+            instruction(return, [Program])
+        ],
+        [constant(self, Program)],
+        [],
+        [function(generate, 1, 'generate(X) :- X.')]
+    ).
+
+% Quine: Program that outputs itself
+quine(Output) :-
+    self_generating_program(Program),
+    execute_program(0, Result),
+    Result = returned(Output),
+    Output = Program.
+
+% ============================================================================
+% EXPORT PROGRAM MODEL TO RUST
+% ============================================================================
+
+export_program_model_to_rust(OutputFile) :-
+    open(OutputFile, write, S),
+    write(S, '// Program model: IP + Instructions + Constants + Variables + Functions\n\n'),
+    write(S, '#[derive(Debug, Clone)]\n'),
+    write(S, 'pub struct Program {\n'),
+    write(S, '    pub ip: usize,\n'),
+    write(S, '    pub instructions: Vec<Instruction>,\n'),
+    write(S, '    pub constants: Vec<Constant>,\n'),
+    write(S, '    pub variables: Vec<Variable>,\n'),
+    write(S, '    pub functions: Vec<Function>,\n'),
+    write(S, '}\n\n'),
+    write(S, '#[derive(Debug, Clone)]\n'),
+    write(S, 'pub enum Instruction {\n'),
+    write(S, '    LoadConstant(String),\n'),
+    write(S, '    CallFunction(String, Vec<String>),\n'),
+    write(S, '    StoreVariable(String, String),\n'),
+    write(S, '    Return(String),\n'),
+    write(S, '}\n\n'),
+    write(S, 'impl Program {\n'),
+    write(S, '    pub fn execute(&mut self) -> Result<String, String> {\n'),
+    write(S, '        while self.ip < self.instructions.len() {\n'),
+    write(S, '            match &self.instructions[self.ip] {\n'),
+    write(S, '                Instruction::Return(val) => return Ok(val.clone()),\n'),
+    write(S, '                _ => self.ip += 1,\n'),
+    write(S, '            }\n'),
+    write(S, '        }\n'),
+    write(S, '        Ok("halted".to_string())\n'),
+    write(S, '    }\n'),
+    write(S, '}\n'),
+    close(S),
+    format('✅ Exported program model to ~w~n', [OutputFile]).
+
+% ============================================================================
+% EXAMPLE
+% ============================================================================
+
 example :-
     init_ip,
     
