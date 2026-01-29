@@ -28,10 +28,26 @@ name = "bootstrap"
 description = "Run bootstrap self-analysis and save to parquet"
 
 [[pipelines.steps]]
-name = "run-bootstrap"
+name = "secure-bootstrap"
 commands = [
   "mkdir -p data/parquets",
-  "bash scripts/run_bootstrap.sh"
+  "swipl -g '[closed_world_security], secure_bootstrap, halt' -t halt",
+  "swipl -g '[bootstrap], bootstrap_until_closure, halt' -t halt"
+]
+
+[[pipelines.steps]]
+name = "convert-to-parquet"
+commands = [
+  "cargo run --bin bootstrap_to_parquet -- data/parquets/bootstrap_closure.json data/parquets/bootstrap_closure.parquet"
+]
+
+[[pipelines.steps]]
+name = "commit-results"
+commands = [
+  "git add data/parquets/bootstrap_closure.parquet",
+  "git add data/parquets/final_index_cards.md",
+  "git add data/parquets/ollama_jobs.jsonl",
+  "git commit -m 'chore: Bootstrap run results' || true"
 ]
 
 [[pipelines]]

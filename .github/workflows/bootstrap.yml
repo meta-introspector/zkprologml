@@ -1,0 +1,51 @@
+name: Bootstrap on Commit
+on:
+  push:
+    branches: [ main, conversation-topology ]
+  workflow_dispatch:
+
+jobs:
+  bootstrap:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      
+      - name: Install Nix
+        uses: cachix/install-nix-action@v22
+        with:
+          nix_path: nixpkgs=channel:nixos-unstable
+      
+      - name: Install SWI-Prolog
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y swi-prolog
+      
+      - name: Install Rust
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+      
+      - name: Run Secure Bootstrap
+        run: |
+          export NIX_BUILD_TOP=$PWD
+          mkdir -p data/parquets
+          swipl -g "[closed_world_security], secure_bootstrap, halt" -t halt || true
+          swipl -g "[bootstrap], bootstrap_until_closure, halt" -t halt || true
+      
+      - name: Convert to Parquet
+        run: |
+          cargo run --bin bootstrap_to_parquet -- \
+            data/parquets/bootstrap_closure.json \
+            data/parquets/bootstrap_closure.parquet || true
+      
+      - name: Commit Results
+        run: |
+          git config user.name "Bootstrap Bot"
+          git config user.email "bootstrap@zkprologml"
+          git add data/parquets/*.parquet || true
+          git add data/parquets/*.md || true
+          git add data/parquets/*.jsonl || true
+          git commit -m "chore: Bootstrap run $(date -Iseconds)" || true
+          git push || true
