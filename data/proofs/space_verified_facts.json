@@ -1,0 +1,22 @@
+{
+  "metadata": {
+    "source": "zkprologml_space",
+    "timestamp": "2026-01-28T20:26:00Z",
+    "verified": true,
+    "zkproof_version": "1.0.0"
+  },
+  "facts": [
+    {
+      "path": "/space/verified/fact1",
+      "godel": 1000,
+      "shard": 8,
+      "verified": true
+    },
+    {
+      "path": "/space/verified/fact2",
+      "godel": 1001,
+      "shard": 9,
+      "verified": true
+    }
+  ]
+}

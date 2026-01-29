@@ -1,0 +1,30 @@
+name: Sync Space to Dataset
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'verified_facts.pl'
+      - 'zkproofs_complete.json'
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      
+      - name: Install dependencies
+        run: |
+          pip install huggingface_hub
+      
+      - name: Sync to Dataset
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          python3 update_dataset_from_space.py
