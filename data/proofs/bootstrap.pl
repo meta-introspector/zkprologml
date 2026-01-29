@@ -198,6 +198,39 @@ export_index_cards(OutputFile) :-
     close(Stream),
     format('📇 Exported index cards to ~w~n', [OutputFile]).
 
+% Export index cards to parquet via Python
+export_index_cards_parquet(OutputFile) :-
+    findall([Term, Def, Refs, Chord], 
+            index_card(Term, Def, Refs, Chord), 
+            Rows),
+    length(Rows, Count),
+    format('📊 Exporting ~w cards to parquet...~n', [Count]),
+    % Write Python script
+    atom_concat(OutputFile, '.py', ScriptFile),
+    open(ScriptFile, write, S),
+    write(S, 'import pandas as pd\n'),
+    write(S, 'import pyarrow as pa\n'),
+    write(S, 'import pyarrow.parquet as pq\n\n'),
+    write(S, 'data = {\n'),
+    write(S, '  "term": [],\n'),
+    write(S, '  "definition": [],\n'),
+    write(S, '  "references": [],\n'),
+    write(S, '  "chord": []\n'),
+    write(S, '}\n\n'),
+    forall(
+        index_card(Term, Def, Refs, Chord),
+        format(S, 'data["term"].append(~q)~ndata["definition"].append(~q)~ndata["references"].append(~w)~ndata["chord"].append(~w)~n', 
+               [Term, Def, Refs, Chord])
+    ),
+    write(S, '\ndf = pd.DataFrame(data)\n'),
+    format(S, 'pq.write_table(pa.Table.from_pandas(df), ~q)\n', [OutputFile]),
+    format(S, 'print(f"✅ Wrote {len(df)} cards to ~w")\n', [OutputFile]),
+    close(S),
+    % Execute Python script
+    format(atom(Cmd), 'python3 ~w', [ScriptFile]),
+    shell(Cmd),
+    format('📇 Exported to ~w~n', [OutputFile]).
+
 % ============================================================================
 
 % Measure how complete the system is relative to Monster Group
