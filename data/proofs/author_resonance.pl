@@ -87,26 +87,30 @@ store_author(Name, Email, Repo) :-
 % COMPUTE AUTHOR RESONANCE
 % ============================================================================
 
-% Resonance = how aligned is this author with our ontology?
+% Resonance = alignment + consistency (low entropy = focused, high quality)
 compute_author_resonance(Author, Resonance) :-
     discovered_author(Author, _, Repos),
-    % Compute based on:
-    % 1. Number of repos (breadth)
     length(Repos, RepoCount),
-    % 2. Commit frequency analysis
+    Breadth is min(RepoCount / 10.0, 1.0),
+    
     author_commit_primes(Author, Primes),
     length(Primes, CommitCount),
-    % 3. Ontological alignment (shared concepts)
+    Activity is min(CommitCount / 100.0, 1.0),
+    
     author_concepts(Author, Concepts),
     our_concepts(OurConcepts),
     intersection(Concepts, OurConcepts, Shared),
     length(Shared, SharedCount),
     length(OurConcepts, OurCount),
-    % Compute resonance score
-    Breadth is min(RepoCount / 10.0, 1.0),
-    Activity is min(CommitCount / 100.0, 1.0),
     Alignment is SharedCount / OurCount,
-    Resonance is 0.3 * Breadth + 0.3 * Activity + 0.4 * Alignment.
+    
+    % Consistency: Low entropy = focused, high-quality work
+    compute_entropy(Primes, Entropy),
+    MaxEntropy is log(20) / log(2),
+    Consistency is 1.0 - (Entropy / MaxEntropy),
+    
+    % Final: Alignment + Consistency weighted higher
+    Resonance is 0.2 * Breadth + 0.2 * Activity + 0.3 * Alignment + 0.3 * Consistency.
 
 our_concepts([
     topology, manifold, zkproof, prolog, lean,
