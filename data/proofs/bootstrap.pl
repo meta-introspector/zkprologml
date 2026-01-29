@@ -3,12 +3,15 @@
 
 :- module(bootstrap, [
     bootstrap_self/0,
+    bootstrap_until_closure/0,
     consume_all_code/1,
     measure_completeness/1,
     unify_with_monster/2,
     self_comprehension/1,
     read_all_text/0,
-    model_unknown_terms/1
+    model_unknown_terms/1,
+    schedule_ollama_conversions/0,
+    process_ollama_jobs/0
 ]).
 
 % ============================================================================
@@ -493,22 +496,26 @@ bootstrap_self :-
     format('📖 Phase 1: Consuming all code...~n', []),
     consume_all_code(Modules),
     
-    % Phase 2: Measure completeness
-    format('~n📏 Phase 2: Measuring completeness...~n', []),
+    % Phase 2: Read all text
+    format('~n📚 Phase 2: Reading all text...~n', []),
+    read_all_text,
+    
+    % Phase 3: Measure completeness
+    format('~n📏 Phase 3: Measuring completeness...~n', []),
     measure_completeness(Score),
     
-    % Phase 3: Unify with Monster
-    format('~n🐉 Phase 3: Unifying with Monster Group...~n', []),
+    % Phase 4: Unify with Monster
+    format('~n🐉 Phase 4: Unifying with Monster Group...~n', []),
     unify_with_monster(self, Result),
     
-    % Phase 4: Self-comprehension
-    format('~n🧠 Phase 4: Self-comprehension...~n', []),
+    % Phase 5: Self-comprehension
+    format('~n🧠 Phase 5: Self-comprehension...~n', []),
     self_comprehension(Level),
     
-    % Phase 5: Report
+    % Phase 6: Report
     format('~n═══════════════════════════════════════~n', []),
     format('🎯 BOOTSTRAP COMPLETE~n~n', []),
-    format('Consumed Modules: ~w~n', [Modules]),
+    format('Consumed Modules: ~w~n', [length(Modules)]),
     format('Completeness: ~2f%~n', [Score * 100]),
     format('Unification: ~w~n', [Result]),
     format('Self-Awareness: ~w/7~n', [Level]),
@@ -522,6 +529,219 @@ bootstrap_self :-
     ),
     
     format('═══════════════════════════════════════~n~n', []).
+
+% ============================================================================
+% ITERATIVE BOOTSTRAP (Run until closure)
+% ============================================================================
+
+% Run bootstrap repeatedly until all concepts apprehended
+bootstrap_until_closure :-
+    bootstrap_until_closure(0, 100).  % Max 100 iterations
+
+bootstrap_until_closure(Iteration, MaxIterations) :-
+    (Iteration >= MaxIterations ->
+        format('⚠️  Max iterations reached~n', [])
+    ;
+        format('~n🔄 ITERATION ~w~n', [Iteration]),
+        format('════════════════════════════════════════~n', []),
+        
+        % Count concepts before
+        findall(T, index_card(T, _, _, _), CardsBefore),
+        length(CardsBefore, CountBefore),
+        
+        % Run bootstrap
+        bootstrap_self,
+        
+        % Count concepts after
+        findall(T, index_card(T, _, _, _), CardsAfter),
+        length(CardsAfter, CountAfter),
+        
+        % Check for closure
+        NewConcepts is CountAfter - CountBefore,
+        format('~n📊 New concepts discovered: ~w~n', [NewConcepts]),
+        format('📊 Total concepts: ~w~n', [CountAfter]),
+        
+        (NewConcepts =:= 0 ->
+            format('~n✅ CLOSURE ACHIEVED - No new concepts~n', []),
+            export_final_state(Iteration, CountAfter)
+        ;
+            % Continue iterating
+            NextIteration is Iteration + 1,
+            bootstrap_until_closure(NextIteration, MaxIterations)
+        )
+    ).
+
+% Export final state to parquet
+export_final_state(Iterations, ConceptCount) :-
+    format('~n📊 Exporting final state...~n', []),
+    
+    % Export index cards
+    export_index_cards('data/parquets/final_index_cards.md'),
+    
+    % Schedule Ollama conversion for each card
+    format('~n🤖 Scheduling Ollama conversions...~n', []),
+    schedule_ollama_conversions,
+    
+    % Export metrics
+    completeness_score(Score),
+    self_awareness_level(Level),
+    consumed_modules(Modules),
+    length(Modules, ModuleCount),
+    
+    open('data/parquets/bootstrap_closure.json', write, S),
+    write(S, '{'),
+    format(S, '\"iterations\": ~w,', [Iterations]),
+    format(S, '\"concept_count\": ~w,', [ConceptCount]),
+    format(S, '\"completeness\": ~w,', [Score]),
+    format(S, '\"self_awareness\": ~w,', [Level]),
+    format(S, '\"module_count\": ~w,', [ModuleCount]),
+    write(S, '\"cards\": ['),
+    forall(
+        index_card(Term, Def, Refs, Chord),
+        format(S, '{\"term\":\"~w\",\"definition\":\"~w\",\"references\":~w,\"chord\":~w},',
+               [Term, Def, Refs, Chord])
+    ),
+    write(S, '{}]}'),
+    close(S),
+    
+    format('✅ Exported to data/parquets/bootstrap_closure.json~n', []).
+
+% ============================================================================
+% OLLAMA CONVERSION SCHEDULER
+% ============================================================================
+
+% Schedule Ollama to convert each card's text to Prolog
+schedule_ollama_conversions :-
+    findall(Term, index_card(Term, _, _, _), Terms),
+    length(Terms, Count),
+    format('  Scheduling ~w Ollama jobs...~n', [Count]),
+    
+    % Create job queue
+    open('data/parquets/ollama_jobs.jsonl', write, S),
+    forall(
+        index_card(Term, Def, Refs, Chord),
+        write_ollama_job(S, Term, Def, Refs, Chord)
+    ),
+    close(S),
+    
+    format('  ✅ Created ollama_jobs.jsonl~n', []).
+
+% Write single Ollama job
+write_ollama_job(Stream, Term, Definition, References, Chord) :-
+    % Collect all context for this term
+    collect_term_context(Term, Context),
+    
+    % Create prompt
+    format(atom(Prompt), 
+'Convert this concept to Prolog predicates using our schema:
+
+Term: ~w
+Definition: ~w
+References: ~w
+Chord (Prime): ~w
+Context: ~w
+
+Schema:
+  concept(Name).
+  concept_definition(Name, Definition).
+  concept_chord(Name, Prime).
+  concept_relates_to(Name1, Name2, Relation).
+  concept_instance(Name, Example).
+
+Generate Prolog facts for this concept.',
+        [Term, Definition, References, Chord, Context]),
+    
+    % Write JSONL entry
+    format(Stream, '{', []),
+    format(Stream, '\"term\":~q,', [Term]),
+    format(Stream, '\"prompt\":~q,', [Prompt]),
+    format(Stream, '\"chord\":~w,', [Chord]),
+    format(Stream, '\"references\":~w', [References]),
+    format(Stream, '}~n', []).
+
+% Collect all context where term appears
+collect_term_context(Term, Context) :-
+    findall(File-Line, (
+        % Search in all text files
+        member(Ext, ['.md', '.txt', '.pl', '.lean']),
+        atom_concat('**/*', Ext, Pattern),
+        expand_file_name(Pattern, Files),
+        member(File, Files),
+        catch(
+            (read_file_to_string(File, Content, []),
+             split_string(Content, "\n", "", Lines),
+             nth0(LineNum, Lines, Line),
+             sub_string(Line, _, _, _, Term)),
+            _,
+            fail
+        )
+    ), Contexts),
+    length(Contexts, ContextCount),
+    (ContextCount > 5 ->
+        length(Sample, 5),
+        append(Sample, _, Contexts),
+        Context = Sample
+    ;
+        Context = Contexts
+    ).
+
+% ============================================================================
+% OLLAMA BATCH PROCESSOR
+% ============================================================================
+
+% Process all Ollama jobs and collect results
+process_ollama_jobs :-
+    format('~n🤖 Processing Ollama jobs...~n', []),
+    
+    % Read job queue
+    open('data/parquets/ollama_jobs.jsonl', read, S),
+    read_ollama_jobs(S, Jobs),
+    close(S),
+    
+    length(Jobs, JobCount),
+    format('  Processing ~w jobs...~n', [JobCount]),
+    
+    % Process each job
+    open('data/proofs/generated_concepts.pl', write, Out),
+    write(Out, '% Generated concept definitions from Ollama\n\n'),
+    write(Out, ':- module(generated_concepts, []).\n\n'),
+    
+    forall(
+        member(Job, Jobs),
+        process_single_ollama_job(Job, Out)
+    ),
+    
+    close(Out),
+    format('  ✅ Generated data/proofs/generated_concepts.pl~n', []).
+
+read_ollama_jobs(Stream, Jobs) :-
+    read_line_to_string(Stream, Line),
+    (Line == end_of_file ->
+        Jobs = []
+    ;
+        atom_string(JobAtom, Line),
+        term_string(Job, JobAtom),
+        read_ollama_jobs(Stream, RestJobs),
+        Jobs = [Job | RestJobs]
+    ).
+
+% Process single job with Ollama
+process_single_ollama_job(Job, OutStream) :-
+    Job = json([term=Term, prompt=Prompt|_]),
+    
+    % Call Ollama
+    format(atom(Cmd), 'ollama run codellama:7b ~q', [Prompt]),
+    setup_call_cleanup(
+        open(pipe(Cmd), read, PipeStream),
+        read_string(PipeStream, _, Response),
+        close(PipeStream)
+    ),
+    
+    % Write response to output
+    format(OutStream, '%% Concept: ~w~n', [Term]),
+    format(OutStream, '~w~n~n', [Response]).
+
+% ============================================================================
 
 % ============================================================================
 % HELPER PREDICATES
