@@ -6,7 +6,9 @@
     consume_all_code/1,
     measure_completeness/1,
     unify_with_monster/2,
-    self_comprehension/1
+    self_comprehension/1,
+    read_all_text/0,
+    model_unknown_terms/1
 ]).
 
 % ============================================================================
@@ -77,6 +79,125 @@ consume_module(Module) :-
 
 % ============================================================================
 % MEASURE COMPLETENESS (Against Monster Group)
+% ============================================================================
+
+% ============================================================================
+% READ ALL TEXT & MODEL WITH CWM (Closed World Model)
+% ============================================================================
+
+% Read all markdown/text files and model unknown terms
+read_all_text :-
+    format('📖 Reading all text files...~n', []),
+    findall(File, (
+        member(Ext, ['.md', '.txt', '.lean', '.pl']),
+        atom_concat('**/*', Ext, Pattern),
+        expand_file_name(Pattern, Files),
+        member(File, Files)
+    ), AllFiles),
+    length(AllFiles, Count),
+    format('  Found ~w files~n', [Count]),
+    maplist(process_text_file, AllFiles).
+
+% Process single text file
+process_text_file(File) :-
+    catch(
+        (read_file_to_string(File, Content, []),
+         extract_terms(Content, Terms),
+         model_unknown_terms(Terms)),
+        Error,
+        format('  ⚠️  Error reading ~w: ~w~n', [File, Error])
+    ).
+
+% Extract terms from text (simple tokenization)
+extract_terms(Content, Terms) :-
+    split_string(Content, " \t\n.,;:()[]{}\"'", "", Tokens),
+    include(is_significant_term, Tokens, Terms).
+
+is_significant_term(Token) :-
+    string_length(Token, Len),
+    Len > 3,  % Skip short words
+    \+ is_common_word(Token).
+
+is_common_word("the").
+is_common_word("and").
+is_common_word("for").
+is_common_word("with").
+is_common_word("that").
+is_common_word("this").
+is_common_word("from").
+
+% Model unknown terms as Umberto Eco index cards
+:- dynamic index_card/4.  % card(Term, Definition, References, Chord)
+
+model_unknown_terms(Terms) :-
+    maplist(model_term, Terms).
+
+model_term(Term) :-
+    (index_card(Term, _, _, _) ->
+        % Already modeled, increment reference
+        retract(index_card(Term, Def, Refs, Chord)),
+        NewRefs is Refs + 1,
+        assertz(index_card(Term, Def, NewRefs, Chord))
+    ;
+        % New term, create index card
+        create_index_card(Term)
+    ).
+
+% Create new index card for unknown term
+create_index_card(Term) :-
+    % Assign prime complexity (chord)
+    term_to_chord(Term, Chord),
+    % Generate definition snippet
+    generate_snippet(Term, Snippet),
+    % Store card
+    assertz(index_card(Term, Snippet, 1, Chord)),
+    format('  🃏 Card: ~w (Chord: ~w)~n', [Term, Chord]).
+
+% Assign chord based on term hash
+term_to_chord(Term, Chord) :-
+    atom_codes(Term, Codes),
+    sum_list(Codes, Sum),
+    nth_prime_index(Sum mod 22, Chord).
+
+nth_prime_index(0, 2).
+nth_prime_index(1, 3).
+nth_prime_index(2, 5).
+nth_prime_index(3, 7).
+nth_prime_index(4, 11).
+nth_prime_index(5, 13).
+nth_prime_index(6, 17).
+nth_prime_index(7, 19).
+nth_prime_index(8, 23).
+nth_prime_index(9, 29).
+nth_prime_index(10, 31).
+nth_prime_index(11, 37).
+nth_prime_index(12, 41).
+nth_prime_index(13, 43).
+nth_prime_index(14, 47).
+nth_prime_index(15, 53).
+nth_prime_index(16, 59).
+nth_prime_index(17, 61).
+nth_prime_index(18, 67).
+nth_prime_index(19, 71).
+nth_prime_index(20, 73).
+nth_prime_index(_, 79).
+
+% Generate snippet (first occurrence context)
+generate_snippet(Term, Snippet) :-
+    format(atom(Snippet), 'Term discovered in corpus: ~w', [Term]).
+
+% Export index cards to markdown
+export_index_cards(OutputFile) :-
+    open(OutputFile, write, Stream),
+    write(Stream, '# Umberto Eco Index Cards (Auto-Generated)\n\n'),
+    forall(
+        index_card(Term, Def, Refs, Chord),
+        format(Stream, '## ~w~n- Chord: ~w~n- References: ~w~n- Definition: ~w~n~n', 
+               [Term, Chord, Refs, Def])
+    ),
+    close(Stream),
+    format('📇 Exported index cards to ~w~n', [OutputFile]).
+
 % ============================================================================
 
 % Measure how complete the system is relative to Monster Group
