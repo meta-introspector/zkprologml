@@ -1,86 +1,64 @@
 [[pipelines]]
-name = "prove_lattice"
-description = "Prove lattice indexes from all parquet files"
+name = "build-erdfa-wasm"
+description = "Build eRDFa WASM module from namespace submodule"
 
 [[pipelines.steps]]
-name = "list_parquets"
+name = "update-submodule"
 commands = [
-  "echo '🗂️  Parquet Lists:'",
-  "echo 'Search parquets:'",
-  "ls -1 data/parquets/*_search.parquet",
-  "echo 'Lattice parquets:'",
-  "ls -1 data/parquets/*_lattice.parquet"
+  "git submodule update --init --recursive submodules/namespace"
 ]
 
 [[pipelines.steps]]
-name = "sample_concepts"
+name = "build-wasm"
 commands = [
-  "echo '📊 Sampling all concepts...'",
-  "cargo run --bin sample_parquet data/parquets/monster_search.parquet 100",
-  "cargo run --bin sample_parquet data/parquets/godel_search.parquet 100",
-  "cargo run --bin sample_parquet data/parquets/athena_search.parquet 100"
+  "cd submodules/namespace/wasm",
+  "nix develop -c cargo build --target wasm32-unknown-unknown --release",
+  "nix develop -c wasm-bindgen --target web --out-dir pkg target/wasm32-unknown-unknown/release/erdfa_wasm.wasm"
 ]
 
 [[pipelines.steps]]
-name = "build_models"
+name = "copy-to-deploy"
 commands = [
-  "echo '🧠 Building expert system models...'",
-  "swipl -g main -t halt data/proofs/expert_system_models.pl"
-]
-
-[[pipelines.steps]]
-name = "load_parquets"
-commands = [
-  "echo '📊 Loading parquets...'",
-  "cargo run --bin prove_lattice_indexes"
-]
-
-[[pipelines.steps]]
-name = "ingest_traces"
-commands = [
-  "echo '🔍 Ingesting perf traces...'",
-  "swipl -g main -t halt data/proofs/perf_novelty_proof.pl"
-]
-
-[[pipelines.steps]]
-name = "prove_novelty"
-commands = [
-  "echo '🔬 Proving novelty...'",
-  "swipl -g 'prove_all_novelties, halt' data/proofs/perf_novelty_proof.pl"
-]
-
-[[pipelines.steps]]
-name = "export_lean"
-commands = [
-  "echo '📝 Exporting to Lean4...'",
-  "ls data/proofs/*.lean | wc -l",
-  "echo 'Lean4 proofs ready'"
+  "mkdir -p data/proofs/deploy/wasm",
+  "cp submodules/namespace/wasm/pkg/* data/proofs/deploy/wasm/"
 ]
 
 [[pipelines]]
-name = "fork_all_prologs"
-description = "Fork, patch, port all Prolog implementations"
+name = "deploy-dashboard"
+description = "Deploy dashboard with eRDFa WASM to HuggingFace"
 
 [[pipelines.steps]]
-name = "fork"
+name = "build-wasm"
+trigger = { pipeline = "build-erdfa-wasm" }
+
+[[pipelines.steps]]
+name = "deploy-to-hf"
 commands = [
-  "echo '🍴 Forking all Prologs...'",
-  "swipl -g main -t halt data/proofs/prolog_fork_queue.pl"
+  "cd data/proofs/deploy",
+  "git add .",
+  "git commit -m 'Update dashboard with eRDFa WASM'",
+  "source ~/.agentrc && git push space main"
+]
+
+[[pipelines]]
+name = "full-build"
+description = "Build all Rust binaries and WASM modules"
+
+[[pipelines.steps]]
+name = "build-layer5"
+commands = [
+  "cd layer5_analysis",
+  "nix develop -c cargo build --release --all-bins"
 ]
 
 [[pipelines.steps]]
-name = "record_perf"
-commands = [
-  "echo '📊 Recording with perf...'",
-  "nix build .#scryer",
-  "nix build .#swi",
-  "nix build .#gnu",
-  "nix build .#trealla"
-]
+name = "build-erdfa-wasm"
+trigger = { pipeline = "build-erdfa-wasm" }
 
 [[pipelines.steps]]
-name = "prove_equivalence"
+name = "link-deps"
 commands = [
-  "echo '🔬 Proving equivalence...'",
-  "swipl -g main -t halt data/proofs/galois_tower_unification.pl"
+  "mkdir -p target/deps",
+  "ln -sf ../layer5_analysis/target/release/* target/deps/",
+  "ln -sf ../submodules/namespace/wasm/pkg target/deps/erdfa-wasm"
 ]

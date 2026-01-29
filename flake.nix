@@ -1,69 +1,31 @@
 {
-  description = "zkPrologML - Universal Prolog Meta-Language";
+  description = "zkPrologML with eRDFa WASM integration";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    gemini-cli.url = "github:meta-introspector/gemini-cli?ref=feature/CRQ-016-nixify-2025-10-06";
+    namespace.url = "github:Escaped-RDFa/namespace";
   };
 
-  outputs = { self, nixpkgs, gemini-cli }:
+  outputs = { self, nixpkgs, namespace }:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
     in
     {
-      devShells.${system}.default = pkgs.mkShell {
-        name = "zkprologml";
-        
-        buildInputs = with pkgs; [
-          # Core
-          swipl
-          rustc
-          cargo
-          
-          # Proof systems
-          lean4
-          coq
-          
-          # Audio
-          lilypond
-          alsa-utils
-          
-          # Data
-          python3
-          python3Packages.pandas
-          python3Packages.pyarrow
-          
-          # LLM interface
-          gemini-cli.packages.${system}.default
-          
-          # Utils
-          qrencode
-          git
-        ];
-        
-        shellHook = ''
-          echo ""
-          echo "♾️  zkPrologML Environment"
-          echo "═══════════════════════════════════════════════════════════"
-          echo ""
-          echo "Run: ./boot.sh to bootstrap"
-          echo ""
-          
-          # Load Gödel lattice
-          export ZKPROLOG_LATTICE="$PWD/data/proofs/generated/godel_lattice.parquet"
-          
-          # Gemini CLI available
-          export GEMINI_CLI="$(which gemini)"
-          
-          echo "Gödel lattice: $ZKPROLOG_LATTICE"
-          echo "Gemini CLI: $GEMINI_CLI"
-          echo ""
-        '';
+      packages.${system} = {
+        # Use eRDFa WASM from namespace flake
+        erdfa-wasm = namespace.packages.${system}.default or namespace.packages.${system}.erdfa-wasm;
+        default = self.packages.${system}.erdfa-wasm;
       };
       
-      packages.${system}.default = pkgs.writeShellScriptBin "zkprologml" ''
-        ${pkgs.swipl}/bin/swipl -g boot -t halt ${./boot.pl}
-      '';
+      devShells.${system}.default = pkgs.mkShell {
+        inputsFrom = [ namespace.devShells.${system}.default or {} ];
+        
+        shellHook = ''
+          echo "🚀 zkPrologML + eRDFa"
+          echo "Build WASM: nix build .#erdfa-wasm"
+          echo "Deploy: cd data/proofs/deploy && git push space main"
+        '';
+      };
     };
 }
