@@ -1,0 +1,9 @@
+{
+  "name": "zkprologml",
+  "version": "1.0.0",
+  "description": "Self-Executing Mathematical Proofs",
+  "scripts": {
+    "dev": "python3 -m http.server 8000",
+    "build": "echo 'Static site - no build needed'"
+  }
+}

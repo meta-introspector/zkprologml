@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zkPrologML - Self-Executing Mathematical Proofs</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; }
+        .hero { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 100px 20px; text-align: center; }
+        .hero h1 { font-size: 3em; margin-bottom: 20px; }
+        .hero p { font-size: 1.3em; margin-bottom: 30px; }
+        .btn { display: inline-block; padding: 15px 30px; background: white; color: #667eea; text-decoration: none; border-radius: 5px; font-weight: bold; margin: 10px; }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
+        .container { max-width: 1200px; margin: 0 auto; padding: 60px 20px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin: 40px 0; }
+        .card { background: #f8f9fa; padding: 30px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .card h3 { color: #667eea; margin-bottom: 15px; }
+        .stats { background: #667eea; color: white; padding: 60px 20px; text-align: center; }
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; }
+        .stat { padding: 20px; }
+        .stat-number { font-size: 3em; font-weight: bold; }
+        .stat-label { font-size: 1.2em; opacity: 0.9; }
+        footer { background: #2d3748; color: white; padding: 40px 20px; text-align: center; }
+        code { background: #f4f4f4; padding: 2px 6px; border-radius: 3px; font-family: 'Courier New', monospace; }
+        pre { background: #2d3748; color: #fff; padding: 20px; border-radius: 5px; overflow-x: auto; }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1>🔷 zkPrologML</h1>
+        <p>Self-Executing Mathematical Proofs</p>
+        <p>200+ Prolog Proofs • 15 WASM Modules • 50+ Lean4 Proofs</p>
+        <a href="https://archive.org/details/zkprologml-20260130-055017" class="btn">📦 Download</a>
+        <a href="https://huggingface.co/datasets/introspector/zkprologml" class="btn">📊 Dataset</a>
+        <a href="https://huggingface.co/spaces/introspector/zkprologml" class="btn">🚀 Demo</a>
+    </div>
+
+    <div class="stats">
+        <div class="stats-grid">
+            <div class="stat">
+                <div class="stat-number">200+</div>
+                <div class="stat-label">Prolog Proofs</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">15</div>
+                <div class="stat-label">WASM Modules</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">50+</div>
+                <div class="stat-label">Lean4 Proofs</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">1.57 GB</div>
+                <div class="stat-label">Total Data</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>What is zkPrologML?</h2>
+        <p>A collection of self-executing mathematical proofs combining Prolog, Lean4, WASM, and zero-knowledge cryptography.</p>
+
+        <div class="grid">
+            <div class="card">
+                <h3>📝 Prolog Proofs</h3>
+                <p>200+ executable logic programs proving mathematical theorems including Monster group properties, Bott periodicity, and lattice theory.</p>
+            </div>
+            <div class="card">
+                <h3>🔷 WASM Modules</h3>
+                <p>15 self-contained WebAssembly modules with embedded zero-knowledge proofs, executable in any browser.</p>
+            </div>
+            <div class="card">
+                <h3>✓ Lean4 Proofs</h3>
+                <p>50+ formally verified proofs type-checked by Lean4, ensuring mathematical correctness.</p>
+            </div>
+            <div class="card">
+                <h3>📊 Reference Data</h3>
+                <p>227 parquet files (1GB) including LMFDB shards, Lean indexes, and Stack Exchange content.</p>
+            </div>
+        </div>
+
+        <h2>Quick Start</h2>
+        <pre><code># Download from archive.org
+wget https://archive.org/download/zkprologml-20260130-055017/zkprologml-archive-bundle.tar.gz
+
+# Extract
+tar -xzf zkprologml-archive-bundle.tar.gz
+cd zkprologml-archive-bundle
+
+# Run all proofs
+./run_proofs.sh</code></pre>
+
+        <h2>Use with Python</h2>
+        <pre><code>from datasets import load_dataset
+
+# Load dataset
+ds = load_dataset("introspector/zkprologml")
+
+# Access proofs
+for proof in ds:
+    print(proof["name"])</code></pre>
+
+        <h2>Features</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>🔓 Open Source</h3>
+                <p>AGPL-3.0 licensed. MIT available on request for commercial use.</p>
+            </div>
+            <div class="card">
+                <h3>📦 Self-Contained</h3>
+                <p>All dependencies documented. Runs anywhere with SWI-Prolog.</p>
+            </div>
+            <div class="card">
+                <h3>♾️ Permanent</h3>
+                <p>Archived on archive.org for long-term preservation.</p>
+            </div>
+            <div class="card">
+                <h3>🔍 Verifiable</h3>
+                <p>All proofs are executable and can be independently verified.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p><strong>zkPrologML</strong> - Self-Executing Mathematical Proofs</p>
+        <p>AGPL-3.0 License • MIT available on request</p>
+        <p>
+            <a href="https://archive.org/details/zkprologml-20260130-055017" style="color: #667eea;">Archive.org</a> •
+            <a href="https://huggingface.co/datasets/introspector/zkprologml" style="color: #667eea;">HuggingFace</a> •
+            <a href="https://github.com/meta-introspector/zkprologml" style="color: #667eea;">GitHub</a>
+        </p>
+    </footer>
+</body>
+</html>
